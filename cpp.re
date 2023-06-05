@@ -6,19 +6,21 @@ import (
 )
 
 /*!include:re2c "unicode_categories.re" */
+/*!re2c
+	re2c:eof = 0;
+	re2c:define:YYCTYPE    = byte;
+	re2c:define:YYPEEK     = "peek(in)";
+	re2c:define:YYSKIP     = "in.cursor += 1";
+	re2c:define:YYBACKUP   = "in.marker = in.cursor";
+	re2c:define:YYRESTORE  = "in.cursor = in.marker";
+	re2c:define:YYLESSTHAN = "in.limit <= in.cursor + @@{len}";
+	re2c:define:YYFILL     = "fill(in) == 0";
+*/
 
 func cpp_lex_str(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-		re2c:eof = 0;
-		re2c:define:YYCTYPE    = byte;
-		re2c:define:YYPEEK     = "peek(in)";
-		re2c:define:YYSKIP     = "in.cursor += 1";
-		re2c:define:YYBACKUP   = "in.marker = in.cursor";
-		re2c:define:YYRESTORE  = "in.cursor = in.marker";
-		re2c:define:YYLESSTHAN = "in.limit <= in.cursor + @@{len}";
-		re2c:define:YYFILL     = "fill(in) == 0";
         *                    { continue }
         $                    { return -1 }
         "\""                 { if in.state != STATE_STRINGLITERAL { return STRING }; in.state = STATE_NORMAL; return STRING }
@@ -55,14 +57,6 @@ func cpp_lex_raw_str(in *Input, start bool) TokenType {
 		}
 		in.token = in.cursor
     /*!re2c
-		re2c:eof = 0;
-		re2c:define:YYCTYPE    = byte;
-		re2c:define:YYPEEK     = "peek(in)";
-		re2c:define:YYSKIP     = "in.cursor += 1";
-		re2c:define:YYBACKUP   = "in.marker = in.cursor";
-		re2c:define:YYRESTORE  = "in.cursor = in.marker";
-		re2c:define:YYLESSTHAN = "in.limit <= in.cursor + @@{len}";
-		re2c:define:YYFILL     = "fill(in) == 0";
         *                    { return STRING }
         $                    { return -1 }
         "\n"                 { in.line += 1; continue }
@@ -82,14 +76,6 @@ func cpp_lex_eol_comment(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-		re2c:eof = 0;
-		re2c:define:YYCTYPE    = byte;
-		re2c:define:YYPEEK     = "peek(in)";
-		re2c:define:YYSKIP     = "in.cursor += 1";
-		re2c:define:YYBACKUP   = "in.marker = in.cursor";
-		re2c:define:YYRESTORE  = "in.cursor = in.marker";
-		re2c:define:YYLESSTHAN = "in.limit <= in.cursor + @@{len}";
-		re2c:define:YYFILL     = "fill(in) == 0";
         *                    { continue }
         "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return END }
         $                    { return END }
@@ -103,14 +89,6 @@ func cpp_lex_ml_comment(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-		re2c:eof = 0;
-		re2c:define:YYCTYPE    = byte;
-		re2c:define:YYPEEK     = "peek(in)";
-		re2c:define:YYSKIP     = "in.cursor += 1";
-		re2c:define:YYBACKUP   = "in.marker = in.cursor";
-		re2c:define:YYRESTORE  = "in.cursor = in.marker";
-		re2c:define:YYLESSTHAN = "in.limit <= in.cursor + @@{len}";
-		re2c:define:YYFILL     = "fill(in) == 0";
         *                    { return COMMENT }
         "\n"                 { in.line += 1; continue }
         "*/"                 { in.state = STATE_NORMAL; return COMMENT }
@@ -149,15 +127,6 @@ func cpp_lex(in *Input) TokenType {
 	    was_bol := in.bol
 		in.bol = false
     /*!re2c
-		re2c:eof = 0;
-		re2c:define:YYCTYPE    = byte;
-		re2c:define:YYPEEK     = "peek(in)";
-		re2c:define:YYSKIP     = "in.cursor += 1";
-		re2c:define:YYBACKUP   = "in.marker = in.cursor";
-		re2c:define:YYRESTORE  = "in.cursor = in.marker";
-		re2c:define:YYLESSTHAN = "in.limit <= in.cursor + @@{len}";
-		re2c:define:YYFILL     = "fill(in) == 0";
-
         scm = "//" [^\n]*;
 		newline = [\n];
 		"\\" { continue }

@@ -21,8 +21,9 @@ func register(exts []string, lexFunc LexFunc) {
 }
 
 type Lexer struct {
-	input    *Input
-	lex_func LexFunc
+	input     *Input
+	lex_func  LexFunc
+	tokenType TokenType
 }
 
 func CanLex(filename string) bool {
@@ -61,11 +62,16 @@ func NewLexer(filename string, input []byte) *Lexer {
 }
 
 func (lexer *Lexer) Lex() TokenType {
-	return lexer.lex_func(lexer.input)
+	lexer.tokenType = lexer.lex_func(lexer.input)
+	return lexer.tokenType
 }
 
 func (lexer *Lexer) Line() int {
 	return lexer.input.line
+}
+
+func (lexer *Lexer) TokenType() TokenType {
+	return lexer.tokenType
 }
 
 func (lexer *Lexer) TokenPos() (int, int) {

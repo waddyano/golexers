@@ -13,8 +13,9 @@ const (
 )
 
 const (
-	END         TokenType = -1
-	KEYWORD     TokenType = 1
+	INVALID     TokenType = -2
+	END                   = -1
+	KEYWORD               = 1
 	IDENTIFIER            = 2
 	PUNCTUATION           = 3
 	LITERAL               = 4
