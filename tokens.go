@@ -10,28 +10,50 @@ const (
 	STATE_LONGSTRINGLITERAL
 	STATE_EOLCOMMENT
 	STATE_MLCOMMENT
+	STATE_CUSTOM // keep last - first for a languag specific state
 )
 
 const (
-	INVALID     TokenType = -2
-	END                   = -1
-	KEYWORD               = 1
-	IDENTIFIER            = 2
-	PUNCTUATION           = 3
-	LITERAL               = 4
-	CHARLITERAL           = 5
-	STRING                = 6
-	STRINGWORD            = 7
-	COMMENT               = 8
-	COMMENTWORD           = 9
+	INVALID      TokenType = -2
+	END                    = -1
+	KEYWORD                = 1
+	KEYWORD_TYPE           = 2 // a keyword (or known identifier) which is a type e.g. types in go
+	IDENTIFIER             = 3
+	BUILTIN                = 4 // a built in function as used in go or perl
+	PUNCTUATION            = 5
+	LITERAL                = 6 // literal but not string or char
+	CHARLITERAL            = 7
+	STRING                 = 8 // inside a string but not a word
+	STRINGWORD             = 9
+	COMMENT                = 10 // inside a commant but not a aord
+	COMMENTWORD            = 11
 )
 
-func TypeString(l TokenType) string {
-	switch l {
+func (tt TokenType) IsWord() bool {
+	switch tt {
+	case KEYWORD:
+	case KEYWORD_TYPE:
+	case IDENTIFIER:
+	case BUILTIN:
+	case STRINGWORD:
+	case COMMENTWORD:
+		return true
+	default:
+		return false
+	}
+	return false
+}
+
+func TypeString(tt TokenType) string {
+	switch tt {
 	case KEYWORD:
 		return "KEYWORD"
+	case KEYWORD_TYPE:
+		return "KEYWORD_TYPE"
 	case IDENTIFIER:
 		return "IDENTIFIER"
+	case BUILTIN:
+		return "BUILT"
 	case PUNCTUATION:
 		return "PUNCTUATION"
 	case LITERAL:

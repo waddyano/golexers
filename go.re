@@ -149,8 +149,11 @@ func go_lex(in *Input) TokenType {
 		"/*" { in.state = STATE_MLCOMMENT; return COMMENT }
 
         "break" { return KEYWORD }
+        "byte" { return KEYWORD_TYPE }
         "case" { return KEYWORD }
         "chan" { return KEYWORD }
+		"complex64" { return KEYWORD_TYPE }
+		"complex128" { return KEYWORD_TYPE }
         "const" { return KEYWORD }
         "continue" { return KEYWORD }
         "default" { return KEYWORD }
@@ -158,26 +161,44 @@ func go_lex(in *Input) TokenType {
         "else" { return KEYWORD }
         "fallthrough" { return KEYWORD }
         "false" { return KEYWORD } // really not keyword
+		"float32" { return KEYWORD_TYPE }
+		"float64" { return KEYWORD_TYPE }
         "for" { return KEYWORD }
         "func" { return KEYWORD }
         "go" { return KEYWORD }
         "goto" { return KEYWORD }
         "if" { return KEYWORD }
         "import" { return KEYWORD }
+        "int" { return KEYWORD_TYPE }
+        "int16" { return KEYWORD_TYPE }
+        "int32" { return KEYWORD_TYPE }
+        "int64" { return KEYWORD_TYPE }
+        "int8" { return KEYWORD_TYPE }
         "interface" { return KEYWORD }
         "map" { return KEYWORD }
         "nil" { return KEYWORD } // really not keyword
         "package" { return KEYWORD }
         "range" { return KEYWORD }
         "return" { return KEYWORD }
+        "rune" { return KEYWORD_TYPE }
         "select" { return KEYWORD }
+        "string" { return KEYWORD_TYPE }
+        "struct" { return KEYWORD }
         "switch" { return KEYWORD }
         "true" { return KEYWORD } // really not keyword
         "type" { return KEYWORD }
+        "uint" { return KEYWORD_TYPE }
+        "uint16" { return KEYWORD_TYPE }
+        "uint32" { return KEYWORD_TYPE }
+        "uint64" { return KEYWORD_TYPE }
+        "uint8" { return KEYWORD_TYPE }
+        "uintptr" { return KEYWORD_TYPE }
         "var" { return KEYWORD }
 
 		"+" { return PUNCTUATION }
 		"-" { return PUNCTUATION }
+		"++" { return PUNCTUATION }
+		"--" { return PUNCTUATION }
 		"/" { return PUNCTUATION }
 		"*" { return PUNCTUATION }
 		"%" { return PUNCTUATION }
@@ -187,9 +208,13 @@ func go_lex(in *Input) TokenType {
 		"||" { return PUNCTUATION }
 		"!" { return PUNCTUATION }
 		"^" { return PUNCTUATION }
+		"<<" { return PUNCTUATION }
+		">>" { return PUNCTUATION }
+		"&^" { return PUNCTUATION }
 		"~" { return PUNCTUATION }
 		";" { return PUNCTUATION }
 		"." { return PUNCTUATION }
+		"..." { return PUNCTUATION }
 		"," { return PUNCTUATION }
 		"(" { return PUNCTUATION }
 		")" { return PUNCTUATION }
@@ -198,16 +223,27 @@ func go_lex(in *Input) TokenType {
 		"[" { return PUNCTUATION }
 		"]" { return PUNCTUATION }
 		"=" { return PUNCTUATION }
+		"+=" { return PUNCTUATION }
+		"-=" { return PUNCTUATION }
+		"*=" { return PUNCTUATION }
+		"/=" { return PUNCTUATION }
+		"%=" { return PUNCTUATION }
+		"&=" { return PUNCTUATION }
+		"|=" { return PUNCTUATION }
+		"^=" { return PUNCTUATION }
 		"==" { return PUNCTUATION }
 		"!=" { return PUNCTUATION }
 		"<" { return PUNCTUATION }
 		">" { return PUNCTUATION }
 		"<=" { return PUNCTUATION }
 		">=" { return PUNCTUATION }
-		"->" { return PUNCTUATION }
+		">>=" { return PUNCTUATION }
+		"<<=" { return PUNCTUATION }
+		"&^=" { return PUNCTUATION }
+		"<-" { return PUNCTUATION }
 		"?" { return PUNCTUATION }
 		":" { return PUNCTUATION }
-		"::" { return PUNCTUATION }
+		":=" { return PUNCTUATION }
 
 		id_start    = L | Nl | [$_];
 		id_continue = id_start | Mn | Mc | Nd | Pc | [\u200D\u05F3];

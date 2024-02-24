@@ -1,4 +1,5 @@
 //go:generate re2c --lang go cpp.re -8 -o cpp.go
+//go:generate re2c --lang go csharp.re -8 -o csharp.go
 //go:generate re2c --lang go java.re -8 -o java.go
 //go:generate re2c --lang go py.re -8 -o py.go
 //go:generate re2c --lang go go.re -8 -o go.go
