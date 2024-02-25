@@ -138,16 +138,16 @@ func cpp_lex(in *Input) TokenType {
 
         "@" { continue } // Objective-c - ignore it for testing (e.g. on llvm)
 
-		decimal = [1-9][0-9]*;
-		hex = "0x" [0-9a-fA-F]+;
-		octal = "0" [0-7]*;
+        decimal = [1-9][0-9]*;
+        hex = "0x" [0-9a-fA-F]+;
+        octal = "0" [0-7]*;
 
-		decimal { return LITERAL }
-		hex { return LITERAL }
-		octal { return LITERAL }
+        decimal { return LITERAL }
+        hex { return LITERAL }
+        octal { return LITERAL }
 
-		"#" [^\n]* { continue } // preprocessor
-		"\"" { in.state = STATE_STRINGLITERAL; return STRING }
+        "#" [^\n]* { continue } // preprocessor
+        "\"" { in.state = STATE_STRINGLITERAL; return STRING }
 		"\'" { in.state = STATE_CHARLITERAL; return STRING }
 		//dchar = [a-zA-Z0-9_{}[\]#<>%:;.?*+-/^&|~!=,"’];
 		"R\"" dchar * "(" { in.state = STATE_RAWSTRINGLITERAL; t := cpp_lex_raw_str(in, true); if t >= 0 { return t }; continue }
