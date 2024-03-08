@@ -30,9 +30,9 @@ func main() {
 				break
 			}
 			if *trace {
-				fmt.Printf("%s %s\n", golexers.TypeString(tok), lex.Token())
+				fmt.Printf("%s %t %s\n", golexers.TypeString(tok), tok.IsWord(), lex.Token())
 			}
-			if tok == golexers.KEYWORD || tok == golexers.IDENTIFIER || tok == golexers.COMMENTWORD || tok == golexers.STRINGWORD {
+			if tok.IsWord() {
 				words[string(lex.Token())] = true
 			}
 		}

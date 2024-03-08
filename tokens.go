@@ -32,10 +32,15 @@ const (
 func (tt TokenType) IsWord() bool {
 	switch tt {
 	case KEYWORD:
+		fallthrough
 	case KEYWORD_TYPE:
+		fallthrough
 	case IDENTIFIER:
+		fallthrough
 	case BUILTIN:
+		fallthrough
 	case STRINGWORD:
+		fallthrough
 	case COMMENTWORD:
 		return true
 	default:
