@@ -3,6 +3,7 @@
 //go:generate re2c --lang go java.re -8 -o java.go
 //go:generate re2c --lang go py.re -8 -o py.go
 //go:generate re2c --lang go go.re -8 -o go.go
+//go:generate re2c --lang go perl.re -8 -o perl.go
 
 package golexers
 

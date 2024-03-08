@@ -3,13 +3,15 @@ package main
 import (
 	"flag"
 	"fmt"
-	"golexers"
 	"io"
 	"os"
 	"slices"
+
+	"github.com/waddyano/golexers"
 )
 
 func main() {
+	trace := flag.Bool("t", false, "trace each token")
 	flag.Parse()
 	if flag.NArg() > 0 {
 		filename := flag.Arg(0)
@@ -26,6 +28,9 @@ func main() {
 			tok := lex.Lex()
 			if tok == golexers.END {
 				break
+			}
+			if *trace {
+				fmt.Printf("%s %s\n", golexers.TypeString(tok), lex.Token())
 			}
 			if tok == golexers.KEYWORD || tok == golexers.IDENTIFIER || tok == golexers.COMMENTWORD || tok == golexers.STRINGWORD {
 				words[string(lex.Token())] = true

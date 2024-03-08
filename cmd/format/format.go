@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"golexers"
 	"html"
 	"io"
 	"os"
 	"unicode/utf8"
+
+	"github.com/waddyano/golexers"
 )
 
 type FormatOptions struct {
