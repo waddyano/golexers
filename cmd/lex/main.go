@@ -24,10 +24,15 @@ func main() {
 		bytes, _ := io.ReadAll(f)
 		lex := golexers.NewLexer(filename, bytes)
 		words := make(map[string]bool)
+		curLine := -1
 		for {
 			tok := lex.Lex()
 			if tok == golexers.END {
 				break
+			}
+			if curLine != lex.Line() {
+				curLine = lex.Line()
+				fmt.Printf("%3d:  %s\n", curLine, lex.LineText())
 			}
 			if *trace {
 				fmt.Printf("%s %t %s\n", golexers.TypeString(tok), tok.IsWord(), lex.Token())

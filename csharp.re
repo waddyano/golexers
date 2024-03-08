@@ -79,7 +79,7 @@ func csharp_lex_long_str(in *Input, start bool) TokenType {
     /*!re2c
         *                    { return STRING }
         $                    { return -1 }
-        "\n"                 { in.line += 1; continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
         wsp = [ \f\t\v\r]+;
         wsp                  { continue }
 
@@ -108,7 +108,7 @@ func csharp_lex_ml_comment(in *Input) TokenType {
 		in.token = in.cursor
     /*!re2c
         *                    { return COMMENT }
-        "\n"                 { in.line += 1; continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
         "*/"                 { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
         word		        { return COMMENTWORD }
@@ -154,7 +154,7 @@ func csharp_lex(in *Input) TokenType {
 		newline = [\n];
 		"\\" { continue }
         wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.line += 1; continue }
+		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }

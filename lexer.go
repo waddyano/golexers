@@ -8,6 +8,7 @@
 package golexers
 
 import (
+	"bytes"
 	"path/filepath"
 )
 
@@ -46,17 +47,18 @@ func NewLexer(filename string, input []byte) *Lexer {
 	}
 
 	in := &Input{
-		filename: filename,
-		file:     nil,
-		data:     input,
-		cursor:   cur,
-		marker:   0,
-		token:    -1,
-		limit:    len(input),
-		line:     1,
-		state:    STATE_NORMAL,
-		eof:      false,
-		bol:      true,
+		filename:  filename,
+		file:      nil,
+		data:      input,
+		cursor:    cur,
+		marker:    0,
+		token:     -1,
+		limit:     len(input),
+		line:      1,
+		state:     STATE_NORMAL,
+		eof:       false,
+		bol:       true,
+		bolcursor: 0,
 	}
 
 	lex_func := langMap[filepath.Ext(filename)]
@@ -82,6 +84,16 @@ func (lexer *Lexer) TokenPos() (int, int) {
 
 func (lexer *Lexer) Token() []byte {
 	return lexer.input.data[lexer.input.token:lexer.input.cursor]
+}
+
+func (lexer *Lexer) LineText() []byte {
+	e := bytes.IndexByte(lexer.input.data[lexer.input.bolcursor:], '\n')
+	if e == -1 {
+		e = len(lexer.input.data)
+	} else {
+		e += lexer.input.bolcursor
+	}
+	return lexer.input.data[lexer.input.bolcursor:e]
 }
 
 /*

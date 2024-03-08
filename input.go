@@ -14,6 +14,7 @@ type Input struct {
 	state         int
 	eof           bool
 	bol           bool
+	bolcursor     int
 	raw_str_delim []byte
 }
 

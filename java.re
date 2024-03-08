@@ -54,7 +54,7 @@ func java_lex_raw_str(in *Input, start bool) TokenType {
     /*!re2c
         *                    { continue }
         $                    { return -1 }
-        "\n"                 { in.line += 1; continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
 
 		dchar = [a-zA-Z0-9_{}[\]#<>%:;.?*+-/^&|~!=,"’];
         ")" dchar* "\""      { if bytes.Compare(in.raw_str_delim, in.data[in.token+1:in.cursor-1]) != 0 { 
@@ -84,7 +84,7 @@ func java_lex_ml_comment(in *Input) TokenType {
 		in.token = in.cursor
     /*!re2c
         *                    { continue }
-        "\n"                 { in.line += 1; continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
         "*/"                 { in.state = STATE_NORMAL; return END }
         $                    { return END }
         [a-zA-Z_0-9]+        { return COMMENTWORD }
@@ -126,7 +126,7 @@ func java_lex(in *Input) TokenType {
 		newline = [\n];
 		"\\" { continue }
         wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.line += 1; continue }
+		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }
