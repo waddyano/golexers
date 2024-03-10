@@ -123,7 +123,6 @@ func go_lex(in *Input) TokenType {
 	    was_bol := in.bol
 		in.bol = false
     /*!re2c
-        scm = "//" [^\n]*;
 		newline = [\n];
 		"\\" { continue }
         wsp { in.bol = was_bol; continue }

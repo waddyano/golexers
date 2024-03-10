@@ -4,6 +4,8 @@
 //go:generate re2c --lang go py.re -8 -o py.go
 //go:generate re2c --lang go go.re -8 -o go.go
 //go:generate re2c --lang go perl.re -8 -o perl.go
+//go:generate re2c --lang go txt.re -8 -o txt.go
+//go:generate re2c --lang go commented_txt.re -8 -o commented_txt.go
 
 package golexers
 

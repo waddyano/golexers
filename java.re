@@ -121,7 +121,6 @@ func java_lex(in *Input) TokenType {
 	    was_bol := in.bol
 		in.bol = false
     /*!re2c
-        scm = "//" [^\n]*;
         wsp = [ \f\t\v\r]+;
 		newline = [\n];
 		"\\" { continue }

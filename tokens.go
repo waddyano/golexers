@@ -14,39 +14,28 @@ const (
 )
 
 const (
+	IS_WORD    = 1 << 8
+	IS_STRING  = 1 << 9
+	IS_COMMENT = 1 << 10
+)
+const (
 	INVALID      TokenType = -2
 	END                    = -1
-	KEYWORD                = 1
-	KEYWORD_TYPE           = 2 // a keyword (or known identifier) which is a type e.g. types in go
-	IDENTIFIER             = 3
-	BUILTIN                = 4 // a built in function as used in go or perl
+	KEYWORD                = 1 | IS_WORD
+	KEYWORD_TYPE           = 2 | IS_WORD // a keyword (or known identifier) which is a type e.g. types in go
+	IDENTIFIER             = 3 | IS_WORD
+	BUILTIN                = 4 | IS_WORD // a built in function as used in go or perl
 	PUNCTUATION            = 5
 	LITERAL                = 6 // literal but not string or char
 	CHARLITERAL            = 7
-	STRING                 = 8 // inside a string but not a word
-	STRINGWORD             = 9
-	COMMENT                = 10 // inside a commant but not a aord
-	COMMENTWORD            = 11
+	STRING                 = 8 | IS_STRING // inside a string but not a word
+	STRINGWORD             = 9 | IS_WORD | IS_STRING
+	COMMENT                = 10 | IS_COMMENT // inside a commant but not a aord
+	COMMENTWORD            = 11 | IS_WORD | IS_COMMENT
 )
 
 func (tt TokenType) IsWord() bool {
-	switch tt {
-	case KEYWORD:
-		fallthrough
-	case KEYWORD_TYPE:
-		fallthrough
-	case IDENTIFIER:
-		fallthrough
-	case BUILTIN:
-		fallthrough
-	case STRINGWORD:
-		fallthrough
-	case COMMENTWORD:
-		return true
-	default:
-		return false
-	}
-	return false
+	return (tt & IS_WORD) != 0
 }
 
 func TypeString(tt TokenType) string {
@@ -58,7 +47,7 @@ func TypeString(tt TokenType) string {
 	case IDENTIFIER:
 		return "IDENTIFIER"
 	case BUILTIN:
-		return "BUILT"
+		return "BUILTIN"
 	case PUNCTUATION:
 		return "PUNCTUATION"
 	case LITERAL:
