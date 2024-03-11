@@ -12,6 +12,9 @@ package golexers
 import (
 	"bytes"
 	"path/filepath"
+
+	"golang.org/x/text/encoding/unicode"
+	"golang.org/x/text/transform"
 )
 
 type LexFunc func(input *Input) TokenType
@@ -46,6 +49,19 @@ func NewLexer(filename string, input []byte) *Lexer {
 	cur := 0
 	if len(input) > 3 && input[0] == 0xef && input[1] == 0xbb && input[2] == 0xbf {
 		cur = 3
+	}
+
+	// Convert from UTF16 to UTF8 if we recognise the BOM
+	if len(input) > 2 {
+		var err error
+		if input[0] == 0xff && input[1] == 0xfe {
+			input, _, err = transform.Bytes(unicode.UTF16(unicode.LittleEndian, unicode.IgnoreBOM).NewDecoder(), input[2:])
+		} else if input[0] == 0xfe && input[1] == 0xff {
+			input, _, err = transform.Bytes(unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewDecoder(), input[2:])
+		}
+		if err != nil {
+			return nil
+		}
 	}
 
 	in := &Input{
