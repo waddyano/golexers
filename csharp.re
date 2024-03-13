@@ -293,5 +293,5 @@ func csharp_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".cs"}, csharp_lex)
+	Register([]string{".cs"}, csharp_lex)
 }

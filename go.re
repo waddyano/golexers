@@ -253,5 +253,5 @@ func go_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".go"}, go_lex)
+	Register([]string{".go"}, go_lex)
 }

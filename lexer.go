@@ -23,7 +23,7 @@ type LexFunc func(input *Input) TokenType
 
 var langMap = map[string]LexFunc{}
 
-func register(exts []string, lexFunc LexFunc) {
+func Register(exts []string, lexFunc LexFunc) {
 	for _, ext := range exts {
 		//fmt.Printf("Register %s\n", ext)
 		langMap[ext] = lexFunc

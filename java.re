@@ -242,5 +242,5 @@ func java_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".java"}, java_lex)
+	Register([]string{".java"}, java_lex)
 }

@@ -46,5 +46,5 @@ func txt_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".txt"}, txt_lex)
+	Register([]string{".txt"}, txt_lex)
 }

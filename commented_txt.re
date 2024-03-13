@@ -29,7 +29,7 @@ func commented_txt_lex_eol_comment(in *Input) TokenType {
 	}
 }
 
-func commented_txt_lex(in *Input) TokenType {
+func commented_txt_lex(in *Input, commentChar byte) TokenType {
 	for {
 		in.token = in.cursor
 		//fmt.Printf("start at %d\n", in.token)
@@ -49,7 +49,7 @@ func commented_txt_lex(in *Input) TokenType {
 		wsp { in.bol = was_bol; continue }
 		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
 
-		* { if in.data[in.cursor-1] == '#' { in.state = STATE_EOLCOMMENT; return COMMENT }; continue }
+		* { if in.data[in.cursor-1] == commentChar { in.state = STATE_EOLCOMMENT; return COMMENT }; continue }
 		$ { return END }
 
 		decimal = [1-9][0-9]*;
@@ -66,5 +66,5 @@ func commented_txt_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".yaml"}, commented_txt_lex)
+	Register([]string{".yaml"}, func (in *Input) TokenType { return commented_txt_lex(in, '#') })
 }

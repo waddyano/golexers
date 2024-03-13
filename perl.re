@@ -235,5 +235,5 @@ func perl_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".pl", ".pm"}, perl_lex)
+	Register([]string{".pl", ".pm"}, perl_lex)
 }

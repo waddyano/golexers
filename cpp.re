@@ -277,5 +277,5 @@ func cpp_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".c", ".h", ".cc", ".hh", ".cxx", ".hxx", ".cpp", ".hpp"}, cpp_lex)
+	Register([]string{".c", ".h", ".cc", ".hh", ".cxx", ".hxx", ".cpp", ".hpp"}, cpp_lex)
 }

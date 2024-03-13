@@ -200,5 +200,5 @@ func py_lex(in *Input) TokenType {
 }
 
 func init() {
-	register([]string{".py"}, py_lex)
+	Register([]string{".py"}, py_lex)
 }
