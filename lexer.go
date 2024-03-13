@@ -11,6 +11,8 @@ package golexers
 
 import (
 	"bytes"
+	"fmt"
+	"os"
 	"path/filepath"
 
 	"golang.org/x/text/encoding/unicode"
@@ -26,6 +28,15 @@ func register(exts []string, lexFunc LexFunc) {
 		//fmt.Printf("Register %s\n", ext)
 		langMap[ext] = lexFunc
 	}
+}
+
+func RegisterAlias(alias string, ext string) {
+	function, present := langMap[ext]
+	if !present {
+		fmt.Fprintf(os.Stderr, "trying to register alias for unknown extension %s\n", ext)
+		return
+	}
+	langMap[alias] = function
 }
 
 type Lexer struct {
