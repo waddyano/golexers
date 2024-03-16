@@ -176,80 +176,80 @@ func csharp_lex(in *Input) TokenType {
 		"//" { in.state = STATE_EOLCOMMENT; return COMMENT }
 		"/*" { in.state = STATE_MLCOMMENT; return COMMENT }
 
-        "abstract" { return KEYWORD }
-        "as" { return KEYWORD }
-        "base" { return KEYWORD }
-        "bool" { return KEYWORD }
-        "break" { return KEYWORD }
-        "byte" { return KEYWORD }
-        "case" { return KEYWORD }
-        "catch" { return KEYWORD }
-        "char" { return KEYWORD }
-        "checked" { return KEYWORD }
-        "class" { return KEYWORD }
-        "const" { return KEYWORD }
-        "continue" { return KEYWORD }
-        "decimal" { return KEYWORD }
-        "default" { return KEYWORD }
-        "delegate" { return KEYWORD }
-        "do" { return KEYWORD }
-        "double" { return KEYWORD }
-        "else" { return KEYWORD }
-        "enum" { return KEYWORD }
-        "event" { return KEYWORD }
-        "explicit" { return KEYWORD }
-        "extern" { return KEYWORD }
-        "false" { return KEYWORD }
-        "for" { return KEYWORD }
-        "forech" { return KEYWORD }
-        "goto" { return KEYWORD }
-        "if" { return KEYWORD }
-        "implicit" { return KEYWORD }
-        "in" { return KEYWORD }
-        "int" { return KEYWORD }
-        "interface" { return KEYWORD }
-        "internal" { return KEYWORD }
-        "is" { return KEYWORD }
-        "lock" { return KEYWORD }
-        "long" { return KEYWORD }
-        "namespace" { return KEYWORD }
-        "new" { return KEYWORD }
-        "null" { return KEYWORD }
-        "object" { return KEYWORD }
-        "operator" { return KEYWORD }
-        "out" { return KEYWORD }
-        "override" { return KEYWORD }
-        "params" { return KEYWORD }
-        "private" { return KEYWORD }
-        "protected" { return KEYWORD }
-        "public" { return KEYWORD }
-        "readonly" { return KEYWORD }
-        "ref" { return KEYWORD }
-        "return" { return KEYWORD }
-        "sbyte" { return KEYWORD }
-        "sealed" { return KEYWORD }
-        "short" { return KEYWORD }
-        "sizeof" { return KEYWORD }
-        "stackalloc" { return KEYWORD }
-        "static" { return KEYWORD }
-        "string" { return KEYWORD }
-        "struct" { return KEYWORD }
-        "switch" { return KEYWORD }
-        "this" { return KEYWORD }
-        "throw" { return KEYWORD }
-        "true" { return KEYWORD }
-        "try" { return KEYWORD }
-        "typeof" { return KEYWORD }
-        "uint" { return KEYWORD }
-        "ulong" { return KEYWORD }
-        "unchecked" { return KEYWORD }
-        "unsafe" { return KEYWORD }
-        "unshort" { return KEYWORD }
-        "using" { return KEYWORD }
-        "virtual" { return KEYWORD }
-        "void" { return KEYWORD }
-        "volatile" { return KEYWORD }
-        "while" { return KEYWORD }
+        "@"?"abstract" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"as" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"base" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"bool" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"break" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"byte" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"case" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"catch" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"char" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"checked" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"class" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"const" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"continue" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"decimal" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"default" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"delegate" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"do" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"double" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"else" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"enum" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"event" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"explicit" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"extern" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"false" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"for" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"forech" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"goto" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"if" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"implicit" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"in" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"int" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"interface" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"internal" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"is" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"lock" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"long" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"namespace" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"new" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"null" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"object" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"operator" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"out" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"override" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"params" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"private" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"protected" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"public" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"readonly" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"ref" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"return" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"sbyte" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"sealed" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"short" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"sizeof" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"stackalloc" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"static" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"string" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"struct" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"switch" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"this" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"throw" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"true" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"try" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"typeof" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"uint" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"ulong" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"unchecked" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"unsafe" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"unshort" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"using" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"virtual" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"void" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"volatile" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"while" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
 
 		"+" { return PUNCTUATION }
 		"-" { return PUNCTUATION }

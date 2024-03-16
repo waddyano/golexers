@@ -38,6 +38,14 @@ func (tt TokenType) IsWord() bool {
 	return (tt & IS_WORD) != 0
 }
 
+func (tt TokenType) IsComment() bool {
+	return (tt & IS_COMMENT) != 0
+}
+
+func (tt TokenType) IsString() bool {
+	return (tt & IS_STRING) != 0
+}
+
 func TypeString(tt TokenType) string {
 	switch tt {
 	case KEYWORD:
@@ -65,5 +73,4 @@ func TypeString(tt TokenType) string {
 	default:
 		return "???"
 	}
-
 }
