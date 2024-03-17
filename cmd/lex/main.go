@@ -35,7 +35,7 @@ func main() {
 				fmt.Printf("%3d:  %s\n", curLine, lex.LineText())
 			}
 			if *trace {
-				fmt.Printf("%s %t %s\n", golexers.TypeString(tok), tok.IsWord(), lex.Token())
+				fmt.Printf("%d: %s %t %s\n", lex.Line(), golexers.TypeString(tok), tok.IsWord(), lex.Token())
 			}
 			if tok.IsWord() {
 				words[string(lex.Token())] = true
