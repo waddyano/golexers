@@ -24,7 +24,7 @@ func perl_lex_str(in *Input) TokenType {
         $                    { return -1 }
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
-		wstart				= L | Nl | [$_];
+		wstart				= L | Nl | "_";
 		wcontinue 			= wstart | Mn | Mc | Nd | Pc | [\u200D\u05F3];
 		word  				= wstart wcontinue*;
         word		         { return STRINGWORD }
@@ -176,6 +176,7 @@ func perl_lex(in *Input) TokenType {
         "xor" { return KEYWORD }
         "y" { return KEYWORD }
 
+		"$" { return PUNCTUATION }
 		"+" { return PUNCTUATION }
 		"-" { return PUNCTUATION }
 		"++" { return PUNCTUATION }

@@ -16,8 +16,8 @@ func commented_txt_lex_eol_comment(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-		wstart				= L | Nl | [$_];
-		wcontinue 			= wstart | Mn | Mc | Nd | Pc | [\u200D\u05F3];
+		wstart				= L | Nl | "_";
+		wcontinue 			= wstart | "$" | Mn | Mc | Nd | Pc | [\u200D\u05F3];
 		word  				= wstart wcontinue*;
         *                    { continue }
         "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return END }
