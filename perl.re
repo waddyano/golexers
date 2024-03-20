@@ -5,6 +5,9 @@ package golexers
 import (
     "fmt"
 )
+
+const STATE_PERL_AFTER_END = STATE_CUSTOM
+
 /*!re2c
 	re2c:eof = 0;
 	re2c:define:YYCTYPE    = byte;
@@ -24,6 +27,7 @@ func perl_lex_str(in *Input) TokenType {
         $                    { return -1 }
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
 		wstart				= L | Nl | "_";
 		wcontinue 			= wstart | Mn | Mc | Nd | Pc | [\u200D\u05F3];
 		word  				= wstart wcontinue*;
@@ -97,6 +101,12 @@ func perl_lex(in *Input) TokenType {
 			}
 		} else if (in.state == STATE_EOLCOMMENT) {
 			t := perl_lex_eol_comment(in)
+			if t >= 0 {
+				return t
+			}
+		} else if (in.state == STATE_PERL_AFTER_END) {
+			// reuse the .txt lexer
+			t := txt_lex(in)
 			if t >= 0 {
 				return t
 			}
@@ -175,6 +185,8 @@ func perl_lex(in *Input) TokenType {
         "while" { return KEYWORD }
         "xor" { return KEYWORD }
         "y" { return KEYWORD }
+
+        "__END__" { in.state = STATE_PERL_AFTER_END; return KEYWORD } // anything after __END__ should just be treated as plain text
 
 		"$" { return PUNCTUATION }
 		"+" { return PUNCTUATION }

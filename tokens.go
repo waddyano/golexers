@@ -10,7 +10,7 @@ const (
 	STATE_LONGSTRINGLITERAL
 	STATE_EOLCOMMENT
 	STATE_MLCOMMENT
-	STATE_CUSTOM // keep last - first for a languag specific state
+	STATE_CUSTOM // keep last - first for a language specific state
 )
 
 const (
