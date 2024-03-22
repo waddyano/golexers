@@ -200,6 +200,8 @@ func csharp_lex(in *Input) TokenType {
         "@"?"explicit" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"extern" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"false" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"finally" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"fixed" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"for" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"forech" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"goto" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
@@ -244,7 +246,7 @@ func csharp_lex(in *Input) TokenType {
         "@"?"ulong" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"unchecked" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"unsafe" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
-        "@"?"unshort" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"ushort" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"using" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"virtual" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"void" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
