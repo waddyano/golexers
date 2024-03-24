@@ -1,5 +1,5 @@
 module github.com/waddyano/golexers
 
-go 1.18
+go 1.22
 
 require golang.org/x/text v0.14.0 // indirect

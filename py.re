@@ -1,5 +1,7 @@
 package golexers
 
+/*!include:re2c "word.re" */
+
 import (
 	"bytes"
     "fmt"
@@ -55,26 +57,12 @@ func py_lex_long_str(in *Input, start bool) TokenType {
         *                    { return STRING }
         $                    { return -1 }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
-        wsp = [ \f\t\v\r]+;
         wsp                  { continue }
 
 		"\"\"\"" { if bytes.Equal(in.raw_str_delim, in.data[in.token:in.cursor]) { in.state = STATE_NORMAL; in.raw_str_delim = nil }; return STRING }
 		"\'\'\'" { if bytes.Equal(in.raw_str_delim, in.data[in.token:in.cursor]) { in.state = STATE_NORMAL; in.raw_str_delim = nil }; return STRING }
 
         [a-zA-Z_0-9]+        { return STRINGWORD }
-	*/
-	}
-}
-
-func py_lex_eol_comment(in *Input) TokenType {
-	for {
-		in.token = in.cursor
-    /*!re2c
-        *                    { continue }
-        "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return END }
-        $                    { return END }
-        [a-zA-Z_0-9]+        { return COMMENTWORD }
-        [^a-zA-Z_0-9\n]+     { return COMMENT }
 	*/
 	}
 }
@@ -94,19 +82,16 @@ func py_lex(in *Input) TokenType {
 				return t
 			}
 		} else if (in.state == STATE_EOLCOMMENT) {
-			t := py_lex_eol_comment(in)
+			t := lex_eol_comment(in)
 			if t >= 0 {
 				return t
 			}
 		}
 
-	    was_bol := in.bol
-		in.bol = false
     /*!re2c
-		newline = [\n];
 		"\\" { continue }
-        wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
+        wsp { continue }
+		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }
@@ -193,8 +178,7 @@ func py_lex(in *Input) TokenType {
 		":" { return PUNCTUATION }
 		"::" { return PUNCTUATION }
 
-        word = [a-zA-Z_$][a-zA-Z_0-9$]*;
-        word { return IDENTIFIER }
+        [a-zA-Z_$][a-zA-Z_0-9$]* { return IDENTIFIER }
     */
     }
 }

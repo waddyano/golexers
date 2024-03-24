@@ -3,7 +3,6 @@ package golexers
 /*!include:re2c "word.re" */
 
 import (
-	"bytes"
     "fmt"
 )
 
@@ -18,27 +17,27 @@ import (
 	re2c:define:YYFILL     = "fill(in) == 0";
 */
 
-func java_lex_str(in *Input) TokenType {
+func js_lex_str(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-        *                    { continue }
+        *                    { return STRING }
         $                    { return -1 }
-        "\""                 { if in.state != STATE_STRINGLITERAL { continue }; in.state = STATE_NORMAL; return END }
-        "\'"                 { if in.state != STATE_CHARLITERAL { continue }; in.state = STATE_NORMAL; return END }
+        "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
+        "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
         [a-zA-Z_0-9]+        { return STRINGWORD }
-        "\\a"                { continue }
-        "\\b"                { continue }
-        "\\f"                { continue }
-        "\\n"                { continue }
-        "\\r"                { continue }
-        "\\t"                { continue }
-        "\\v"                { continue }
-        "\\\\"               { continue }
-        "\\'"                { continue }
-        "\\\""               { continue }
-        "\\?"                { continue }
-        //"\\" [0-7]{1,3}      { lex_oct(in.tok, in.cur, u); continue; }
+        "\\a"                { return STRING }
+        "\\b"                { return STRING }
+        "\\f"                { return STRING }
+        "\\n"                { return STRING }
+        "\\r"                { return STRING }
+        "\\t"                { return STRING }
+        "\\v"                { return STRING }
+        "\\\\"               { return STRING }
+        "\\'"                { return STRING }
+        "\\\""               { return STRING }
+        "\\?"                { return STRING }
+        "\\" [0-7]{1,3}      { return STRING }
         //"\\u" [0-9a-fA-F]{4} { lex_hex(in.tok, in.cur, u); continue; }
         //"\\U" [0-9a-fA-F]{8} { lex_hex(in.tok, in.cur, u); continue; }
         //"\\x" [0-9a-fA-F]+   { if (!lex_hex(in.tok, in.cur, u)) return false; continue; }	
@@ -46,7 +45,7 @@ func java_lex_str(in *Input) TokenType {
 	}
 }
 
-func java_lex_raw_str(in *Input, start bool) TokenType {
+func js_lex_long_str(in *Input, start bool) TokenType {
 	for {
 		if start {
 			in.raw_str_delim = in.data[in.token + 2:in.cursor - 1]
@@ -54,55 +53,47 @@ func java_lex_raw_str(in *Input, start bool) TokenType {
 		}
 		in.token = in.cursor
     /*!re2c
-        *                    { continue }
+        *                    { return STRING }
         $                    { return -1 }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
+        wsp                  { continue }
 
-		dchar = [a-zA-Z0-9_{}[\]#<>%:;.?*+-/^&|~!=,"’];
-        ")" dchar* "\""      { if bytes.Compare(in.raw_str_delim, in.data[in.token+1:in.cursor-1]) != 0 { 
-									//fmt.Printf("%s:%d: not end %s\n", in.filename, in.line, in.data[in.token+1:in.cursor-1]); 
-									continue
-								}
-								in.state = STATE_NORMAL; in.raw_str_delim = nil; return END }
+		"`"                  { in.state = STATE_NORMAL; return STRING }
+
         [a-zA-Z_0-9]+        { return STRINGWORD }
 	*/
 	}
 }
 
-func java_lex_ml_comment(in *Input) TokenType {
+func js_lex_ml_comment(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-        *                    { continue }
+        *                    { return COMMENT }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
-        "*/"                 { in.state = STATE_NORMAL; return END }
+        "*/"                 { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
-        [a-zA-Z_0-9]+        { return COMMENTWORD }
+        word       			 { return COMMENTWORD }
 	*/
 	}
 }
 
-func java_lex(in *Input) TokenType {
+func js_lex(in *Input) TokenType {
 	for {
 		in.token = in.cursor
         //fmt.Printf("start at %d\n", in.token)
 		if in.state == STATE_STRINGLITERAL || in.state == STATE_CHARLITERAL {
-			t := java_lex_str(in)
+			t := js_lex_str(in)
 			if t >= 0 {
 				return t
 			}
-		} else if (in.state == STATE_RAWSTRINGLITERAL) {
-			t := java_lex_raw_str(in, false)
+		} else if (in.state == STATE_LONGSTRINGLITERAL) {
+			t := js_lex_long_str(in, false)
 			if t >= 0 {
 				return t
 			}
 		} else if (in.state == STATE_EOLCOMMENT) {
 			t := lex_eol_comment(in)
-			if t >= 0 {
-				return t
-			}
-		} else if (in.state == STATE_MLCOMMENT) {
-			t := java_lex_ml_comment(in)
 			if t >= 0 {
 				return t
 			}
@@ -126,67 +117,52 @@ func java_lex(in *Input) TokenType {
 		hex { return LITERAL }
 		octal { return LITERAL }
 
-		"#" [^\n]* { continue }
-		"\"" { in.state = STATE_STRINGLITERAL; t := java_lex_str(in); if t >= 0 { return t }; continue }
-		"\'" { in.state = STATE_CHARLITERAL; t := java_lex_str(in); if t >= 0 { return t }; continue }
-		//dchar = [a-zA-Z0-9_{}[\]#<>%:;.?*+-/^&|~!=,"’];
-		"R\"" dchar * "(" { in.state = STATE_RAWSTRINGLITERAL; t := java_lex_raw_str(in, true); if t >= 0 { return t }; continue }
-		"//" { in.state = STATE_EOLCOMMENT; t := lex_eol_comment(in); if t >= 0 { return t }; continue }
-		"/*" { in.state = STATE_MLCOMMENT; t := java_lex_ml_comment(in); if t >= 0 { return t }; continue }
+		"\"" { in.state = STATE_STRINGLITERAL; return STRING }
+		"\'" { in.state = STATE_CHARLITERAL; return STRING }
+		"`" { in.state = STATE_LONGSTRINGLITERAL; return STRING }
+		"//" { in.state = STATE_EOLCOMMENT; return COMMENT }
 
-        "abstract" { return KEYWORD }
-        "assert" { return KEYWORD }
-        "boolean" { return KEYWORD }
+        "await" { return KEYWORD }
         "break" { return KEYWORD }
-        "byte" { return KEYWORD }
         "case" { return KEYWORD }
         "catch" { return KEYWORD }
-        "char" { return KEYWORD }
         "class" { return KEYWORD }
         "const" { return KEYWORD }
         "continue" { return KEYWORD }
-        "defaulte" { return KEYWORD }
+        "debugger" { return KEYWORD }
+        "default" { return KEYWORD }
+        "delete" { return KEYWORD }
         "do" { return KEYWORD }
-        "double" { return KEYWORD }
         "else" { return KEYWORD }
         "enum" { return KEYWORD }
+        "export" { return KEYWORD }
         "extends" { return KEYWORD }
-        "final" { return KEYWORD }
+        "false" { return KEYWORD }
         "finally" { return KEYWORD }
-        "float" { return KEYWORD }
         "for" { return KEYWORD }
-        "goto" { return KEYWORD }
+        "function" { return KEYWORD }
         "if" { return KEYWORD }
-        "implements" { return KEYWORD }
         "import" { return KEYWORD }
+        "in" { return KEYWORD }
         "instanceof" { return KEYWORD }
-        "int" { return KEYWORD }
-        "long" { return KEYWORD }
-        "native" { return KEYWORD }
+        "lambda" { return KEYWORD }
+        "let" { return KEYWORD }
         "new" { return KEYWORD }
-        "package" { return KEYWORD }
-        "private" { return KEYWORD }
-        "protected" { return KEYWORD }
-        "public" { return KEYWORD }
+        "null" { return KEYWORD }
         "return" { return KEYWORD }
-        "short" { return KEYWORD }
         "static" { return KEYWORD }
-        "strictfp" { return KEYWORD }
-        "static_cast" { return KEYWORD }
         "super" { return KEYWORD }
         "switch" { return KEYWORD }
-        "synchronized" { return KEYWORD }
         "this" { return KEYWORD }
         "throw" { return KEYWORD }
-        "throws" { return KEYWORD }
+        "true" { return KEYWORD }
         "try" { return KEYWORD }
+        "typeof" { return KEYWORD }
+        "var" { return KEYWORD }
         "void" { return KEYWORD }
-        "volatile" { return KEYWORD }
         "while" { return KEYWORD }
-
-        "false" { return LITERAL }
-        "true" { return LITERAL }
-        "null" { return LITERAL }
+        "with" { return KEYWORD }
+        "yield" { return KEYWORD }
 
 		"+" { return PUNCTUATION }
 		"-" { return PUNCTUATION }
@@ -227,5 +203,5 @@ func java_lex(in *Input) TokenType {
 }
 
 func init() {
-	Register([]string{".java"}, java_lex)
+	Register([]string{".js"}, js_lex)
 }

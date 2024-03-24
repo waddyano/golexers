@@ -1,6 +1,8 @@
 package golexers
 
-/*!include:re2c "unicode_categories.re" */
+//import "fmt"
+
+/*!include:re2c "word.re" */
 /*!re2c
 	re2c:eof = 0;
 	re2c:define:YYCTYPE    = byte;
@@ -14,22 +16,13 @@ package golexers
 
 func txt_lex(in *Input) TokenType {
 	for {
+        //fmt.Printf("start at %d, us %d\n", in.cursor, in.unmatched_start)
 		in.token = in.cursor
-        //fmt.Printf("start at %d\n", in.token)
-
-	    was_bol := in.bol
-		in.bol = false
     /*!re2c
-		wstart				= L | Nl | "_";
-		wcontinue 			= wstart | "$" | Mn | Mc | Nd | Pc | [\u200D\u05F3];
-		word  				= wstart wcontinue*;
-        wsp = [ \f\t\v\r]+;
+        wsp { continue }
+		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
-		newline = [\n];
-        wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
-
-        * { continue }
+        * { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = PUNCTUATION }; continue }
         $ { return END }
 
 		decimal = [1-9][0-9]*;

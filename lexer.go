@@ -1,6 +1,8 @@
+//go:generate re2c --lang go comments.re -8 -o comments.go
 //go:generate re2c --lang go cpp.re -8 -o cpp.go
 //go:generate re2c --lang go csharp.re -8 -o csharp.go
 //go:generate re2c --lang go java.re -8 -o java.go
+//go:generate re2c --lang go js.re -8 -o js.go
 //go:generate re2c --lang go py.re -8 -o py.go
 //go:generate re2c --lang go go.re -8 -o go.go
 //go:generate re2c --lang go perl.re -8 -o perl.go
@@ -40,9 +42,13 @@ func RegisterAlias(alias string, ext string) {
 }
 
 type Lexer struct {
-	input     *Input
-	lex_func  LexFunc
-	tokenType TokenType
+	input            *Input
+	lex_func         LexFunc
+	tokenType        TokenType
+	tokenLine        int
+	tokenStart       int
+	tokenEnd         int
+	pendingTokenType TokenType
 }
 
 func CanLex(filename string) bool {
@@ -76,31 +82,52 @@ func NewLexer(filename string, input []byte) *Lexer {
 	}
 
 	in := &Input{
-		filename:  filename,
-		file:      nil,
-		data:      input,
-		cursor:    cur,
-		marker:    0,
-		token:     -1,
-		limit:     len(input),
-		line:      1,
-		state:     STATE_NORMAL,
-		eof:       false,
-		bol:       true,
-		bolcursor: 0,
+		filename:        filename,
+		file:            nil,
+		data:            input,
+		unmatched_start: -1,
+		cursor:          cur,
+		marker:          0,
+		token:           -1,
+		limit:           len(input),
+		line:            1,
+		state:           STATE_NORMAL,
+		eof:             false,
+		bolcursor:       0,
 	}
 
 	lex_func := langMap[filepath.Ext(filename)]
-	return &Lexer{input: in, lex_func: lex_func}
+	return &Lexer{input: in, lex_func: lex_func, pendingTokenType: INVALID}
 }
 
 func (lexer *Lexer) Lex() TokenType {
-	lexer.tokenType = lexer.lex_func(lexer.input)
+	if lexer.pendingTokenType != INVALID {
+		lexer.tokenType = lexer.pendingTokenType
+		lexer.pendingTokenType = INVALID
+	} else {
+		tt := lexer.lex_func(lexer.input)
+		//fmt.Printf("returned %s\n", TypeString(tt))
+		if lexer.input.unmatched_start >= 0 {
+			//fmt.Printf("got token %s us %d %d\n", lexer.input.data[lexer.input.unmatched_start:lexer.input.token], lexer.input.unmatched_start, lexer.input.token)
+			lexer.pendingTokenType = tt
+			lexer.tokenLine = lexer.input.line
+			lexer.tokenType = lexer.input.unmatched_token
+			lexer.tokenStart = lexer.input.unmatched_start
+			lexer.tokenEnd = lexer.input.token
+			lexer.input.unmatched_start = -1
+			return lexer.tokenType
+		} else {
+			lexer.tokenType = tt
+		}
+	}
+	lexer.tokenStart = lexer.input.token
+	lexer.tokenEnd = lexer.input.cursor
+	lexer.tokenLine = lexer.input.line
 	return lexer.tokenType
 }
 
 func (lexer *Lexer) Line() int {
-	return lexer.input.line
+	return lexer.tokenLine
 }
 
 func (lexer *Lexer) TokenType() TokenType {
@@ -108,11 +135,11 @@ func (lexer *Lexer) TokenType() TokenType {
 }
 
 func (lexer *Lexer) TokenPos() (int, int) {
-	return lexer.input.token, lexer.input.cursor
+	return lexer.tokenStart, lexer.tokenEnd
 }
 
 func (lexer *Lexer) Token() []byte {
-	return lexer.input.data[lexer.input.token:lexer.input.cursor]
+	return lexer.input.data[lexer.tokenStart:lexer.tokenEnd]
 }
 
 func (lexer *Lexer) LineText() []byte {

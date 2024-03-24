@@ -1,6 +1,6 @@
 package golexers
 
-/*!include:re2c "unicode_categories.re" */
+/*!include:re2c "word.re" */
 
 import (
     "fmt"
@@ -24,9 +24,6 @@ func go_lex_str(in *Input) TokenType {
         $                    { return -1 }
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
-		wstart				= L | Nl | [$_];
-		wcontinue 			= wstart | Mn | Mc | Nd | Pc | [\u200D\u05F3];
-		word  				= wstart wcontinue*;
         word		         { return STRINGWORD }
         "\\a"                { return STRING }
         "\\b"                { return STRING }
@@ -39,10 +36,6 @@ func go_lex_str(in *Input) TokenType {
         "\\'"                { return STRING }
         "\\\""               { return STRING }
         "\\?"                { return STRING }
-        //"\\" [0-7]{1,3}      { lex_oct(in.tok, in.cur, u); continue; }
-        //"\\u" [0-9a-fA-F]{4} { lex_hex(in.tok, in.cur, u); continue; }
-        //"\\U" [0-9a-fA-F]{8} { lex_hex(in.tok, in.cur, u); continue; }
-        //"\\x" [0-9a-fA-F]+   { if (!lex_hex(in.tok, in.cur, u)) return false; continue; }	
 	*/
 	}
 }
@@ -58,25 +51,11 @@ func go_lex_long_str(in *Input, start bool) TokenType {
         *                    { return STRING }
         $                    { return -1 }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
-        wsp = [ \f\t\v\r]+;
         wsp                  { continue }
 
 		"`" { in.state = STATE_NORMAL; return STRING }
 
         word        		{ return STRINGWORD }
-	*/
-	}
-}
-
-func go_lex_eol_comment(in *Input) TokenType {
-	for {
-		in.token = in.cursor
-    /*!re2c
-        *                    { continue }
-        "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return END }
-        $                    { return END }
-        word		         { return COMMENTWORD }
-        [^a-zA-Z_0-9\n]+     { return COMMENT }
 	*/
 	}
 }
@@ -109,7 +88,7 @@ func go_lex(in *Input) TokenType {
 				return t
 			}
 		} else if (in.state == STATE_EOLCOMMENT) {
-			t := go_lex_eol_comment(in)
+			t := lex_eol_comment(in)
 			if t >= 0 {
 				return t
 			}
@@ -120,13 +99,10 @@ func go_lex(in *Input) TokenType {
 			}
 		}
 
-	    was_bol := in.bol
-		in.bol = false
     /*!re2c
-		newline = [\n];
 		"\\" { continue }
-        wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
+        wsp { continue }
+		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }

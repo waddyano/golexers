@@ -1,6 +1,6 @@
 package golexers
 
-/*!include:re2c "unicode_categories.re" */
+/*!include:re2c "word.re" */
 
 import (
     "fmt"
@@ -28,9 +28,6 @@ func perl_lex_str(in *Input) TokenType {
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
-		wstart				= L | Nl | "_";
-		wcontinue 			= wstart | Mn | Mc | Nd | Pc | [\u200D\u05F3];
-		word  				= wstart wcontinue*;
         word		         { return STRINGWORD }
         "\\a"                { return STRING }
         "\\b"                { return STRING }
@@ -43,10 +40,6 @@ func perl_lex_str(in *Input) TokenType {
         "\\'"                { return STRING }
         "\\\""               { return STRING }
         "\\?"                { return STRING }
-        //"\\" [0-7]{1,3}      { lex_oct(in.tok, in.cur, u); continue; }
-        //"\\u" [0-9a-fA-F]{4} { lex_hex(in.tok, in.cur, u); continue; }
-        //"\\U" [0-9a-fA-F]{8} { lex_hex(in.tok, in.cur, u); continue; }
-        //"\\x" [0-9a-fA-F]+   { if (!lex_hex(in.tok, in.cur, u)) return false; continue; }	
 	*/
 	}
 }
@@ -62,7 +55,6 @@ func perl_lex_long_str(in *Input, start bool) TokenType {
         *                    { return STRING }
         $                    { return -1 }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
-        wsp = [ \f\t\v\r]+;
         wsp                  { continue }
 
 		"`" { in.state = STATE_NORMAL; return STRING }
@@ -72,17 +64,20 @@ func perl_lex_long_str(in *Input, start bool) TokenType {
 	}
 }
 
-func perl_lex_eol_comment(in *Input) TokenType {
+func perl_doc_lex(in *Input) TokenType {
 	for {
+        //fmt.Printf("start at %d, us %d\n", in.cursor, in.unmatched_start)
 		in.token = in.cursor
     /*!re2c
-        *                    { continue }
-        "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return END }
-        $                    { return END }
-        word		         { return COMMENTWORD }
-        [^a-zA-Z_0-9\n]+     { return COMMENT }
-	*/
-	}
+        wsp { continue }
+		newline { in.bolcursor = in.cursor; in.line += 1; continue }
+
+        * { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = COMMENT }; continue }
+        $ { return END }
+
+        word { return COMMENTWORD }
+    */
+    }
 }
 
 func perl_lex(in *Input) TokenType {
@@ -100,25 +95,22 @@ func perl_lex(in *Input) TokenType {
 				return t
 			}
 		} else if (in.state == STATE_EOLCOMMENT) {
-			t := perl_lex_eol_comment(in)
+			t := lex_eol_comment(in)
 			if t >= 0 {
 				return t
 			}
 		} else if (in.state == STATE_PERL_AFTER_END) {
 			// reuse the .txt lexer
-			t := txt_lex(in)
+			t := perl_doc_lex(in)
 			if t >= 0 {
 				return t
 			}
 		} 
 
-	    was_bol := in.bol
-		in.bol = false
     /*!re2c
-		newline = [\n];
 		"\\" { continue }
-        wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
+        wsp { continue }
+		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }

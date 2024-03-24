@@ -14,6 +14,17 @@ type FormatOptions struct {
 	LineNumbers bool
 }
 
+var style = `<style>
+.file { font-family: courier; border-collapse: collapse; }
+.ln { background-color: lightgray; text-align: right; }
+.KEYWORD { color: blue; }
+.KEYWORD_TYPE { color: blue; }
+.COMMENTWORD { color: green; }
+.COMMENT { color: green; }
+.STRING { color: brown; }
+.STRINGWORD { color: brown; }
+</style>`
+
 func Format(filename string, options FormatOptions, w io.Writer) error {
 	r, err := os.Open(filename)
 
@@ -23,26 +34,25 @@ func Format(filename string, options FormatOptions, w io.Writer) error {
 	}
 	defer r.Close()
 	input, _ := io.ReadAll(r)
+	fmt.Fprintf(w, `
+<html><head>
+%s
+</head><body>`, style)
+	//fmt.Fprintf(w, ("lex returns %d\n", l)
+	//fmt.Fprintf(w, ("%d: next token %s line %d %d-%d \"%s\"\n", lex.Line(), lexers.TypeString(tk), lex.Line(), pos, end, lex.Token())
+	formatCode(w, options, filename, input)
+	fmt.Fprintf(w, "</body></html>\n")
+	return nil
+}
+
+func formatCode(w io.Writer, options FormatOptions, filename string, input []byte) {
 	lex := golexers.NewLexer(filename, input)
 	//fmt.Fprintf(w, ("do analyze\n")
 	if lex == nil {
 		fmt.Fprintf(os.Stderr, "no lexer for %s\n", filename)
-		return nil
+		return
 	}
 
-	fmt.Fprintf(w, `
-<html><head>
-<style>
-.file { font-family: courier; border-collapse: collapse; }
-.ln { background-color: lightgray; text-align: right; }
-.KEYWORD { color: blue; }
-.KEYWORD_TYPE { color: blue; }
-.COMMENTWORD { color: green; }
-.COMMENT { color: green; }
-.STRING { color: brown; }
-.STRINGWORD { color: brown; }
-</style>
-</head><body>`)
 	fmt.Fprintf(w, "<table class=\"file\">\n")
 	lastEnd := 0
 	line := 1
@@ -54,7 +64,7 @@ func Format(filename string, options FormatOptions, w io.Writer) error {
 	col := 0
 	for {
 		tk := lex.Lex()
-		//fmt.Fprintf(w, ("lex returns %d\n", l)
+
 		if tk == golexers.END {
 			break
 		}
@@ -99,9 +109,8 @@ func Format(filename string, options FormatOptions, w io.Writer) error {
 		col += len(s)
 		fmt.Fprintf(w, "<span class=\"%s\">%s</span>", golexers.TypeString(tk), html.EscapeString(s))
 		lastEnd = end
-		//fmt.Fprintf(w, ("%d: next token %s line %d %d-%d \"%s\"\n", lex.Line(), lexers.TypeString(tk), lex.Line(), pos, end, lex.Token())
+
 	}
 
-	fmt.Fprintf(w, "</table></body></html>\n")
-	return nil
+	fmt.Fprintf(w, "</table>\n")
 }

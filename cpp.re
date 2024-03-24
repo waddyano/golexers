@@ -5,7 +5,7 @@ import (
     "fmt"
 )
 
-/*!include:re2c "unicode_categories.re" */
+/*!include:re2c "word.re" */
 /*!re2c
 	re2c:eof = 0;
 	re2c:define:YYCTYPE    = byte;
@@ -25,11 +25,7 @@ func cpp_lex_str(in *Input) TokenType {
         $                    { return -1 }
         "\""                 { if in.state != STATE_STRINGLITERAL { return STRING }; in.state = STATE_NORMAL; return STRING }
         "\'"                 { if in.state != STATE_CHARLITERAL { return STRING }; in.state = STATE_NORMAL; return STRING }
-		wstart				= L | Nl | [$_];
-		wcontinue 			= wstart | Mn | Mc | Nd | Pc | [\u200D\u05F3];
-		word  				= wstart wcontinue*;
-        word		        { return STRINGWORD }
-        wsp = [ \f\t\v\r]+;
+        word		         { return STRINGWORD }
         wsp                  { continue }
         "\\b"                { return STRING }
         "\\f"                { return STRING  }
@@ -73,24 +69,12 @@ func cpp_lex_raw_str(in *Input, start bool) TokenType {
 	}
 }
 
-func cpp_lex_eol_comment(in *Input) TokenType {
-	for {
-		in.token = in.cursor
-    /*!re2c
-        *                    { continue }
-        "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return END }
-        $                    { return END }
-        word        		 { return COMMENTWORD }
-        [^a-zA-Z_0-9 \t\n]+  { return COMMENT }
-	*/
-	}
-}
-
 func cpp_lex_ml_comment(in *Input) TokenType {
 	for {
 		in.token = in.cursor
     /*!re2c
-        *                    { return COMMENT }
+        *                    { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = COMMENT }; continue }
+        wsp                  { continue }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
         "*/"                 { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
@@ -114,7 +98,7 @@ func cpp_lex(in *Input) TokenType {
 				return t
 			}
 		} else if (in.state == STATE_EOLCOMMENT) {
-			t := cpp_lex_eol_comment(in)
+			t := lex_eol_comment(in)
 			if t >= 0 {
 				return t
 			}
@@ -125,13 +109,10 @@ func cpp_lex(in *Input) TokenType {
 			}
 		}
 
-	    was_bol := in.bol
-		in.bol = false
     /*!re2c
-		newline = [\n];
 		"\\" { continue }
-        wsp { in.bol = was_bol; continue }
-		newline { in.bol = true; in.bolcursor = in.cursor; in.line += 1; continue }
+        wsp { continue }
+		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: discarded match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }

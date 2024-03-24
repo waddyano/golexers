@@ -32,6 +32,7 @@ const (
 	STRINGWORD             = 9 | IS_WORD | IS_STRING
 	COMMENT                = 10 | IS_COMMENT // inside a commant but not a aord
 	COMMENTWORD            = 11 | IS_WORD | IS_COMMENT
+	NEWLINE                = 100
 )
 
 func (tt TokenType) IsWord() bool {
@@ -48,6 +49,10 @@ func (tt TokenType) IsString() bool {
 
 func TypeString(tt TokenType) string {
 	switch tt {
+	case INVALID:
+		return "INVALID"
+	case END:
+		return "END"
 	case KEYWORD:
 		return "KEYWORD"
 	case KEYWORD_TYPE:
@@ -70,6 +75,8 @@ func TypeString(tt TokenType) string {
 		return "COMMENT"
 	case COMMENTWORD:
 		return "COMMENTWORD"
+	case NEWLINE:
+		return "NEWLINE"
 	default:
 		return "???"
 	}
