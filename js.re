@@ -92,6 +92,11 @@ func js_lex(in *Input) TokenType {
 			if t >= 0 {
 				return t
 			}
+		} else if (in.state == STATE_MLCOMMENT) {
+			t := js_lex_ml_comment(in)
+			if t >= 0 {
+				return t
+			}
 		} else if (in.state == STATE_EOLCOMMENT) {
 			t := lex_eol_comment(in)
 			if t >= 0 {

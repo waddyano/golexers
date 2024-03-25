@@ -133,6 +133,7 @@ func csharp_lex(in *Input) TokenType {
     /*!re2c
 		"\\" { continue }
         wsp { continue }
+        "\xef\xbb\xbf" { continue } // ignore BOM in the middle
 		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
