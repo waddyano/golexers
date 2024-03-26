@@ -126,6 +126,7 @@ func js_lex(in *Input) TokenType {
 		"\'" { in.state = STATE_CHARLITERAL; return STRING }
 		"`" { in.state = STATE_LONGSTRINGLITERAL; return STRING }
 		"//" { in.state = STATE_EOLCOMMENT; return COMMENT }
+		"/*" { in.state = STATE_MLCOMMENT; return COMMENT }
 
         "await" { return KEYWORD }
         "break" { return KEYWORD }
