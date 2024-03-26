@@ -102,7 +102,6 @@ func csharp_lex_ml_comment(in *Input) TokenType {
 func csharp_lex(in *Input) TokenType {
 	for {
 		in.token = in.cursor
-        //fmt.Printf("start at %d\n", in.token)
 		if in.state == STATE_STRINGLITERAL || in.state == STATE_CHARLITERAL {
 			t := csharp_lex_str(in)
 			if t >= 0 {
@@ -133,11 +132,11 @@ func csharp_lex(in *Input) TokenType {
     /*!re2c
 		"\\" { continue }
         wsp { continue }
-        "\xef\xbb\xbf" { continue } // ignore BOM in the middle
 		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }
+        "\uFEFF" { continue } // ignore BOM in the middle
 		
 		"#" [^\n]* { continue } // preprocessor
         
