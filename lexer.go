@@ -1,14 +1,14 @@
-//go:generate re2c --lang go comments.re -8 -o comments.go
-//go:generate re2c --lang go cpp.re -8 -o cpp.go
-//go:generate re2c --lang go csharp.re -8 -o csharp.go
-//go:generate re2c --lang go java.re -8 -o java.go
-//go:generate re2c --lang go js.re -8 -o js.go
-//go:generate re2c --lang go py.re -8 -o py.go
-//go:generate re2c --lang go go.re -8 -o go.go
-//go:generate re2c --lang go perl.re -8 -o perl.go
-//go:generate re2c --lang go txt.re -8 -o txt.go
-//go:generate re2c --lang go xml.re -8 -o xml.go
-//go:generate re2c --lang go commented_txt.re -8 -o commented_txt.go
+//go:generate re2c --lang go --no-generation-date comments.re -8 -o comments.go
+//go:generate re2c --lang go --no-generation-date cpp.re -8 -o cpp.go
+//go:generate re2c --lang go --no-generation-date csharp.re -8 -o csharp.go
+//go:generate re2c --lang go --no-generation-date java.re -8 -o java.go
+//go:generate re2c --lang go --no-generation-date js.re -8 -o js.go
+//go:generate re2c --lang go --no-generation-date py.re -8 -o py.go
+//go:generate re2c --lang go --no-generation-date go.re -8 -o go.go
+//go:generate re2c --lang go --no-generation-date perl.re -8 -o perl.go
+//go:generate re2c --lang go --no-generation-date txt.re -8 -o txt.go
+//go:generate re2c --lang go --no-generation-date xml.re -8 -o xml.go
+//go:generate re2c --lang go --no-generation-date commented_txt.re -8 -o commented_txt.go
 
 package golexers
 

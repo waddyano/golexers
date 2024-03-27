@@ -175,6 +175,9 @@ func js_lex(in *Input) TokenType {
 		"/" { return PUNCTUATION }
 		"*" { return PUNCTUATION }
 		"%" { return PUNCTUATION }
+		"**" { return PUNCTUATION }
+		"++" { return PUNCTUATION }
+		"--" { return PUNCTUATION }
 		"&" { return PUNCTUATION }
 		"|" { return PUNCTUATION }
 		"&&" { return PUNCTUATION }
@@ -184,6 +187,7 @@ func js_lex(in *Input) TokenType {
 		"~" { return PUNCTUATION }
 		";" { return PUNCTUATION }
 		"." { return PUNCTUATION }
+		"..." { return PUNCTUATION }
 		"," { return PUNCTUATION }
 		"(" { return PUNCTUATION }
 		")" { return PUNCTUATION }
@@ -192,16 +196,37 @@ func js_lex(in *Input) TokenType {
 		"[" { return PUNCTUATION }
 		"]" { return PUNCTUATION }
 		"=" { return PUNCTUATION }
+		"+=" { return PUNCTUATION }
+		"-=" { return PUNCTUATION }
+		"*=" { return PUNCTUATION }
+		"%=" { return PUNCTUATION }
+		"**=" { return PUNCTUATION }
+		"<<=" { return PUNCTUATION }
+		">>=" { return PUNCTUATION }
+		">>>=" { return PUNCTUATION }
+		"&=" { return PUNCTUATION }
+		"|=" { return PUNCTUATION }
+		"^=" { return PUNCTUATION }
+		"&&=" { return PUNCTUATION }
+		"||=" { return PUNCTUATION }
+		"??=" { return PUNCTUATION }
 		"==" { return PUNCTUATION }
 		"!=" { return PUNCTUATION }
+		"===" { return PUNCTUATION }
+		"!==" { return PUNCTUATION }
 		"<" { return PUNCTUATION }
 		">" { return PUNCTUATION }
 		"<=" { return PUNCTUATION }
 		">=" { return PUNCTUATION }
+		"=>" { return PUNCTUATION }
+		"<<" { return PUNCTUATION }
+		">>" { return PUNCTUATION }
+		">>>" { return PUNCTUATION }
 		"->" { return PUNCTUATION }
 		"?" { return PUNCTUATION }
+		"??" { return PUNCTUATION }
 		":" { return PUNCTUATION }
-		"::" { return PUNCTUATION }
+		";" { return PUNCTUATION }
 
         [a-zA-Z_$][a-zA-Z_0-9$]* { return IDENTIFIER }
     */
