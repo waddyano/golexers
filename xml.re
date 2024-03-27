@@ -2,6 +2,11 @@ package golexers
 
 //import "fmt"
 
+const (
+    STATE_STARTTAG = STATE_CUSTOM
+    STATE_ATTRSTRING = STATE_CUSTOM + 1
+)
+
 /*!include:re2c "word.re" */
 /*!re2c
 	re2c:eof = 0;
@@ -27,6 +32,43 @@ func xml_lex_ml_comment(in *Input) TokenType {
 	*/
 	}
 }
+
+func xml_lex_start_tag(in *Input) TokenType {
+	for {
+		in.token = in.cursor
+    /*!re2c
+        *                    { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = PUNCTUATION }; continue }
+        wsp                  { continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
+        ">"                  { in.state = STATE_NORMAL; return PUNCTUATION }
+        "="                  { return PUNCTUATION }
+        "\""                 { code := classify_string(in); 
+                               if code == STRING_PROCESS {
+                                  in.state = STATE_ATTRSTRING
+                                  return PUNCTUATION
+                               }
+                               return STRING
+                             }
+        $                    { return END }
+        word       			 { return IDENTIFIER }
+	*/
+	}
+}
+
+func xml_lex_attr_string(in *Input) TokenType {
+	for {
+		in.token = in.cursor
+    /*!re2c
+        *                    { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = PUNCTUATION }; continue }
+        wsp                  { continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
+        "\""                 { in.state = STATE_STARTTAG; return PUNCTUATION }
+        $                    { return END }
+        word       			 { return IDENTIFIER }
+	*/
+	}
+}
+
 
 func xml_lex_str(in *Input) TokenType {
 	for {
@@ -71,6 +113,16 @@ func xml_lex(in *Input) TokenType {
 			if t >= 0 {
 				return t
 			}
+		} else if (in.state == STATE_STARTTAG) {
+			t := xml_lex_start_tag(in)
+			if t >= 0 {
+				return t
+			}
+		} else if (in.state == STATE_ATTRSTRING) {
+			t := xml_lex_attr_string(in)
+			if t >= 0 {
+				return t
+			}
 		}
 
     /*!re2c
@@ -79,6 +131,7 @@ func xml_lex(in *Input) TokenType {
 
         * 		{ if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = PUNCTUATION }; continue }
 		"<!--" 	{ in.state = STATE_MLCOMMENT; return COMMENT }
+		"<" 	{ in.state = STATE_STARTTAG; return PUNCTUATION }
 		"\"" 	{ in.state = STATE_STRINGLITERAL; return STRING }
         $ { return END }
 
