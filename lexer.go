@@ -17,6 +17,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"unicode/utf8"
 
 	"golang.org/x/text/encoding/unicode"
 	"golang.org/x/text/transform"
@@ -64,13 +65,10 @@ func NewLexer(filename string, input []byte) *Lexer {
 	}
 
 	// Skip BOM if there but keep all byte offsets in file correct
-	cur := 0
 	if len(input) > 3 && input[0] == 0xef && input[1] == 0xbb && input[2] == 0xbf {
-		cur = 3
-	}
-
-	// Convert from UTF16 to UTF8 if we recognise the BOM
-	if len(input) > 2 {
+		input = input[3:]
+	} else if len(input) > 2 {
+		// Convert from UTF16 to UTF8 if we recognise the BOM
 		var err error
 		if input[0] == 0xff && input[1] == 0xfe {
 			input, _, err = transform.Bytes(unicode.UTF16(unicode.LittleEndian, unicode.IgnoreBOM).NewDecoder(), input[2:])
@@ -82,12 +80,27 @@ func NewLexer(filename string, input []byte) *Lexer {
 		}
 	}
 
+	// Check it looks like the file at least starts with valid UTF8 - in case the extension is just misleading
+	lim := len(input)
+	if lim > 512 {
+		lim = 512
+	}
+	w := input
+	for i := 0; i < lim; i++ {
+		r, n := utf8.DecodeRune(w)
+		if r == utf8.RuneError {
+			return nil
+		}
+		w = w[n:]
+		i += n
+	}
+
 	in := &Input{
 		filename:        filename,
 		file:            nil,
 		data:            input,
 		unmatched_start: -1,
-		cursor:          cur,
+		cursor:          0,
 		marker:          0,
 		token:           -1,
 		limit:           len(input),

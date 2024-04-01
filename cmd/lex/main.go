@@ -23,6 +23,10 @@ func main() {
 		defer f.Close()
 		bytes, _ := io.ReadAll(f)
 		lex := golexers.NewLexer(filename, bytes)
+		if lex == nil {
+			fmt.Fprintf(os.Stderr, "can not lex %s\n", filename)
+			os.Exit(1)
+		}
 		words := make(map[string]bool)
 		curLine := -1
 		for {

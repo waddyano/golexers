@@ -6,6 +6,11 @@ import (
     "fmt"
 )
 
+const (
+	STATE_POSSIBLEREGEX = STATE_CUSTOM // like normal but affects parsing '/'
+	STATE_REGEX = STATE_CUSTOM + 1
+)
+
 /*!re2c
 	re2c:eof = 0;
 	re2c:define:YYCTYPE    = byte;
@@ -45,22 +50,41 @@ func js_lex_str(in *Input) TokenType {
 	}
 }
 
-func js_lex_long_str(in *Input, start bool) TokenType {
+func js_lex_long_str(in *Input) TokenType {
 	for {
-		if start {
-			in.raw_str_delim = in.data[in.token + 2:in.cursor - 1]
-			start = false
-		}
 		in.token = in.cursor
     /*!re2c
         *                    { return STRING }
         $                    { return -1 }
-        "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; return STRING }
         wsp                  { continue }
 
 		"`"                  { in.state = STATE_NORMAL; return STRING }
 
-        [a-zA-Z_0-9]+        { return STRINGWORD }
+        word                 { return STRINGWORD }
+	*/
+	}
+}
+
+func printRegex(in *Input) {
+	offset := cap(in.data) - cap(in.raw_str_delim)
+	fmt.Printf("regex %s\n", in.data[offset:in.cursor]);
+}
+
+func js_lex_regex(in *Input) TokenType {
+	for {
+		in.token = in.cursor
+    /*!re2c
+        *                    { return PUNCTUATION }
+        $                    { return -1 }
+        "\n"                 { in.bolcursor = in.cursor; in.line += 1; in.state = STATE_NORMAL; continue } // unterminated so reset state
+        wsp                  { continue }
+
+		"/"                  { in.state = STATE_NORMAL; return PUNCTUATION }
+		"\\/"                { return PUNCTUATION }
+		"\\\\"               { return PUNCTUATION }
+
+        word                 { return IDENTIFIER }
 	*/
 	}
 }
@@ -82,13 +106,14 @@ func js_lex(in *Input) TokenType {
 	for {
 		in.token = in.cursor
         //fmt.Printf("start at %d\n", in.token)
+		mightBeRegex := false
 		if in.state == STATE_STRINGLITERAL || in.state == STATE_CHARLITERAL {
 			t := js_lex_str(in)
 			if t >= 0 {
 				return t
 			}
 		} else if (in.state == STATE_LONGSTRINGLITERAL) {
-			t := js_lex_long_str(in, false)
+			t := js_lex_long_str(in)
 			if t >= 0 {
 				return t
 			}
@@ -102,17 +127,27 @@ func js_lex(in *Input) TokenType {
 			if t >= 0 {
 				return t
 			}
+		} else if (in.state == STATE_POSSIBLEREGEX) {
+			mightBeRegex = true;
+			in.state = STATE_NORMAL;
+		} else if (in.state == STATE_REGEX) {
+			t := js_lex_regex(in)
+			if t >= 0 {
+				return t
+			}
 		}
 
     /*!re2c
 		"\\" { continue }
-        wsp { continue }
-		newline { in.bolcursor = in.cursor; in.line += 1; continue }
+        wsp { if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; continue }
+		newline { if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; in.bolcursor = in.cursor; in.line += 1; continue }
 
-        * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
+        * { fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }
 
-        "@" { continue } // Objective-c
+		"#!" { if in.cursor == 2 { continue } }
+
+		"#" { continue } // private field
 
 		decimal = [1-9][0-9]*;
 		hex = "0x" [0-9a-fA-F]+;
@@ -130,16 +165,16 @@ func js_lex(in *Input) TokenType {
 
         "await" { return KEYWORD }
         "break" { return KEYWORD }
-        "case" { return KEYWORD }
+        "case" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "catch" { return KEYWORD }
         "class" { return KEYWORD }
         "const" { return KEYWORD }
         "continue" { return KEYWORD }
         "debugger" { return KEYWORD }
         "default" { return KEYWORD }
-        "delete" { return KEYWORD }
-        "do" { return KEYWORD }
-        "else" { return KEYWORD }
+        "delete" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+        "do" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+        "else" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "enum" { return KEYWORD }
         "export" { return KEYWORD }
         "extends" { return KEYWORD }
@@ -149,71 +184,73 @@ func js_lex(in *Input) TokenType {
         "function" { return KEYWORD }
         "if" { return KEYWORD }
         "import" { return KEYWORD }
-        "in" { return KEYWORD }
-        "instanceof" { return KEYWORD }
+        "in" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+        "instanceof" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "lambda" { return KEYWORD }
         "let" { return KEYWORD }
-        "new" { return KEYWORD }
+        "new" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "null" { return KEYWORD }
-        "return" { return KEYWORD }
+        "return" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "static" { return KEYWORD }
         "super" { return KEYWORD }
         "switch" { return KEYWORD }
         "this" { return KEYWORD }
-        "throw" { return KEYWORD }
+        "throw" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "true" { return KEYWORD }
         "try" { return KEYWORD }
-        "typeof" { return KEYWORD }
-        "var" { return KEYWORD }
+        "typeof" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+        "var" { in.state = STATE_POSSIBLEREGEX; return KEYWORD }
         "void" { return KEYWORD }
         "while" { return KEYWORD }
         "with" { return KEYWORD }
         "yield" { return KEYWORD }
 
+		// help from: https://stackoverflow.com/questions/5519596/when-parsing-javascript-what-determines-the-meaning-of-a-slash
+		
 		"+" { return PUNCTUATION }
 		"-" { return PUNCTUATION }
-		"/" { return PUNCTUATION }
+		"/" { if mightBeRegex { in.state = STATE_REGEX; in.raw_str_delim = in.data[in.cursor-1:] }; return PUNCTUATION }
 		"*" { return PUNCTUATION }
 		"%" { return PUNCTUATION }
 		"**" { return PUNCTUATION }
 		"++" { return PUNCTUATION }
 		"--" { return PUNCTUATION }
-		"&" { return PUNCTUATION }
-		"|" { return PUNCTUATION }
-		"&&" { return PUNCTUATION }
-		"||" { return PUNCTUATION }
-		"!" { return PUNCTUATION }
+		"&" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"|" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"&&" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"||" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"!" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
 		"^" { return PUNCTUATION }
 		"~" { return PUNCTUATION }
 		";" { return PUNCTUATION }
 		"." { return PUNCTUATION }
 		"..." { return PUNCTUATION }
-		"," { return PUNCTUATION }
-		"(" { return PUNCTUATION }
+		"," { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"(" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
 		")" { return PUNCTUATION }
-		"{" { return PUNCTUATION }
-		"}" { return PUNCTUATION }
-		"[" { return PUNCTUATION }
+		"{" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"}" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"[" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
 		"]" { return PUNCTUATION }
-		"=" { return PUNCTUATION }
-		"+=" { return PUNCTUATION }
-		"-=" { return PUNCTUATION }
-		"*=" { return PUNCTUATION }
-		"%=" { return PUNCTUATION }
-		"**=" { return PUNCTUATION }
-		"<<=" { return PUNCTUATION }
-		">>=" { return PUNCTUATION }
-		">>>=" { return PUNCTUATION }
-		"&=" { return PUNCTUATION }
-		"|=" { return PUNCTUATION }
-		"^=" { return PUNCTUATION }
-		"&&=" { return PUNCTUATION }
-		"||=" { return PUNCTUATION }
-		"??=" { return PUNCTUATION }
-		"==" { return PUNCTUATION }
-		"!=" { return PUNCTUATION }
-		"===" { return PUNCTUATION }
-		"!==" { return PUNCTUATION }
+		"=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"+=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"-=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"*=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"%=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"**=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"<<=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		">>=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		">>>=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"&=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"|=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"^=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"&&=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"||=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"??=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"==" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"!=" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"===" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"!==" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
 		"<" { return PUNCTUATION }
 		">" { return PUNCTUATION }
 		"<=" { return PUNCTUATION }
@@ -223,10 +260,10 @@ func js_lex(in *Input) TokenType {
 		">>" { return PUNCTUATION }
 		">>>" { return PUNCTUATION }
 		"->" { return PUNCTUATION }
-		"?" { return PUNCTUATION }
-		"??" { return PUNCTUATION }
-		":" { return PUNCTUATION }
-		";" { return PUNCTUATION }
+		"?" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		"??" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		":" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+		";" { in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
 
         [a-zA-Z_$][a-zA-Z_0-9$]* { return IDENTIFIER }
     */

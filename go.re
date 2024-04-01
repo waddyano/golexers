@@ -104,7 +104,7 @@ func go_lex(in *Input) TokenType {
         wsp { continue }
 		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
-        * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
+        * { fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }
 
         "@" { continue } // Objective-c

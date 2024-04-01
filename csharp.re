@@ -55,6 +55,7 @@ func csharp_lex_verbatim_str(in *Input) TokenType {
     /*!re2c
         *                    { return STRING }
         $                    { return -1 }
+        "\"\""               { return STRING }
         "\""                 { in.state = STATE_NORMAL; return STRING }
         word		         { return STRINGWORD }
         "\\"                 { return STRING }
@@ -134,7 +135,7 @@ func csharp_lex(in *Input) TokenType {
         wsp { continue }
 		newline { in.bolcursor = in.cursor; in.line += 1; continue }
 
-        * { fmt.Printf("%s: %d: match %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
+        * { fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
         $ { return END }
         "\uFEFF" { continue } // ignore BOM in the middle
 		
@@ -228,10 +229,13 @@ func csharp_lex(in *Input) TokenType {
         "@"?"unsafe" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"ushort" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"using" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"value" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"var" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"virtual" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"void" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"volatile" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
         "@"?"while" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
+        "@"?"yield" { if in.data[in.token] == '@' { in.token++; return IDENTIFIER }; return KEYWORD }
 
 		"+" { return PUNCTUATION }
 		"-" { return PUNCTUATION }
@@ -269,7 +273,7 @@ func csharp_lex(in *Input) TokenType {
 		id_start    = L | Nl | [$_];
 		id_continue = id_start | Mn | Mc | Nd | Pc | [\u200D\u05F3];
         id = id_start id_continue *;
-        id { return IDENTIFIER }
+        "@"?id { if in.data[in.token] == '@' { in.token++ }; return IDENTIFIER }
     */
     }
 }
