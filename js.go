@@ -29038,5 +29038,5 @@ yy1484:
 }
 
 func init() {
-	Register([]string{".js"}, js_lex)
+	Register([]string{".js", ".json"}, js_lex)
 }
