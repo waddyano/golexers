@@ -20,7 +20,7 @@ func classify_string(in *Input) int {
 	// Now look to see if the whole strings has a space in it or not. If it does we process it as words.
 	space := bytes.IndexByte(in.data[in.cursor:in.cursor+end], ' ')
 	if space < 0 {
-		if end-in.cursor > 64 {
+		if end > 64 {
 			in.cursor += end + 1 // after the ending quote
 			return STRING_IGNORE
 		}
