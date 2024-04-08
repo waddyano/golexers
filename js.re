@@ -139,7 +139,8 @@ func js_lex(in *Input) TokenType {
 
     /*!re2c
 		"\\" { continue }
-        wsp { if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; continue }
+		// Javascript explicitly says its form of whitespace is Zs
+        Zs+ { if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; continue }
 		newline { if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; in.bolcursor = in.cursor; in.line += 1; continue }
 
         * { fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
