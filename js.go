@@ -24624,10 +24624,14 @@ func js_lex(in *Input) TokenType {
 yyFillLabel1118:
 	yych = peek(in)
 	switch (yych) {
-	case '\n':
-		goto yy1165
+	case '\t':
+		fallthrough
+	case '\v','\f','\r':
+		fallthrough
 	case ' ':
-		goto yy1166
+		goto yy1165
+	case '\n':
+		goto yy1167
 	case '!':
 		goto yy1168
 	case '"':
@@ -24762,21 +24766,20 @@ yy1163:
 yy1164:
 //line "js.re":146
 	{ fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
-//line "js.go":24766
+//line "js.go":24770
 yy1165:
-	in.cursor += 1
-//line "js.re":144
-	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; in.bolcursor = in.cursor; in.line += 1; continue }
-//line "js.go":24771
-yy1166:
 	yyaccept = 0
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel1119:
 	yych = peek(in)
 	switch (yych) {
+	case '\t':
+		fallthrough
+	case '\v','\f','\r':
+		fallthrough
 	case ' ':
-		goto yy1166
+		goto yy1165
 	case 0xC2:
 		goto yy1238
 	case 0xE1:
@@ -24791,12 +24794,17 @@ yyFillLabel1119:
 				goto yyFillLabel1119
 			}
 		}
-		goto yy1167
+		goto yy1166
 	}
-yy1167:
+yy1166:
 //line "js.re":143
 	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; continue }
-//line "js.go":24800
+//line "js.go":24803
+yy1167:
+	in.cursor += 1
+//line "js.re":144
+	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; in.bolcursor = in.cursor; in.line += 1; continue }
+//line "js.go":24808
 yy1168:
 	in.cursor += 1
 yyFillLabel1120:
@@ -24815,12 +24823,12 @@ yyFillLabel1120:
 yy1169:
 //line "js.re":223
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24819
+//line "js.go":24827
 yy1170:
 	in.cursor += 1
 //line "js.re":161
 	{ in.state = STATE_STRINGLITERAL; return STRING }
-//line "js.go":24824
+//line "js.go":24832
 yy1171:
 	in.cursor += 1
 yyFillLabel1121:
@@ -24839,7 +24847,7 @@ yyFillLabel1121:
 yy1172:
 //line "js.re":151
 	{ continue }
-//line "js.go":24843
+//line "js.go":24851
 yy1173:
 	in.cursor += 1
 yyFillLabel1122:
@@ -24867,7 +24875,7 @@ yy1174:
 yy1175:
 //line "js.re":269
 	{ return IDENTIFIER }
-//line "js.go":24871
+//line "js.go":24879
 yy1176:
 	in.cursor += 1
 yyFillLabel1123:
@@ -24886,7 +24894,7 @@ yyFillLabel1123:
 yy1177:
 //line "js.re":215
 	{ return PUNCTUATION }
-//line "js.go":24890
+//line "js.go":24898
 yy1178:
 	in.cursor += 1
 yyFillLabel1124:
@@ -24907,22 +24915,22 @@ yyFillLabel1124:
 yy1179:
 //line "js.re":219
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24911
+//line "js.go":24919
 yy1180:
 	in.cursor += 1
 //line "js.re":162
 	{ in.state = STATE_CHARLITERAL; return STRING }
-//line "js.go":24916
+//line "js.go":24924
 yy1181:
 	in.cursor += 1
 //line "js.re":230
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24921
+//line "js.go":24929
 yy1182:
 	in.cursor += 1
 //line "js.re":231
 	{ return PUNCTUATION }
-//line "js.go":24926
+//line "js.go":24934
 yy1183:
 	in.cursor += 1
 yyFillLabel1125:
@@ -24943,7 +24951,7 @@ yyFillLabel1125:
 yy1184:
 //line "js.re":214
 	{ return PUNCTUATION }
-//line "js.go":24947
+//line "js.go":24955
 yy1185:
 	in.cursor += 1
 yyFillLabel1126:
@@ -24964,12 +24972,12 @@ yyFillLabel1126:
 yy1186:
 //line "js.re":211
 	{ return PUNCTUATION }
-//line "js.go":24968
+//line "js.go":24976
 yy1187:
 	in.cursor += 1
 //line "js.re":229
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24973
+//line "js.go":24981
 yy1188:
 	in.cursor += 1
 yyFillLabel1127:
@@ -24992,7 +25000,7 @@ yyFillLabel1127:
 yy1189:
 //line "js.re":212
 	{ return PUNCTUATION }
-//line "js.go":24996
+//line "js.go":25004
 yy1190:
 	yyaccept = 1
 	in.cursor += 1
@@ -25013,7 +25021,7 @@ yyFillLabel1128:
 yy1191:
 //line "js.re":227
 	{ return PUNCTUATION }
-//line "js.go":25017
+//line "js.go":25025
 yy1192:
 	in.cursor += 1
 yyFillLabel1129:
@@ -25034,7 +25042,7 @@ yyFillLabel1129:
 yy1193:
 //line "js.re":213
 	{ if mightBeRegex { in.state = STATE_REGEX; in.raw_str_delim = in.data[in.cursor-1:] }; return PUNCTUATION }
-//line "js.go":25038
+//line "js.go":25046
 yy1194:
 	yyaccept = 2
 	in.cursor += 1
@@ -25057,7 +25065,7 @@ yyFillLabel1130:
 yy1195:
 //line "js.re":159
 	{ return LITERAL }
-//line "js.go":25061
+//line "js.go":25069
 yy1196:
 	in.cursor += 1
 yyFillLabel1131:
@@ -25076,17 +25084,17 @@ yyFillLabel1131:
 yy1197:
 //line "js.re":157
 	{ return LITERAL }
-//line "js.go":25080
+//line "js.go":25088
 yy1198:
 	in.cursor += 1
 //line "js.re":266
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25085
+//line "js.go":25093
 yy1199:
 	in.cursor += 1
 //line "js.re":226
 	{ return PUNCTUATION }
-//line "js.go":25090
+//line "js.go":25098
 yy1200:
 	in.cursor += 1
 yyFillLabel1132:
@@ -25107,7 +25115,7 @@ yyFillLabel1132:
 yy1201:
 //line "js.re":255
 	{ return PUNCTUATION }
-//line "js.go":25111
+//line "js.go":25119
 yy1202:
 	in.cursor += 1
 yyFillLabel1133:
@@ -25128,7 +25136,7 @@ yyFillLabel1133:
 yy1203:
 //line "js.re":236
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25132
+//line "js.go":25140
 yy1204:
 	in.cursor += 1
 yyFillLabel1134:
@@ -25149,7 +25157,7 @@ yyFillLabel1134:
 yy1205:
 //line "js.re":256
 	{ return PUNCTUATION }
-//line "js.go":25153
+//line "js.go":25161
 yy1206:
 	in.cursor += 1
 yyFillLabel1135:
@@ -25168,22 +25176,22 @@ yyFillLabel1135:
 yy1207:
 //line "js.re":264
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25172
+//line "js.go":25180
 yy1208:
 	in.cursor += 1
 //line "js.re":234
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25177
+//line "js.go":25185
 yy1209:
 	in.cursor += 1
 //line "js.re":141
 	{ continue }
-//line "js.go":25182
+//line "js.go":25190
 yy1210:
 	in.cursor += 1
 //line "js.re":235
 	{ return PUNCTUATION }
-//line "js.go":25187
+//line "js.go":25195
 yy1211:
 	in.cursor += 1
 yyFillLabel1136:
@@ -25202,12 +25210,12 @@ yyFillLabel1136:
 yy1212:
 //line "js.re":224
 	{ return PUNCTUATION }
-//line "js.go":25206
+//line "js.go":25214
 yy1213:
 	in.cursor += 1
 //line "js.re":163
 	{ in.state = STATE_LONGSTRINGLITERAL; return STRING }
-//line "js.go":25211
+//line "js.go":25219
 yy1214:
 	in.cursor += 1
 yyFillLabel1137:
@@ -25503,7 +25511,7 @@ yy1229:
 	in.cursor += 1
 //line "js.re":232
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25507
+//line "js.go":25515
 yy1230:
 	in.cursor += 1
 yyFillLabel1152:
@@ -25524,24 +25532,24 @@ yyFillLabel1152:
 yy1231:
 //line "js.re":220
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25528
+//line "js.go":25536
 yy1232:
 	in.cursor += 1
 //line "js.re":233
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25533
+//line "js.go":25541
 yy1233:
 	in.cursor += 1
 //line "js.re":225
 	{ return PUNCTUATION }
-//line "js.go":25538
+//line "js.go":25546
 yy1234:
 	in.cursor += 1
 yyFillLabel1153:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA0:
-		goto yy1166
+		goto yy1165
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -25609,7 +25617,7 @@ yyFillLabel1157:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA0:
-		goto yy1166
+		goto yy1165
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -25622,7 +25630,7 @@ yy1239:
 	in.cursor = in.marker
 	switch (yyaccept) {
 	case 0:
-		goto yy1167
+		goto yy1166
 	case 1:
 		goto yy1191
 	case 2:
@@ -25695,17 +25703,17 @@ yyFillLabel1161:
 yy1244:
 //line "js.re":252
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25699
+//line "js.go":25707
 yy1245:
 	in.cursor += 1
 //line "js.re":149
 	{ if in.cursor == 2 { continue } }
-//line "js.go":25704
+//line "js.go":25712
 yy1246:
 	in.cursor += 1
 //line "js.re":240
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25709
+//line "js.go":25717
 yy1247:
 	in.cursor += 1
 yyFillLabel1162:
@@ -25724,12 +25732,12 @@ yyFillLabel1162:
 yy1248:
 //line "js.re":221
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25728
+//line "js.go":25736
 yy1249:
 	in.cursor += 1
 //line "js.re":245
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25733
+//line "js.go":25741
 yy1250:
 	in.cursor += 1
 yyFillLabel1163:
@@ -25748,37 +25756,37 @@ yyFillLabel1163:
 yy1251:
 //line "js.re":216
 	{ return PUNCTUATION }
-//line "js.go":25752
+//line "js.go":25760
 yy1252:
 	in.cursor += 1
 //line "js.re":239
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25757
+//line "js.go":25765
 yy1253:
 	in.cursor += 1
 //line "js.re":217
 	{ return PUNCTUATION }
-//line "js.go":25762
+//line "js.go":25770
 yy1254:
 	in.cursor += 1
 //line "js.re":237
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25767
+//line "js.go":25775
 yy1255:
 	in.cursor += 1
 //line "js.re":218
 	{ return PUNCTUATION }
-//line "js.go":25772
+//line "js.go":25780
 yy1256:
 	in.cursor += 1
 //line "js.re":238
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25777
+//line "js.go":25785
 yy1257:
 	in.cursor += 1
 //line "js.re":263
 	{ return PUNCTUATION }
-//line "js.go":25782
+//line "js.go":25790
 yy1258:
 	in.cursor += 1
 yyFillLabel1164:
@@ -25798,12 +25806,12 @@ yy1259:
 	in.cursor += 1
 //line "js.re":165
 	{ in.state = STATE_MLCOMMENT; return COMMENT }
-//line "js.go":25802
+//line "js.go":25810
 yy1260:
 	in.cursor += 1
 //line "js.re":164
 	{ in.state = STATE_EOLCOMMENT; return COMMENT }
-//line "js.go":25807
+//line "js.go":25815
 yy1261:
 	in.cursor += 1
 yyFillLabel1165:
@@ -25857,12 +25865,12 @@ yyFillLabel1167:
 yy1265:
 //line "js.re":260
 	{ return PUNCTUATION }
-//line "js.go":25861
+//line "js.go":25869
 yy1266:
 	in.cursor += 1
 //line "js.re":257
 	{ return PUNCTUATION }
-//line "js.go":25866
+//line "js.go":25874
 yy1267:
 	in.cursor += 1
 yyFillLabel1168:
@@ -25881,17 +25889,17 @@ yyFillLabel1168:
 yy1268:
 //line "js.re":251
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25885
+//line "js.go":25893
 yy1269:
 	in.cursor += 1
 //line "js.re":259
 	{ return PUNCTUATION }
-//line "js.go":25890
+//line "js.go":25898
 yy1270:
 	in.cursor += 1
 //line "js.re":258
 	{ return PUNCTUATION }
-//line "js.go":25895
+//line "js.go":25903
 yy1271:
 	in.cursor += 1
 yyFillLabel1169:
@@ -25912,7 +25920,7 @@ yyFillLabel1169:
 yy1272:
 //line "js.re":261
 	{ return PUNCTUATION }
-//line "js.go":25916
+//line "js.go":25924
 yy1273:
 	in.cursor += 1
 yyFillLabel1170:
@@ -25931,12 +25939,12 @@ yyFillLabel1170:
 yy1274:
 //line "js.re":265
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25935
+//line "js.go":25943
 yy1275:
 	in.cursor += 1
 //line "js.re":247
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25940
+//line "js.go":25948
 yy1276:
 	in.cursor += 1
 yyFillLabel1171:
@@ -26071,7 +26079,7 @@ yyFillLabel1177:
 yy1283:
 //line "js.re":177
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":26075
+//line "js.go":26083
 yy1284:
 	in.cursor += 1
 yyFillLabel1178:
@@ -26219,7 +26227,7 @@ yyFillLabel1185:
 yy1292:
 //line "js.re":186
 	{ return KEYWORD }
-//line "js.go":26223
+//line "js.go":26231
 yy1293:
 	in.cursor += 1
 yyFillLabel1186:
@@ -26267,7 +26275,7 @@ yyFillLabel1187:
 yy1295:
 //line "js.re":188
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":26271
+//line "js.go":26279
 yy1296:
 	in.cursor += 1
 yyFillLabel1188:
@@ -26548,7 +26556,7 @@ yy1312:
 	in.cursor += 1
 //line "js.re":246
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26552
+//line "js.go":26560
 yy1313:
 	in.cursor += 1
 yyFillLabel1204:
@@ -26567,14 +26575,14 @@ yyFillLabel1204:
 yy1314:
 //line "js.re":222
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26571
+//line "js.go":26579
 yy1315:
 	in.cursor += 1
 yyFillLabel1205:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy1166
+		goto yy1165
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -26591,7 +26599,7 @@ yyFillLabel1206:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
 		fallthrough
 	case 0xAF:
-		goto yy1166
+		goto yy1165
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -26606,7 +26614,7 @@ yyFillLabel1207:
 	yych = peek(in)
 	switch (yych) {
 	case 0x9F:
-		goto yy1166
+		goto yy1165
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -26619,22 +26627,22 @@ yy1318:
 	in.cursor += 1
 //line "js.re":254
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26623
+//line "js.go":26631
 yy1319:
 	in.cursor += 1
 //line "js.re":248
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26628
+//line "js.go":26636
 yy1320:
 	in.cursor += 1
 //line "js.re":241
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26633
+//line "js.go":26641
 yy1321:
 	in.cursor += 1
 //line "js.re":228
 	{ return PUNCTUATION }
-//line "js.go":26638
+//line "js.go":26646
 yy1322:
 	in.cursor += 1
 yyFillLabel1208:
@@ -26657,22 +26665,22 @@ yyFillLabel1208:
 yy1323:
 //line "js.re":158
 	{ return LITERAL }
-//line "js.go":26661
+//line "js.go":26669
 yy1324:
 	in.cursor += 1
 //line "js.re":242
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26666
+//line "js.go":26674
 yy1325:
 	in.cursor += 1
 //line "js.re":253
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26671
+//line "js.go":26679
 yy1326:
 	in.cursor += 1
 //line "js.re":243
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26676
+//line "js.go":26684
 yy1327:
 	in.cursor += 1
 yyFillLabel1209:
@@ -26691,12 +26699,12 @@ yyFillLabel1209:
 yy1328:
 //line "js.re":262
 	{ return PUNCTUATION }
-//line "js.go":26695
+//line "js.go":26703
 yy1329:
 	in.cursor += 1
 //line "js.re":250
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26700
+//line "js.go":26708
 yy1330:
 	in.cursor += 1
 yyFillLabel1210:
@@ -26980,7 +26988,7 @@ yyFillLabel1225:
 yy1346:
 //line "js.re":184
 	{ return KEYWORD }
-//line "js.go":26984
+//line "js.go":26992
 yy1347:
 	in.cursor += 1
 yyFillLabel1226:
@@ -27075,7 +27083,7 @@ yyFillLabel1230:
 yy1352:
 //line "js.re":191
 	{ return KEYWORD }
-//line "js.go":27079
+//line "js.go":27087
 yy1353:
 	in.cursor += 1
 yyFillLabel1231:
@@ -27102,7 +27110,7 @@ yyFillLabel1231:
 yy1354:
 //line "js.re":192
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27106
+//line "js.go":27114
 yy1355:
 	in.cursor += 1
 yyFillLabel1232:
@@ -27265,7 +27273,7 @@ yyFillLabel1240:
 yy1364:
 //line "js.re":201
 	{ return KEYWORD }
-//line "js.go":27269
+//line "js.go":27277
 yy1365:
 	in.cursor += 1
 yyFillLabel1241:
@@ -27309,7 +27317,7 @@ yyFillLabel1242:
 yy1367:
 //line "js.re":203
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27313
+//line "js.go":27321
 yy1368:
 	in.cursor += 1
 yyFillLabel1243:
@@ -27382,12 +27390,12 @@ yy1372:
 	in.cursor += 1
 //line "js.re":249
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":27386
+//line "js.go":27394
 yy1373:
 	in.cursor += 1
 //line "js.re":244
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":27391
+//line "js.go":27399
 yy1374:
 	in.cursor += 1
 yyFillLabel1247:
@@ -27448,7 +27456,7 @@ yyFillLabel1249:
 yy1377:
 //line "js.re":169
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27452
+//line "js.go":27460
 yy1378:
 	in.cursor += 1
 yyFillLabel1250:
@@ -27594,7 +27602,7 @@ yyFillLabel1257:
 yy1386:
 //line "js.re":178
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27598
+//line "js.go":27606
 yy1387:
 	in.cursor += 1
 yyFillLabel1258:
@@ -27621,7 +27629,7 @@ yyFillLabel1258:
 yy1388:
 //line "js.re":179
 	{ return KEYWORD }
-//line "js.go":27625
+//line "js.go":27633
 yy1389:
 	in.cursor += 1
 yyFillLabel1259:
@@ -27784,7 +27792,7 @@ yyFillLabel1267:
 yy1398:
 //line "js.re":193
 	{ return KEYWORD }
-//line "js.go":27788
+//line "js.go":27796
 yy1399:
 	in.cursor += 1
 yyFillLabel1268:
@@ -27879,7 +27887,7 @@ yyFillLabel1272:
 yy1404:
 //line "js.re":198
 	{ return KEYWORD }
-//line "js.go":27883
+//line "js.go":27891
 yy1405:
 	in.cursor += 1
 yyFillLabel1273:
@@ -27923,7 +27931,7 @@ yyFillLabel1274:
 yy1407:
 //line "js.re":200
 	{ return KEYWORD }
-//line "js.go":27927
+//line "js.go":27935
 yy1408:
 	in.cursor += 1
 yyFillLabel1275:
@@ -27967,7 +27975,7 @@ yyFillLabel1276:
 yy1410:
 //line "js.re":204
 	{ return KEYWORD }
-//line "js.go":27971
+//line "js.go":27979
 yy1411:
 	in.cursor += 1
 yyFillLabel1277:
@@ -28011,7 +28019,7 @@ yyFillLabel1278:
 yy1413:
 //line "js.re":206
 	{ return KEYWORD }
-//line "js.go":28015
+//line "js.go":28023
 yy1414:
 	in.cursor += 1
 yyFillLabel1279:
@@ -28055,7 +28063,7 @@ yyFillLabel1280:
 yy1416:
 //line "js.re":167
 	{ return KEYWORD }
-//line "js.go":28059
+//line "js.go":28067
 yy1417:
 	in.cursor += 1
 yyFillLabel1281:
@@ -28082,7 +28090,7 @@ yyFillLabel1281:
 yy1418:
 //line "js.re":168
 	{ return KEYWORD }
-//line "js.go":28086
+//line "js.go":28094
 yy1419:
 	in.cursor += 1
 yyFillLabel1282:
@@ -28109,7 +28117,7 @@ yyFillLabel1282:
 yy1420:
 //line "js.re":170
 	{ return KEYWORD }
-//line "js.go":28113
+//line "js.go":28121
 yy1421:
 	in.cursor += 1
 yyFillLabel1283:
@@ -28136,7 +28144,7 @@ yyFillLabel1283:
 yy1422:
 //line "js.re":171
 	{ return KEYWORD }
-//line "js.go":28140
+//line "js.go":28148
 yy1423:
 	in.cursor += 1
 yyFillLabel1284:
@@ -28163,7 +28171,7 @@ yyFillLabel1284:
 yy1424:
 //line "js.re":172
 	{ return KEYWORD }
-//line "js.go":28167
+//line "js.go":28175
 yy1425:
 	in.cursor += 1
 yyFillLabel1285:
@@ -28292,7 +28300,7 @@ yyFillLabel1291:
 yy1432:
 //line "js.re":182
 	{ return KEYWORD }
-//line "js.go":28296
+//line "js.go":28304
 yy1433:
 	in.cursor += 1
 yyFillLabel1292:
@@ -28438,7 +28446,7 @@ yyFillLabel1299:
 yy1441:
 //line "js.re":196
 	{ return KEYWORD }
-//line "js.go":28442
+//line "js.go":28450
 yy1442:
 	in.cursor += 1
 yyFillLabel1300:
@@ -28482,7 +28490,7 @@ yyFillLabel1301:
 yy1444:
 //line "js.re":199
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28486
+//line "js.go":28494
 yy1445:
 	in.cursor += 1
 yyFillLabel1302:
@@ -28526,7 +28534,7 @@ yyFillLabel1303:
 yy1447:
 //line "js.re":205
 	{ return KEYWORD }
-//line "js.go":28530
+//line "js.go":28538
 yy1448:
 	in.cursor += 1
 yyFillLabel1304:
@@ -28553,7 +28561,7 @@ yyFillLabel1304:
 yy1449:
 //line "js.re":207
 	{ return KEYWORD }
-//line "js.go":28557
+//line "js.go":28565
 yy1450:
 	in.cursor += 1
 yyFillLabel1305:
@@ -28631,7 +28639,7 @@ yyFillLabel1308:
 yy1454:
 //line "js.re":176
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28635
+//line "js.go":28643
 yy1455:
 	in.cursor += 1
 yyFillLabel1309:
@@ -28658,7 +28666,7 @@ yyFillLabel1309:
 yy1456:
 //line "js.re":180
 	{ return KEYWORD }
-//line "js.go":28662
+//line "js.go":28670
 yy1457:
 	in.cursor += 1
 yyFillLabel1310:
@@ -28736,7 +28744,7 @@ yyFillLabel1313:
 yy1461:
 //line "js.re":187
 	{ return KEYWORD }
-//line "js.go":28740
+//line "js.go":28748
 yy1462:
 	in.cursor += 1
 yyFillLabel1314:
@@ -28780,7 +28788,7 @@ yyFillLabel1315:
 yy1464:
 //line "js.re":190
 	{ return KEYWORD }
-//line "js.go":28784
+//line "js.go":28792
 yy1465:
 	in.cursor += 1
 yyFillLabel1316:
@@ -28807,7 +28815,7 @@ yyFillLabel1316:
 yy1466:
 //line "js.re":194
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28811
+//line "js.go":28819
 yy1467:
 	in.cursor += 1
 yyFillLabel1317:
@@ -28834,7 +28842,7 @@ yyFillLabel1317:
 yy1468:
 //line "js.re":195
 	{ return KEYWORD }
-//line "js.go":28838
+//line "js.go":28846
 yy1469:
 	in.cursor += 1
 yyFillLabel1318:
@@ -28861,7 +28869,7 @@ yyFillLabel1318:
 yy1470:
 //line "js.re":197
 	{ return KEYWORD }
-//line "js.go":28865
+//line "js.go":28873
 yy1471:
 	in.cursor += 1
 yyFillLabel1319:
@@ -28888,7 +28896,7 @@ yyFillLabel1319:
 yy1472:
 //line "js.re":202
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28892
+//line "js.go":28900
 yy1473:
 	in.cursor += 1
 yyFillLabel1320:
@@ -28949,7 +28957,7 @@ yyFillLabel1322:
 yy1476:
 //line "js.re":175
 	{ return KEYWORD }
-//line "js.go":28953
+//line "js.go":28961
 yy1477:
 	in.cursor += 1
 yyFillLabel1323:
@@ -28976,7 +28984,7 @@ yyFillLabel1323:
 yy1478:
 //line "js.re":181
 	{ return KEYWORD }
-//line "js.go":28980
+//line "js.go":28988
 yy1479:
 	in.cursor += 1
 yyFillLabel1324:
@@ -29003,7 +29011,7 @@ yyFillLabel1324:
 yy1480:
 //line "js.re":183
 	{ return KEYWORD }
-//line "js.go":29007
+//line "js.go":29015
 yy1481:
 	in.cursor += 1
 yyFillLabel1325:
@@ -29064,7 +29072,7 @@ yyFillLabel1327:
 yy1484:
 //line "js.re":173
 	{ return KEYWORD }
-//line "js.go":29068
+//line "js.go":29076
 yy1485:
 	in.cursor += 1
 yyFillLabel1328:
@@ -29091,7 +29099,7 @@ yyFillLabel1328:
 yy1486:
 //line "js.re":174
 	{ return KEYWORD }
-//line "js.go":29095
+//line "js.go":29103
 yy1487:
 	in.cursor += 1
 yyFillLabel1329:
@@ -29118,7 +29126,7 @@ yyFillLabel1329:
 yy1488:
 //line "js.re":185
 	{ return KEYWORD }
-//line "js.go":29122
+//line "js.go":29130
 yy1489:
 	in.cursor += 1
 yyFillLabel1330:
@@ -29179,11 +29187,11 @@ yyFillLabel1332:
 yy1492:
 //line "js.re":189
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":29183
+//line "js.go":29191
 yy1493:
 //line "js.re":147
 	{ return END }
-//line "js.go":29187
+//line "js.go":29195
 }
 //line "js.re":270
 
