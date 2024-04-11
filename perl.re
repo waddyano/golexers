@@ -231,7 +231,7 @@ func perl_lex(in *Input) TokenType {
 		":" { return PUNCTUATION }
 		":=" { return PUNCTUATION }
 
-		id_start    = L | Nl | [$_];
+		id_start    = L | Nl | [_];
 		id_continue = id_start | Mn | Mc | Nd | Pc | [\u200D\u05F3];
         id = id_start id_continue *;
         id { return IDENTIFIER }
