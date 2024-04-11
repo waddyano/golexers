@@ -25,6 +25,7 @@ func go_lex_str(in *Input) TokenType {
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
         word		         { return STRINGWORD }
+        [0-9]+               { return STRINGWORD }
         "\\a"                { return STRING }
         "\\b"                { return STRING }
         "\\f"                { return STRING }
@@ -55,7 +56,8 @@ func go_lex_long_str(in *Input, start bool) TokenType {
 
 		"`" { in.state = STATE_NORMAL; return STRING }
 
-        word        		{ return STRINGWORD }
+        word                 { return STRINGWORD }
+        [0-9]+               { return STRINGWORD }
 	*/
 	}
 }

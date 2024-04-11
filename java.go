@@ -189,7 +189,7 @@ yy19:
 	{ return -1 }
 //line "java.go":191
 }
-//line "java.re":45
+//line "java.re":46
 
 	}
 }
@@ -233,12 +233,12 @@ yyFillLabel3:
 yy21:
 	in.cursor += 1
 yy22:
-//line "java.re":57
+//line "java.re":58
 	{ continue }
 //line "java.go":239
 yy23:
 	in.cursor += 1
-//line "java.re":59
+//line "java.re":60
 	{ in.bolcursor = in.cursor; in.line += 1; continue }
 //line "java.go":244
 yy24:
@@ -292,7 +292,7 @@ yyFillLabel5:
 		goto yy26
 	}
 yy26:
-//line "java.re":67
+//line "java.re":68
 	{ return STRINGWORD }
 //line "java.go":298
 yy27:
@@ -372,7 +372,7 @@ yyFillLabel7:
 		goto yy31
 	}
 yy31:
-//line "java.re":62
+//line "java.re":63
 	{ if bytes.Compare(in.raw_str_delim, in.data[in.token+1:in.cursor-1]) != 0 { 
 									//fmt.Printf("%s:%d: not end %s\n", in.filename, in.line, in.data[in.token+1:in.cursor-1]); 
 									continue
@@ -412,11 +412,11 @@ yyFillLabel9:
 		goto yy29
 	}
 yy34:
-//line "java.re":58
+//line "java.re":59
 	{ return -1 }
 //line "java.go":418
 }
-//line "java.re":68
+//line "java.re":69
 
 	}
 }
@@ -455,12 +455,12 @@ yyFillLabel10:
 yy36:
 	in.cursor += 1
 yy37:
-//line "java.re":76
+//line "java.re":77
 	{ continue }
 //line "java.go":461
 yy38:
 	in.cursor += 1
-//line "java.re":77
+//line "java.re":78
 	{ in.bolcursor = in.cursor; in.line += 1; continue }
 //line "java.go":466
 yy39:
@@ -500,20 +500,20 @@ yyFillLabel12:
 		goto yy41
 	}
 yy41:
-//line "java.re":80
+//line "java.re":81
 	{ return COMMENTWORD }
 //line "java.go":506
 yy42:
 	in.cursor += 1
-//line "java.re":78
+//line "java.re":79
 	{ in.state = STATE_NORMAL; return END }
 //line "java.go":511
 yy43:
-//line "java.re":79
+//line "java.re":80
 	{ return END }
 //line "java.go":515
 }
-//line "java.re":81
+//line "java.re":82
 
 	}
 }
@@ -692,7 +692,7 @@ yyFillLabel13:
 yy45:
 	in.cursor += 1
 yy46:
-//line "java.re":116
+//line "java.re":117
 	{ fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
 //line "java.go":698
 yy47:
@@ -719,12 +719,12 @@ yyFillLabel14:
 		goto yy48
 	}
 yy48:
-//line "java.re":113
+//line "java.re":114
 	{ continue }
 //line "java.go":725
 yy49:
 	in.cursor += 1
-//line "java.re":114
+//line "java.re":115
 	{ in.bolcursor = in.cursor; in.line += 1; continue }
 //line "java.go":730
 yy50:
@@ -743,12 +743,12 @@ yyFillLabel15:
 		goto yy51
 	}
 yy51:
-//line "java.re":200
+//line "java.re":201
 	{ return PUNCTUATION }
 //line "java.go":749
 yy52:
 	in.cursor += 1
-//line "java.re":130
+//line "java.re":131
 	{ in.state = STATE_STRINGLITERAL; t := java_lex_str(in); if t >= 0 { return t }; continue }
 //line "java.go":754
 yy53:
@@ -786,7 +786,7 @@ yyFillLabel16:
 		goto yy54
 	}
 yy54:
-//line "java.re":129
+//line "java.re":130
 	{ continue }
 //line "java.go":792
 yy55:
@@ -814,12 +814,12 @@ yy56:
 		goto yy57
 	}
 yy57:
-//line "java.re":224
+//line "java.re":225
 	{ return IDENTIFIER }
 //line "java.go":820
 yy58:
 	in.cursor += 1
-//line "java.re":195
+//line "java.re":196
 	{ return PUNCTUATION }
 //line "java.go":825
 yy59:
@@ -838,37 +838,37 @@ yyFillLabel18:
 		goto yy60
 	}
 yy60:
-//line "java.re":196
+//line "java.re":197
 	{ return PUNCTUATION }
 //line "java.go":844
 yy61:
 	in.cursor += 1
-//line "java.re":131
+//line "java.re":132
 	{ in.state = STATE_CHARLITERAL; t := java_lex_str(in); if t >= 0 { return t }; continue }
 //line "java.go":849
 yy62:
 	in.cursor += 1
-//line "java.re":206
+//line "java.re":207
 	{ return PUNCTUATION }
 //line "java.go":854
 yy63:
 	in.cursor += 1
-//line "java.re":207
+//line "java.re":208
 	{ return PUNCTUATION }
 //line "java.go":859
 yy64:
 	in.cursor += 1
-//line "java.re":194
+//line "java.re":195
 	{ return PUNCTUATION }
 //line "java.go":864
 yy65:
 	in.cursor += 1
-//line "java.re":191
+//line "java.re":192
 	{ return PUNCTUATION }
 //line "java.go":869
 yy66:
 	in.cursor += 1
-//line "java.re":205
+//line "java.re":206
 	{ return PUNCTUATION }
 //line "java.go":874
 yy67:
@@ -887,12 +887,12 @@ yyFillLabel19:
 		goto yy68
 	}
 yy68:
-//line "java.re":192
+//line "java.re":193
 	{ return PUNCTUATION }
 //line "java.go":893
 yy69:
 	in.cursor += 1
-//line "java.re":204
+//line "java.re":205
 	{ return PUNCTUATION }
 //line "java.go":898
 yy70:
@@ -913,7 +913,7 @@ yyFillLabel20:
 		goto yy71
 	}
 yy71:
-//line "java.re":193
+//line "java.re":194
 	{ return PUNCTUATION }
 //line "java.go":919
 yy72:
@@ -936,7 +936,7 @@ yyFillLabel21:
 		goto yy128
 	}
 yy73:
-//line "java.re":127
+//line "java.re":128
 	{ return LITERAL }
 //line "java.go":942
 yy74:
@@ -955,7 +955,7 @@ yyFillLabel22:
 		goto yy75
 	}
 yy75:
-//line "java.re":125
+//line "java.re":126
 	{ return LITERAL }
 //line "java.go":961
 yy76:
@@ -974,12 +974,12 @@ yyFillLabel23:
 		goto yy77
 	}
 yy77:
-//line "java.re":221
+//line "java.re":222
 	{ return PUNCTUATION }
 //line "java.go":980
 yy78:
 	in.cursor += 1
-//line "java.re":203
+//line "java.re":204
 	{ return PUNCTUATION }
 //line "java.go":985
 yy79:
@@ -998,7 +998,7 @@ yyFillLabel24:
 		goto yy80
 	}
 yy80:
-//line "java.re":215
+//line "java.re":216
 	{ return PUNCTUATION }
 //line "java.go":1004
 yy81:
@@ -1017,7 +1017,7 @@ yyFillLabel25:
 		goto yy82
 	}
 yy82:
-//line "java.re":212
+//line "java.re":213
 	{ return PUNCTUATION }
 //line "java.go":1023
 yy83:
@@ -1036,17 +1036,17 @@ yyFillLabel26:
 		goto yy84
 	}
 yy84:
-//line "java.re":216
+//line "java.re":217
 	{ return PUNCTUATION }
 //line "java.go":1042
 yy85:
 	in.cursor += 1
-//line "java.re":220
+//line "java.re":221
 	{ return PUNCTUATION }
 //line "java.go":1047
 yy86:
 	in.cursor += 1
-//line "java.re":119
+//line "java.re":120
 	{ continue }
 //line "java.go":1052
 yy87:
@@ -1070,22 +1070,22 @@ yyFillLabel27:
 	}
 yy88:
 	in.cursor += 1
-//line "java.re":210
+//line "java.re":211
 	{ return PUNCTUATION }
 //line "java.go":1076
 yy89:
 	in.cursor += 1
-//line "java.re":112
+//line "java.re":113
 	{ continue }
 //line "java.go":1081
 yy90:
 	in.cursor += 1
-//line "java.re":211
+//line "java.re":212
 	{ return PUNCTUATION }
 //line "java.go":1086
 yy91:
 	in.cursor += 1
-//line "java.re":201
+//line "java.re":202
 	{ return PUNCTUATION }
 //line "java.go":1091
 yy92:
@@ -1408,7 +1408,7 @@ yyFillLabel43:
 	}
 yy108:
 	in.cursor += 1
-//line "java.re":208
+//line "java.re":209
 	{ return PUNCTUATION }
 //line "java.go":1414
 yy109:
@@ -1427,17 +1427,17 @@ yyFillLabel44:
 		goto yy110
 	}
 yy110:
-//line "java.re":197
+//line "java.re":198
 	{ return PUNCTUATION }
 //line "java.go":1433
 yy111:
 	in.cursor += 1
-//line "java.re":209
+//line "java.re":210
 	{ return PUNCTUATION }
 //line "java.go":1438
 yy112:
 	in.cursor += 1
-//line "java.re":202
+//line "java.re":203
 	{ return PUNCTUATION }
 //line "java.go":1443
 yy113:
@@ -1484,7 +1484,7 @@ yy115:
 	}
 yy116:
 	in.cursor += 1
-//line "java.re":214
+//line "java.re":215
 	{ return PUNCTUATION }
 //line "java.go":1490
 yy117:
@@ -1579,22 +1579,22 @@ yyFillLabel52:
 	}
 yy123:
 	in.cursor += 1
-//line "java.re":198
+//line "java.re":199
 	{ return PUNCTUATION }
 //line "java.go":1585
 yy124:
 	in.cursor += 1
-//line "java.re":219
+//line "java.re":220
 	{ return PUNCTUATION }
 //line "java.go":1590
 yy125:
 	in.cursor += 1
-//line "java.re":135
+//line "java.re":136
 	{ in.state = STATE_MLCOMMENT; t := java_lex_ml_comment(in); if t >= 0 { return t }; continue }
 //line "java.go":1595
 yy126:
 	in.cursor += 1
-//line "java.re":134
+//line "java.re":135
 	{ in.state = STATE_EOLCOMMENT; t := lex_eol_comment(in); if t >= 0 { return t }; continue }
 //line "java.go":1600
 yy127:
@@ -1634,22 +1634,22 @@ yyFillLabel54:
 	}
 yy130:
 	in.cursor += 1
-//line "java.re":222
+//line "java.re":223
 	{ return PUNCTUATION }
 //line "java.go":1640
 yy131:
 	in.cursor += 1
-//line "java.re":217
+//line "java.re":218
 	{ return PUNCTUATION }
 //line "java.go":1645
 yy132:
 	in.cursor += 1
-//line "java.re":213
+//line "java.re":214
 	{ return PUNCTUATION }
 //line "java.go":1650
 yy133:
 	in.cursor += 1
-//line "java.re":218
+//line "java.re":219
 	{ return PUNCTUATION }
 //line "java.go":1655
 yy134:
@@ -1883,7 +1883,7 @@ yyFillLabel66:
 		goto yy146
 	}
 yy146:
-//line "java.re":149
+//line "java.re":150
 	{ return KEYWORD }
 //line "java.go":1889
 yy147:
@@ -2046,7 +2046,7 @@ yyFillLabel75:
 		goto yy156
 	}
 yy156:
-//line "java.re":159
+//line "java.re":160
 	{ return KEYWORD }
 //line "java.go":2052
 yy157:
@@ -2386,7 +2386,7 @@ yyFillLabel94:
 	}
 yy176:
 	in.cursor += 1
-//line "java.re":199
+//line "java.re":200
 	{ return PUNCTUATION }
 //line "java.go":2392
 yy177:
@@ -2409,12 +2409,12 @@ yyFillLabel95:
 		goto yy178
 	}
 yy178:
-//line "java.re":126
+//line "java.re":127
 	{ return LITERAL }
 //line "java.go":2415
 yy179:
 	in.cursor += 1
-//line "java.re":133
+//line "java.re":134
 	{ in.state = STATE_RAWSTRINGLITERAL; t := java_lex_raw_str(in, true); if t >= 0 { return t }; continue }
 //line "java.go":2420
 yy180:
@@ -2781,7 +2781,7 @@ yyFillLabel116:
 		goto yy201
 	}
 yy201:
-//line "java.re":157
+//line "java.re":158
 	{ return KEYWORD }
 //line "java.go":2787
 yy202:
@@ -2861,7 +2861,7 @@ yyFillLabel120:
 		goto yy206
 	}
 yy206:
-//line "java.re":163
+//line "java.re":164
 	{ return KEYWORD }
 //line "java.go":2867
 yy207:
@@ -2922,7 +2922,7 @@ yyFillLabel123:
 		goto yy210
 	}
 yy210:
-//line "java.re":166
+//line "java.re":167
 	{ return KEYWORD }
 //line "java.go":2928
 yy211:
@@ -3204,7 +3204,7 @@ yyFillLabel139:
 		goto yy227
 	}
 yy227:
-//line "java.re":182
+//line "java.re":183
 	{ return KEYWORD }
 //line "java.go":3210
 yy228:
@@ -3350,7 +3350,7 @@ yyFillLabel147:
 		goto yy236
 	}
 yy236:
-//line "java.re":141
+//line "java.re":142
 	{ return KEYWORD }
 //line "java.go":3356
 yy237:
@@ -3377,7 +3377,7 @@ yyFillLabel148:
 		goto yy238
 	}
 yy238:
-//line "java.re":142
+//line "java.re":143
 	{ return KEYWORD }
 //line "java.go":3383
 yy239:
@@ -3421,7 +3421,7 @@ yyFillLabel150:
 		goto yy241
 	}
 yy241:
-//line "java.re":144
+//line "java.re":145
 	{ return KEYWORD }
 //line "java.go":3427
 yy242:
@@ -3533,7 +3533,7 @@ yyFillLabel156:
 		goto yy248
 	}
 yy248:
-//line "java.re":151
+//line "java.re":152
 	{ return KEYWORD }
 //line "java.go":3539
 yy249:
@@ -3560,7 +3560,7 @@ yyFillLabel157:
 		goto yy250
 	}
 yy250:
-//line "java.re":152
+//line "java.re":153
 	{ return KEYWORD }
 //line "java.go":3566
 yy251:
@@ -3655,7 +3655,7 @@ yyFillLabel162:
 		goto yy256
 	}
 yy256:
-//line "java.re":158
+//line "java.re":159
 	{ return KEYWORD }
 //line "java.go":3661
 yy257:
@@ -3733,7 +3733,7 @@ yyFillLabel166:
 		goto yy261
 	}
 yy261:
-//line "java.re":164
+//line "java.re":165
 	{ return KEYWORD }
 //line "java.go":3739
 yy262:
@@ -3777,7 +3777,7 @@ yyFillLabel168:
 		goto yy264
 	}
 yy264:
-//line "java.re":189
+//line "java.re":190
 	{ return LITERAL }
 //line "java.go":3783
 yy265:
@@ -3991,7 +3991,7 @@ yyFillLabel180:
 		goto yy277
 	}
 yy277:
-//line "java.re":179
+//line "java.re":180
 	{ return KEYWORD }
 //line "java.go":3997
 yy278:
@@ -4035,7 +4035,7 @@ yyFillLabel182:
 		goto yy280
 	}
 yy280:
-//line "java.re":188
+//line "java.re":189
 	{ return LITERAL }
 //line "java.go":4041
 yy281:
@@ -4062,7 +4062,7 @@ yyFillLabel183:
 		goto yy282
 	}
 yy282:
-//line "java.re":183
+//line "java.re":184
 	{ return KEYWORD }
 //line "java.go":4068
 yy283:
@@ -4174,7 +4174,7 @@ yyFillLabel189:
 		goto yy289
 	}
 yy289:
-//line "java.re":140
+//line "java.re":141
 	{ return KEYWORD }
 //line "java.go":4180
 yy290:
@@ -4201,7 +4201,7 @@ yyFillLabel190:
 		goto yy291
 	}
 yy291:
-//line "java.re":143
+//line "java.re":144
 	{ return KEYWORD }
 //line "java.go":4207
 yy292:
@@ -4228,7 +4228,7 @@ yyFillLabel191:
 		goto yy293
 	}
 yy293:
-//line "java.re":145
+//line "java.re":146
 	{ return KEYWORD }
 //line "java.go":4234
 yy294:
@@ -4255,7 +4255,7 @@ yyFillLabel192:
 		goto yy295
 	}
 yy295:
-//line "java.re":146
+//line "java.re":147
 	{ return KEYWORD }
 //line "java.go":4261
 yy296:
@@ -4350,7 +4350,7 @@ yyFillLabel197:
 		goto yy301
 	}
 yy301:
-//line "java.re":187
+//line "java.re":188
 	{ return LITERAL }
 //line "java.go":4356
 yy302:
@@ -4381,7 +4381,7 @@ yyFillLabel198:
 		goto yy303
 	}
 yy303:
-//line "java.re":154
+//line "java.re":155
 	{ return KEYWORD }
 //line "java.go":4387
 yy304:
@@ -4408,7 +4408,7 @@ yyFillLabel199:
 		goto yy305
 	}
 yy305:
-//line "java.re":156
+//line "java.re":157
 	{ return KEYWORD }
 //line "java.go":4414
 yy306:
@@ -4588,7 +4588,7 @@ yyFillLabel209:
 		goto yy316
 	}
 yy316:
-//line "java.re":172
+//line "java.re":173
 	{ return KEYWORD }
 //line "java.go":4594
 yy317:
@@ -4649,7 +4649,7 @@ yyFillLabel212:
 		goto yy320
 	}
 yy320:
-//line "java.re":176
+//line "java.re":177
 	{ return KEYWORD }
 //line "java.go":4655
 yy321:
@@ -4714,7 +4714,7 @@ yyFillLabel215:
 		goto yy324
 	}
 yy324:
-//line "java.re":180
+//line "java.re":181
 	{ return KEYWORD }
 //line "java.go":4720
 yy325:
@@ -4758,7 +4758,7 @@ yyFillLabel217:
 		goto yy327
 	}
 yy327:
-//line "java.re":185
+//line "java.re":186
 	{ return KEYWORD }
 //line "java.go":4764
 yy328:
@@ -4802,7 +4802,7 @@ yyFillLabel219:
 		goto yy330
 	}
 yy330:
-//line "java.re":138
+//line "java.re":139
 	{ return KEYWORD }
 //line "java.go":4808
 yy331:
@@ -4880,7 +4880,7 @@ yyFillLabel223:
 		goto yy335
 	}
 yy335:
-//line "java.re":150
+//line "java.re":151
 	{ return KEYWORD }
 //line "java.go":4886
 yy336:
@@ -4958,7 +4958,7 @@ yyFillLabel227:
 		goto yy340
 	}
 yy340:
-//line "java.re":161
+//line "java.re":162
 	{ return KEYWORD }
 //line "java.go":4964
 yy341:
@@ -5002,7 +5002,7 @@ yyFillLabel229:
 		goto yy343
 	}
 yy343:
-//line "java.re":165
+//line "java.re":166
 	{ return KEYWORD }
 //line "java.go":5008
 yy344:
@@ -5080,7 +5080,7 @@ yyFillLabel233:
 		goto yy348
 	}
 yy348:
-//line "java.re":170
+//line "java.re":171
 	{ return KEYWORD }
 //line "java.go":5086
 yy349:
@@ -5107,7 +5107,7 @@ yyFillLabel234:
 		goto yy350
 	}
 yy350:
-//line "java.re":171
+//line "java.re":172
 	{ return KEYWORD }
 //line "java.go":5113
 yy351:
@@ -5134,7 +5134,7 @@ yyFillLabel235:
 		goto yy352
 	}
 yy352:
-//line "java.re":173
+//line "java.re":174
 	{ return KEYWORD }
 //line "java.go":5140
 yy353:
@@ -5178,7 +5178,7 @@ yyFillLabel237:
 		goto yy355
 	}
 yy355:
-//line "java.re":177
+//line "java.re":178
 	{ return KEYWORD }
 //line "java.go":5184
 yy356:
@@ -5222,7 +5222,7 @@ yyFillLabel239:
 		goto yy358
 	}
 yy358:
-//line "java.re":181
+//line "java.re":182
 	{ return KEYWORD }
 //line "java.go":5228
 yy359:
@@ -5283,7 +5283,7 @@ yyFillLabel242:
 		goto yy362
 	}
 yy362:
-//line "java.re":139
+//line "java.re":140
 	{ return KEYWORD }
 //line "java.go":5289
 yy363:
@@ -5327,7 +5327,7 @@ yyFillLabel244:
 		goto yy365
 	}
 yy365:
-//line "java.re":148
+//line "java.re":149
 	{ return KEYWORD }
 //line "java.go":5333
 yy366:
@@ -5354,7 +5354,7 @@ yyFillLabel245:
 		goto yy367
 	}
 yy367:
-//line "java.re":153
+//line "java.re":154
 	{ return KEYWORD }
 //line "java.go":5360
 yy368:
@@ -5381,7 +5381,7 @@ yyFillLabel246:
 		goto yy369
 	}
 yy369:
-//line "java.re":155
+//line "java.re":156
 	{ return KEYWORD }
 //line "java.go":5387
 yy370:
@@ -5442,7 +5442,7 @@ yyFillLabel249:
 		goto yy373
 	}
 yy373:
-//line "java.re":167
+//line "java.re":168
 	{ return KEYWORD }
 //line "java.go":5448
 yy374:
@@ -5469,7 +5469,7 @@ yyFillLabel250:
 		goto yy375
 	}
 yy375:
-//line "java.re":168
+//line "java.re":169
 	{ return KEYWORD }
 //line "java.go":5475
 yy376:
@@ -5581,7 +5581,7 @@ yyFillLabel256:
 		goto yy382
 	}
 yy382:
-//line "java.re":137
+//line "java.re":138
 	{ return KEYWORD }
 //line "java.go":5587
 yy383:
@@ -5608,7 +5608,7 @@ yyFillLabel257:
 		goto yy384
 	}
 yy384:
-//line "java.re":147
+//line "java.re":148
 	{ return KEYWORD }
 //line "java.go":5614
 yy385:
@@ -5703,7 +5703,7 @@ yyFillLabel262:
 		goto yy390
 	}
 yy390:
-//line "java.re":174
+//line "java.re":175
 	{ return KEYWORD }
 //line "java.go":5709
 yy391:
@@ -5747,7 +5747,7 @@ yyFillLabel264:
 		goto yy393
 	}
 yy393:
-//line "java.re":184
+//line "java.re":185
 	{ return KEYWORD }
 //line "java.go":5753
 yy394:
@@ -5808,7 +5808,7 @@ yyFillLabel267:
 		goto yy397
 	}
 yy397:
-//line "java.re":169
+//line "java.re":170
 	{ return KEYWORD }
 //line "java.go":5814
 yy398:
@@ -5869,7 +5869,7 @@ yyFillLabel270:
 		goto yy401
 	}
 yy401:
-//line "java.re":160
+//line "java.re":161
 	{ return KEYWORD }
 //line "java.go":5875
 yy402:
@@ -5896,7 +5896,7 @@ yyFillLabel271:
 		goto yy403
 	}
 yy403:
-//line "java.re":162
+//line "java.re":163
 	{ return KEYWORD }
 //line "java.go":5902
 yy404:
@@ -5957,7 +5957,7 @@ yyFillLabel274:
 		goto yy407
 	}
 yy407:
-//line "java.re":175
+//line "java.re":176
 	{ return KEYWORD }
 //line "java.go":5963
 yy408:
@@ -6001,15 +6001,15 @@ yyFillLabel276:
 		goto yy410
 	}
 yy410:
-//line "java.re":178
+//line "java.re":179
 	{ return KEYWORD }
 //line "java.go":6007
 yy411:
-//line "java.re":117
+//line "java.re":118
 	{ return END }
 //line "java.go":6011
 }
-//line "java.re":225
+//line "java.re":226
 
     }
 }

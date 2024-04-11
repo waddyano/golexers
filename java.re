@@ -38,6 +38,7 @@ func java_lex_str(in *Input) TokenType {
         "\\'"                { continue }
         "\\\""               { continue }
         "\\?"                { continue }
+        [0-9]+               { return STRINGWORD }
         //"\\" [0-7]{1,3}      { lex_oct(in.tok, in.cur, u); continue; }
         //"\\u" [0-9a-fA-F]{4} { lex_hex(in.tok, in.cur, u); continue; }
         //"\\U" [0-9a-fA-F]{8} { lex_hex(in.tok, in.cur, u); continue; }

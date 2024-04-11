@@ -38,6 +38,7 @@ func cpp_lex_str(in *Input) TokenType {
         "\\\""               { return STRING  }
         "\\?"                { return STRING  }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
+        [0-9]+               { return STRINGWORD }
         //"\\" [0-7]{1,3}      { lex_oct(in.tok, in.cur, u); continue; }
         //"\\u" [0-9a-fA-F]{4} { lex_hex(in.tok, in.cur, u); continue; }
         //"\\U" [0-9a-fA-F]{8} { lex_hex(in.tok, in.cur, u); continue; }
@@ -64,7 +65,8 @@ func cpp_lex_raw_str(in *Input, start bool) TokenType {
 									continue
 								}
 								in.state = STATE_NORMAL; in.raw_str_delim = nil; return END }
-        word        		{ return STRINGWORD }
+        word        		 { return STRINGWORD }
+        [0-9]+               { return STRINGWORD }
 	*/
 	}
 }
@@ -79,6 +81,7 @@ func cpp_lex_ml_comment(in *Input) TokenType {
         "*/"                 { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
         word       			 { return COMMENTWORD }
+        [0-9]+               { return COMMENTWORD }
 	*/
 	}
 }

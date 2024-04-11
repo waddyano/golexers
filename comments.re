@@ -21,6 +21,7 @@ func lex_eol_comment(in *Input) TokenType {
         "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return NEWLINE }
         $                    { return END }
         word        		 { return COMMENTWORD }
+        [0-9]+               { return COMMENTWORD }
 	*/
 	}
 }
@@ -34,6 +35,7 @@ func lex_ml_comment(in *Input) TokenType {
         "*/"                 { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
         word       			 { return COMMENTWORD }
+        [0-9]+               { return COMMENTWORD }
 	*/
 	}
 }
