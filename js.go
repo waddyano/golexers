@@ -8,7 +8,7 @@ package golexers
 
 //line "word.re":1
 
-//line "word.re":8
+//line "word.re":10
 //line "js.re":3
 
 
@@ -232,7 +232,7 @@ yy23:
 	{ return -1 }
 //line "js.go":234
 }
-//line "js.re":50
+//line "js.re":49
 
 	}
 }
@@ -346,7 +346,7 @@ yyFillLabel5:
 yy25:
 	in.cursor += 1
 yy26:
-//line "js.re":58
+//line "js.re":57
 	{ return STRING }
 //line "js.go":352
 yy27:
@@ -373,12 +373,12 @@ yyFillLabel6:
 		goto yy28
 	}
 yy28:
-//line "js.re":61
+//line "js.re":60
 	{ continue }
 //line "js.go":379
 yy29:
 	in.cursor += 1
-//line "js.re":60
+//line "js.re":59
 	{ in.bolcursor = in.cursor; in.line += 1; return STRING }
 //line "js.go":384
 yy30:
@@ -397,7 +397,7 @@ yyFillLabel7:
 		goto yy31
 	}
 yy31:
-//line "js.re":66
+//line "js.re":65
 	{ return STRINGWORD }
 //line "js.go":403
 yy32:
@@ -498,12 +498,12 @@ yyFillLabel8:
 		goto yy33
 	}
 yy33:
-//line "js.re":65
+//line "js.re":64
 	{ return STRINGWORD }
 //line "js.go":504
 yy34:
 	in.cursor += 1
-//line "js.re":63
+//line "js.re":62
 	{ in.state = STATE_NORMAL; return STRING }
 //line "js.go":509
 yy35:
@@ -8365,11 +8365,11 @@ yyFillLabel376:
 		goto yy66
 	}
 yy404:
-//line "js.re":59
+//line "js.re":58
 	{ return -1 }
 //line "js.go":8371
 }
-//line "js.re":67
+//line "js.re":66
 
 	}
 }
@@ -8488,7 +8488,7 @@ yyFillLabel377:
 yy406:
 	in.cursor += 1
 yy407:
-//line "js.re":80
+//line "js.re":79
 	{ return PUNCTUATION }
 //line "js.go":8494
 yy408:
@@ -8515,17 +8515,17 @@ yyFillLabel378:
 		goto yy409
 	}
 yy409:
-//line "js.re":83
+//line "js.re":82
 	{ continue }
 //line "js.go":8521
 yy410:
 	in.cursor += 1
-//line "js.re":82
+//line "js.re":81
 	{ in.bolcursor = in.cursor; in.line += 1; in.state = STATE_NORMAL; continue }
 //line "js.go":8526
 yy411:
 	in.cursor += 1
-//line "js.re":85
+//line "js.re":84
 	{ in.state = STATE_NORMAL; return PUNCTUATION }
 //line "js.go":8531
 yy412:
@@ -8626,7 +8626,7 @@ yyFillLabel379:
 		goto yy413
 	}
 yy413:
-//line "js.re":89
+//line "js.re":88
 	{ return IDENTIFIER }
 //line "js.go":8632
 yy414:
@@ -10382,12 +10382,12 @@ yyFillLabel442:
 	}
 yy478:
 	in.cursor += 1
-//line "js.re":86
+//line "js.re":85
 	{ return PUNCTUATION }
 //line "js.go":10388
 yy479:
 	in.cursor += 1
-//line "js.re":87
+//line "js.re":86
 	{ return PUNCTUATION }
 //line "js.go":10393
 yy480:
@@ -16515,11 +16515,11 @@ yyFillLabel748:
 		goto yy446
 	}
 yy786:
-//line "js.re":81
+//line "js.re":80
 	{ return -1 }
 //line "js.go":16521
 }
-//line "js.re":90
+//line "js.re":89
 
 	}
 }
@@ -16540,17 +16540,17 @@ yyFillLabel749:
 	case '*':
 		goto yy791
 	case '0','1','2','3','4','5','6','7','8','9':
-		goto yy792
+		fallthrough
 	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
 		fallthrough
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy794
+		goto yy792
 	case 0xC2:
-		goto yy796
+		goto yy794
 	case 0xC3:
-		goto yy797
+		goto yy795
 	case 0xC4,0xC5,0xC6,0xC7,0xC8,0xC9,0xCA:
 		fallthrough
 	case 0xD0,0xD1:
@@ -16558,81 +16558,81 @@ yyFillLabel749:
 	case 0xD3:
 		fallthrough
 	case 0xDA:
-		goto yy798
+		goto yy796
 	case 0xCB:
-		goto yy799
+		goto yy797
 	case 0xCD:
-		goto yy800
+		goto yy798
 	case 0xCE:
-		goto yy801
+		goto yy799
 	case 0xCF:
-		goto yy802
+		goto yy800
 	case 0xD2:
-		goto yy803
+		goto yy801
 	case 0xD4:
-		goto yy804
+		goto yy802
 	case 0xD5:
-		goto yy805
+		goto yy803
 	case 0xD6:
-		goto yy806
+		goto yy804
 	case 0xD7:
-		goto yy807
+		goto yy805
 	case 0xD8:
-		goto yy808
+		goto yy806
 	case 0xD9:
-		goto yy809
+		goto yy807
 	case 0xDB:
-		goto yy810
+		goto yy808
 	case 0xDC:
-		goto yy811
+		goto yy809
 	case 0xDD:
-		goto yy812
+		goto yy810
 	case 0xDE:
-		goto yy813
+		goto yy811
 	case 0xDF:
-		goto yy814
+		goto yy812
 	case 0xE0:
-		goto yy815
+		goto yy813
 	case 0xE1:
-		goto yy816
+		goto yy814
 	case 0xE2:
-		goto yy817
+		goto yy815
 	case 0xE3:
-		goto yy818
+		goto yy816
 	case 0xE4:
-		goto yy819
+		goto yy817
 	case 0xE5,0xE6,0xE7,0xE8:
 		fallthrough
 	case 0xEB,0xEC:
-		goto yy820
+		goto yy818
 	case 0xE9:
-		goto yy821
+		goto yy819
 	case 0xEA:
-		goto yy822
+		goto yy820
 	case 0xED:
-		goto yy823
+		goto yy821
 	case 0xEF:
-		goto yy824
+		goto yy822
 	case 0xF0:
-		goto yy825
+		goto yy823
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel749
 			}
-			goto yy1165
+			goto yy1162
 		}
 		goto yy788
 	}
 yy788:
 	in.cursor += 1
 yy789:
-//line "js.re":98
+//line "js.re":97
 	{ return COMMENT }
 //line "js.go":16633
 yy790:
 	in.cursor += 1
-//line "js.re":99
+//line "js.re":98
 	{ in.bolcursor = in.cursor; in.line += 1; continue }
 //line "js.go":16638
 yy791:
@@ -16641,7 +16641,7 @@ yyFillLabel750:
 	yych = peek(in)
 	switch (yych) {
 	case '/':
-		goto yy826
+		goto yy824
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16651,29 +16651,10 @@ yyFillLabel750:
 		goto yy789
 	}
 yy792:
-	in.cursor += 1
-yyFillLabel751:
-	yych = peek(in)
-	switch (yych) {
-	case '0','1','2','3','4','5','6','7','8','9':
-		goto yy792
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel751
-			}
-		}
-		goto yy793
-	}
-yy793:
-//line "js.re":103
-	{ return COMMENTWORD }
-//line "js.go":16672
-yy794:
 	yyaccept = 0
 	in.cursor += 1
 	in.marker = in.cursor
-yyFillLabel752:
+yyFillLabel751:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -16685,11 +16666,11 @@ yyFillLabel752:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy794
+		goto yy792
 	case 0xC2:
-		goto yy827
+		goto yy825
 	case 0xC3:
-		goto yy829
+		goto yy827
 	case 0xC4,0xC5,0xC6,0xC7,0xC8,0xC9,0xCA:
 		fallthrough
 	case 0xCC:
@@ -16699,80 +16680,80 @@ yyFillLabel752:
 	case 0xD3:
 		fallthrough
 	case 0xDA:
-		goto yy830
+		goto yy828
 	case 0xCB:
-		goto yy831
+		goto yy829
 	case 0xCD:
-		goto yy832
+		goto yy830
 	case 0xCE:
-		goto yy833
+		goto yy831
 	case 0xCF:
-		goto yy834
+		goto yy832
 	case 0xD2:
-		goto yy835
+		goto yy833
 	case 0xD4:
-		goto yy836
+		goto yy834
 	case 0xD5:
-		goto yy837
+		goto yy835
 	case 0xD6:
-		goto yy838
+		goto yy836
 	case 0xD7:
-		goto yy839
+		goto yy837
 	case 0xD8:
-		goto yy840
+		goto yy838
 	case 0xD9:
-		goto yy841
+		goto yy839
 	case 0xDB:
-		goto yy842
+		goto yy840
 	case 0xDC:
-		goto yy843
+		goto yy841
 	case 0xDD:
-		goto yy844
+		goto yy842
 	case 0xDE:
-		goto yy845
+		goto yy843
 	case 0xDF:
-		goto yy846
+		goto yy844
 	case 0xE0:
-		goto yy847
+		goto yy845
 	case 0xE1:
-		goto yy848
+		goto yy846
 	case 0xE2:
-		goto yy849
+		goto yy847
 	case 0xE3:
-		goto yy850
+		goto yy848
 	case 0xE4:
-		goto yy851
+		goto yy849
 	case 0xE5,0xE6,0xE7,0xE8:
 		fallthrough
 	case 0xEB,0xEC:
-		goto yy852
+		goto yy850
 	case 0xE9:
-		goto yy853
+		goto yy851
 	case 0xEA:
-		goto yy854
+		goto yy852
 	case 0xED:
-		goto yy855
+		goto yy853
 	case 0xEF:
-		goto yy856
+		goto yy854
 	case 0xF0:
-		goto yy857
+		goto yy855
 	case 0xF3:
-		goto yy858
+		goto yy856
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel752
+				goto yyFillLabel751
 			}
 		}
-		goto yy795
+		goto yy793
 	}
-yy795:
-//line "js.re":102
+yy793:
+//line "js.re":101
 	{ return COMMENTWORD }
-//line "js.go":16773
-yy796:
+//line "js.go":16754
+yy794:
 	in.cursor += 1
-yyFillLabel753:
+yyFillLabel752:
 	yych = peek(in)
 	switch (yych) {
 	case 0xAA:
@@ -16780,7 +16761,26 @@ yyFillLabel753:
 	case 0xB5:
 		fallthrough
 	case 0xBA:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel752
+			}
+		}
+		goto yy789
+	}
+yy795:
+	in.cursor += 1
+yyFillLabel753:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
+		fallthrough
+	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
+		fallthrough
+	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16789,17 +16789,13 @@ yyFillLabel753:
 		}
 		goto yy789
 	}
-yy797:
+yy796:
 	in.cursor += 1
 yyFillLabel754:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
-		fallthrough
-	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
-		fallthrough
-	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16808,24 +16804,9 @@ yyFillLabel754:
 		}
 		goto yy789
 	}
-yy798:
+yy797:
 	in.cursor += 1
 yyFillLabel755:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel755
-			}
-		}
-		goto yy789
-	}
-yy799:
-	in.cursor += 1
-yyFillLabel756:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81:
@@ -16837,18 +16818,18 @@ yyFillLabel756:
 	case 0xAC:
 		fallthrough
 	case 0xAE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel756
+				goto yyFillLabel755
 			}
 		}
 		goto yy789
 	}
-yy800:
+yy798:
 	in.cursor += 1
-yyFillLabel757:
+yyFillLabel756:
 	yych = peek(in)
 	switch (yych) {
 	case 0xB0,0xB1,0xB2,0xB3,0xB4:
@@ -16858,18 +16839,18 @@ yyFillLabel757:
 	case 0xBA,0xBB,0xBC,0xBD:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel757
+				goto yyFillLabel756
 			}
 		}
 		goto yy789
 	}
-yy801:
+yy799:
 	in.cursor += 1
-yyFillLabel758:
+yyFillLabel757:
 	yych = peek(in)
 	switch (yych) {
 	case 0x86:
@@ -16881,7 +16862,24 @@ yyFillLabel758:
 	case 0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1:
 		fallthrough
 	case 0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel757
+			}
+		}
+		goto yy789
+	}
+yy800:
+	in.cursor += 1
+yyFillLabel758:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+		fallthrough
+	case 0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16890,15 +16888,15 @@ yyFillLabel758:
 		}
 		goto yy789
 	}
-yy802:
+yy801:
 	in.cursor += 1
 yyFillLabel759:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+	case 0x80,0x81:
 		fallthrough
-	case 0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16907,15 +16905,15 @@ yyFillLabel759:
 		}
 		goto yy789
 	}
-yy803:
+yy802:
 	in.cursor += 1
 yyFillLabel760:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
-	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16924,15 +16922,17 @@ yyFillLabel760:
 		}
 		goto yy789
 	}
-yy804:
+yy803:
 	in.cursor += 1
 yyFillLabel761:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
 		fallthrough
-	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x99:
+		fallthrough
+	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16941,17 +16941,13 @@ yyFillLabel761:
 		}
 		goto yy789
 	}
-yy805:
+yy804:
 	in.cursor += 1
 yyFillLabel762:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
-		fallthrough
-	case 0x99:
-		fallthrough
-	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16960,13 +16956,15 @@ yyFillLabel762:
 		}
 		goto yy789
 	}
-yy806:
+yy805:
 	in.cursor += 1
 yyFillLabel763:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
+		fallthrough
+	case 0xB0,0xB1,0xB2:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16975,15 +16973,13 @@ yyFillLabel763:
 		}
 		goto yy789
 	}
-yy807:
+yy806:
 	in.cursor += 1
 yyFillLabel764:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
-		fallthrough
-	case 0xB0,0xB1,0xB2:
-		goto yy794
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -16992,13 +16988,19 @@ yyFillLabel764:
 		}
 		goto yy789
 	}
-yy808:
+yy807:
 	in.cursor += 1
 yyFillLabel765:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		fallthrough
+	case 0xAE,0xAF:
+		fallthrough
+	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17007,28 +17009,9 @@ yyFillLabel765:
 		}
 		goto yy789
 	}
-yy809:
+yy808:
 	in.cursor += 1
 yyFillLabel766:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
-		fallthrough
-	case 0xAE,0xAF:
-		fallthrough
-	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel766
-			}
-		}
-		goto yy789
-	}
-yy810:
-	in.cursor += 1
-yyFillLabel767:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93:
@@ -17037,12 +17020,27 @@ yyFillLabel767:
 		fallthrough
 	case 0xA5,0xA6:
 		fallthrough
-	case 0xAE,0xAF:
-		fallthrough
-	case 0xBA,0xBB,0xBC:
+	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel766
+			}
+		}
+		goto yy789
+	}
+yy809:
+	in.cursor += 1
+yyFillLabel767:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90:
+		fallthrough
+	case 0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17051,15 +17049,13 @@ yyFillLabel767:
 		}
 		goto yy789
 	}
-yy811:
+yy810:
 	in.cursor += 1
 yyFillLabel768:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90:
-		fallthrough
-	case 0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		goto yy794
+	case 0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17068,13 +17064,15 @@ yyFillLabel768:
 		}
 		goto yy789
 	}
-yy812:
+yy811:
 	in.cursor += 1
 yyFillLabel769:
 	yych = peek(in)
 	switch (yych) {
-	case 0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5:
+		fallthrough
+	case 0xB1:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17083,15 +17081,17 @@ yyFillLabel769:
 		}
 		goto yy789
 	}
-yy813:
+yy812:
 	in.cursor += 1
 yyFillLabel770:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
-	case 0xB1:
-		goto yy794
+	case 0xB4,0xB5:
+		fallthrough
+	case 0xBA:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17100,17 +17100,73 @@ yyFillLabel770:
 		}
 		goto yy789
 	}
-yy814:
+yy813:
+	yyaccept = 1
 	in.cursor += 1
+	in.marker = in.cursor
 yyFillLabel771:
 	yych = peek(in)
 	switch (yych) {
-	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
-		fallthrough
-	case 0xB4,0xB5:
-		fallthrough
+	case 0xA0:
+		goto yy857
+	case 0xA1:
+		goto yy858
+	case 0xA2:
+		goto yy859
+	case 0xA4:
+		goto yy860
+	case 0xA5:
+		goto yy861
+	case 0xA6:
+		goto yy862
+	case 0xA7:
+		goto yy863
+	case 0xA8:
+		goto yy864
+	case 0xA9:
+		goto yy865
+	case 0xAA:
+		goto yy866
+	case 0xAB:
+		goto yy867
+	case 0xAC:
+		goto yy868
+	case 0xAD:
+		goto yy869
+	case 0xAE:
+		goto yy870
+	case 0xAF:
+		goto yy871
+	case 0xB0:
+		goto yy872
+	case 0xB1:
+		goto yy873
+	case 0xB2:
+		goto yy874
+	case 0xB3:
+		goto yy875
+	case 0xB4:
+		goto yy876
+	case 0xB5:
+		goto yy877
+	case 0xB6:
+		goto yy878
+	case 0xB7:
+		goto yy879
+	case 0xB8:
+		goto yy880
+	case 0xB9:
+		goto yy881
 	case 0xBA:
-		goto yy794
+		goto yy882
+	case 0xBB:
+		goto yy883
+	case 0xBC:
+		goto yy884
+	case 0xBD:
+		goto yy885
+	case 0xBE:
+		goto yy886
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17119,73 +17175,103 @@ yyFillLabel771:
 		}
 		goto yy789
 	}
-yy815:
+yy814:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel772:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0:
-		goto yy859
-	case 0xA1:
-		goto yy860
-	case 0xA2:
-		goto yy861
-	case 0xA4:
-		goto yy862
-	case 0xA5:
-		goto yy863
-	case 0xA6:
-		goto yy864
-	case 0xA7:
-		goto yy865
-	case 0xA8:
-		goto yy866
-	case 0xA9:
-		goto yy867
-	case 0xAA:
-		goto yy868
-	case 0xAB:
-		goto yy869
-	case 0xAC:
-		goto yy870
-	case 0xAD:
-		goto yy871
-	case 0xAE:
-		goto yy872
-	case 0xAF:
-		goto yy873
-	case 0xB0:
-		goto yy874
-	case 0xB1:
-		goto yy875
-	case 0xB2:
-		goto yy876
-	case 0xB3:
-		goto yy877
-	case 0xB4:
-		goto yy878
-	case 0xB5:
-		goto yy879
-	case 0xB6:
-		goto yy880
-	case 0xB7:
-		fallthrough
-	case 0xB9:
-		goto yy881
-	case 0xB8:
-		goto yy882
-	case 0xBA:
-		goto yy883
-	case 0xBB:
-		goto yy884
-	case 0xBC:
-		goto yy885
-	case 0xBD:
-		goto yy886
-	case 0xBE:
+	case 0x80:
 		goto yy887
+	case 0x81:
+		goto yy888
+	case 0x82:
+		goto yy889
+	case 0x83:
+		goto yy890
+	case 0x84,0x85,0x86,0x87,0x88:
+		fallthrough
+	case 0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98:
+		fallthrough
+	case 0xB4,0xB5,0xB6:
+		fallthrough
+	case 0xB8,0xB9,0xBA,0xBB:
+		goto yy828
+	case 0x89:
+		goto yy891
+	case 0x8A:
+		goto yy892
+	case 0x8B:
+		goto yy893
+	case 0x8C:
+		goto yy894
+	case 0x8D:
+		goto yy895
+	case 0x8E:
+		goto yy896
+	case 0x8F:
+		goto yy897
+	case 0x90:
+		goto yy898
+	case 0x99:
+		goto yy899
+	case 0x9A:
+		goto yy900
+	case 0x9B:
+		goto yy901
+	case 0x9C:
+		goto yy902
+	case 0x9D:
+		goto yy903
+	case 0x9E:
+		goto yy904
+	case 0x9F:
+		goto yy905
+	case 0xA0:
+		goto yy906
+	case 0xA1:
+		goto yy907
+	case 0xA2:
+		goto yy908
+	case 0xA3:
+		goto yy909
+	case 0xA4:
+		goto yy910
+	case 0xA5:
+		goto yy911
+	case 0xA6:
+		goto yy912
+	case 0xA7:
+		goto yy913
+	case 0xA8:
+		goto yy914
+	case 0xA9:
+		goto yy915
+	case 0xAA:
+		goto yy916
+	case 0xAC:
+		goto yy917
+	case 0xAD:
+		goto yy918
+	case 0xAE:
+		goto yy919
+	case 0xAF:
+		goto yy920
+	case 0xB0:
+		goto yy921
+	case 0xB1:
+		goto yy922
+	case 0xB3:
+		goto yy923
+	case 0xBC:
+		goto yy924
+	case 0xBD:
+		goto yy925
+	case 0xBE:
+		goto yy926
+	case 0xBF:
+		goto yy927
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17194,103 +17280,41 @@ yyFillLabel772:
 		}
 		goto yy789
 	}
-yy816:
+yy815:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel773:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy888
 	case 0x81:
-		goto yy889
-	case 0x82:
-		goto yy890
-	case 0x83:
-		goto yy891
-	case 0x84,0x85,0x86,0x87,0x88:
-		fallthrough
-	case 0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98:
-		fallthrough
-	case 0xB4,0xB5,0xB6:
-		fallthrough
-	case 0xB8,0xB9,0xBA,0xBB:
-		goto yy830
-	case 0x89:
-		goto yy892
-	case 0x8A:
-		goto yy893
-	case 0x8B:
-		goto yy894
-	case 0x8C:
-		goto yy895
-	case 0x8D:
-		goto yy896
-	case 0x8E:
-		goto yy897
-	case 0x8F:
-		goto yy898
-	case 0x90:
-		goto yy899
-	case 0x99:
-		goto yy900
-	case 0x9A:
-		goto yy901
-	case 0x9B:
-		goto yy902
-	case 0x9C:
-		goto yy903
-	case 0x9D:
-		goto yy904
-	case 0x9E:
-		goto yy905
-	case 0x9F:
-		goto yy906
-	case 0xA0:
-		goto yy907
-	case 0xA1:
-		goto yy908
-	case 0xA2:
-		goto yy909
-	case 0xA3:
-		goto yy910
-	case 0xA4:
-		goto yy911
-	case 0xA5:
-		goto yy912
-	case 0xA6:
-		goto yy913
-	case 0xA7:
-		goto yy914
-	case 0xA8:
-		goto yy915
-	case 0xA9:
-		goto yy916
-	case 0xAA:
-		goto yy917
-	case 0xAC:
-		goto yy918
-	case 0xAD:
-		goto yy919
-	case 0xAE:
-		goto yy920
-	case 0xAF:
-		goto yy921
-	case 0xB0:
-		goto yy922
-	case 0xB1:
-		goto yy923
-	case 0xB3:
-		goto yy924
-	case 0xBC:
-		goto yy925
-	case 0xBD:
-		goto yy926
-	case 0xBE:
-		goto yy927
-	case 0xBF:
 		goto yy928
+	case 0x82:
+		goto yy929
+	case 0x84:
+		goto yy930
+	case 0x85:
+		goto yy931
+	case 0x86:
+		goto yy932
+	case 0xB0:
+		goto yy933
+	case 0xB1:
+		goto yy934
+	case 0xB2:
+		goto yy828
+	case 0xB3:
+		goto yy935
+	case 0xB4:
+		goto yy936
+	case 0xB5:
+		goto yy937
+	case 0xB6:
+		goto yy938
+	case 0xB7:
+		goto yy939
+	case 0xB8:
+		goto yy940
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17299,41 +17323,31 @@ yyFillLabel773:
 		}
 		goto yy789
 	}
-yy817:
+yy816:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel774:
 	yych = peek(in)
 	switch (yych) {
-	case 0x81:
-		goto yy929
-	case 0x82:
-		goto yy930
-	case 0x84:
-		goto yy931
-	case 0x85:
-		goto yy932
-	case 0x86:
-		goto yy933
-	case 0xB0:
-		goto yy934
-	case 0xB1:
-		goto yy935
-	case 0xB2:
-		goto yy830
-	case 0xB3:
-		goto yy936
-	case 0xB4:
-		goto yy937
-	case 0xB5:
-		goto yy938
-	case 0xB6:
-		goto yy939
-	case 0xB7:
-		goto yy940
-	case 0xB8:
+	case 0x80:
 		goto yy941
+	case 0x81:
+		goto yy898
+	case 0x82:
+		goto yy942
+	case 0x83:
+		goto yy943
+	case 0x84:
+		goto yy944
+	case 0x85:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy828
+	case 0x86:
+		goto yy945
+	case 0x87:
+		goto yy946
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17342,31 +17356,19 @@ yyFillLabel774:
 		}
 		goto yy789
 	}
-yy818:
+yy817:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel775:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy942
-	case 0x81:
-		goto yy899
-	case 0x82:
-		goto yy943
-	case 0x83:
-		goto yy944
-	case 0x84:
-		goto yy945
-	case 0x85:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
 		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
-	case 0x86:
-		goto yy946
-	case 0x87:
-		goto yy947
+	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy828
+	case 0xB6:
+		goto yy909
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17375,19 +17377,15 @@ yyFillLabel775:
 		}
 		goto yy789
 	}
-yy819:
+yy818:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel776:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		fallthrough
-	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
-	case 0xB6:
-		goto yy910
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy828
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17396,15 +17394,17 @@ yyFillLabel776:
 		}
 		goto yy789
 	}
-yy820:
+yy819:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel777:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
+		goto yy828
+	case 0xBF:
+		goto yy947
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17413,30 +17413,11 @@ yyFillLabel777:
 		}
 		goto yy789
 	}
-yy821:
+yy820:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel778:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy830
-	case 0xBF:
-		goto yy948
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel778
-			}
-		}
-		goto yy789
-	}
-yy822:
-	yyaccept = 1
-	in.cursor += 1
-	in.marker = in.cursor
-yyFillLabel779:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
@@ -17446,55 +17427,76 @@ yyFillLabel779:
 	case 0x9D:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
+		goto yy828
 	case 0x92:
-		goto yy948
+		goto yy947
 	case 0x93:
-		goto yy949
+		goto yy948
 	case 0x98:
-		goto yy950
+		goto yy949
 	case 0x99:
-		goto yy951
+		goto yy950
 	case 0x9A:
-		goto yy952
+		goto yy951
 	case 0x9B:
-		goto yy953
+		goto yy952
 	case 0x9C:
-		goto yy954
+		goto yy953
 	case 0x9E:
-		goto yy955
+		goto yy954
 	case 0x9F:
-		goto yy956
+		goto yy955
 	case 0xA0:
-		goto yy957
+		goto yy956
 	case 0xA1:
-		goto yy905
+		goto yy904
 	case 0xA2:
-		goto yy958
+		goto yy957
 	case 0xA3:
-		goto yy959
+		goto yy958
 	case 0xA4:
-		goto yy960
+		goto yy959
 	case 0xA5:
-		goto yy961
+		goto yy960
 	case 0xA6:
-		goto yy962
+		goto yy961
 	case 0xA7:
-		goto yy963
+		goto yy962
 	case 0xA8:
-		goto yy964
+		goto yy963
 	case 0xA9:
-		goto yy965
+		goto yy964
 	case 0xAA:
-		goto yy966
+		goto yy965
 	case 0xAB:
-		goto yy967
+		goto yy966
 	case 0xAC:
-		goto yy968
+		goto yy967
 	case 0xAD:
-		goto yy969
+		goto yy968
 	case 0xAF:
+		goto yy969
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel778
+			}
+		}
+		goto yy789
+	}
+yy821:
+	yyaccept = 1
+	in.cursor += 1
+	in.marker = in.cursor
+yyFillLabel779:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
+		goto yy828
+	case 0x9E:
 		goto yy970
+	case 0x9F:
+		goto yy971
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17503,32 +17505,11 @@ yyFillLabel779:
 		}
 		goto yy789
 	}
-yy823:
+yy822:
 	yyaccept = 1
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel780:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
-		goto yy830
-	case 0x9E:
-		goto yy971
-	case 0x9F:
-		goto yy972
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel780
-			}
-		}
-		goto yy789
-	}
-yy824:
-	yyaccept = 1
-	in.cursor += 1
-	in.marker = in.cursor
-yyFillLabel781:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA4,0xA5,0xA6,0xA7,0xA8:
@@ -17538,39 +17519,78 @@ yyFillLabel781:
 	case 0xB0,0xB1,0xB2,0xB3:
 		fallthrough
 	case 0xBA:
-		goto yy830
+		goto yy828
 	case 0xA9:
-		goto yy973
+		goto yy972
 	case 0xAB:
-		goto yy974
+		goto yy973
 	case 0xAC:
-		goto yy975
+		goto yy974
 	case 0xAD:
-		goto yy976
+		goto yy975
 	case 0xAE:
-		goto yy845
-	case 0xAF:
-		goto yy977
-	case 0xB4:
-		goto yy978
-	case 0xB5:
 		goto yy843
+	case 0xAF:
+		goto yy976
+	case 0xB4:
+		goto yy977
+	case 0xB5:
+		goto yy841
 	case 0xB6:
-		goto yy979
+		goto yy978
 	case 0xB7:
-		goto yy980
+		goto yy979
 	case 0xB9:
-		goto yy981
+		goto yy980
 	case 0xBB:
-		goto yy982
+		goto yy981
 	case 0xBC:
-		goto yy983
+		goto yy982
 	case 0xBD:
-		goto yy984
+		goto yy983
 	case 0xBE:
-		goto yy985
+		goto yy984
 	case 0xBF:
+		goto yy985
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel780
+			}
+		}
+		goto yy789
+	}
+yy823:
+	yyaccept = 1
+	in.cursor += 1
+	in.marker = in.cursor
+yyFillLabel781:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90:
 		goto yy986
+	case 0x91:
+		goto yy987
+	case 0x92:
+		goto yy988
+	case 0x93:
+		goto yy989
+	case 0x96:
+		goto yy990
+	case 0x9B:
+		goto yy991
+	case 0x9D:
+		goto yy992
+	case 0x9E:
+		goto yy993
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		goto yy850
+	case 0xAA:
+		goto yy994
+	case 0xAB:
+		goto yy995
+	case 0xAF:
+		goto yy996
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -17579,53 +17599,14 @@ yyFillLabel781:
 		}
 		goto yy789
 	}
-yy825:
-	yyaccept = 1
+yy824:
 	in.cursor += 1
-	in.marker = in.cursor
-yyFillLabel782:
-	yych = peek(in)
-	switch (yych) {
-	case 0x90:
-		goto yy987
-	case 0x91:
-		goto yy988
-	case 0x92:
-		goto yy989
-	case 0x93:
-		goto yy990
-	case 0x96:
-		goto yy991
-	case 0x9B:
-		goto yy992
-	case 0x9D:
-		goto yy993
-	case 0x9E:
-		goto yy994
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		goto yy852
-	case 0xAA:
-		goto yy995
-	case 0xAB:
-		goto yy996
-	case 0xAF:
-		goto yy997
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel782
-			}
-		}
-		goto yy789
-	}
-yy826:
-	in.cursor += 1
-//line "js.re":100
+//line "js.re":99
 	{ in.state = STATE_NORMAL; return COMMENT }
-//line "js.go":17626
-yy827:
+//line "js.go":17607
+yy825:
 	in.cursor += 1
-yyFillLabel783:
+yyFillLabel782:
 	yych = peek(in)
 	switch (yych) {
 	case 0xAA:
@@ -17633,25 +17614,25 @@ yyFillLabel783:
 	case 0xB5:
 		fallthrough
 	case 0xBA:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel783
+				goto yyFillLabel782
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy828:
+yy826:
 	in.cursor = in.marker
 	if (yyaccept == 0) {
-		goto yy795
+		goto yy793
 	} else {
 		goto yy789
 	}
-yy829:
+yy827:
 	in.cursor += 1
-yyFillLabel784:
+yyFillLabel783:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
@@ -17659,33 +17640,33 @@ yyFillLabel784:
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
 		fallthrough
 	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel783
+			}
+		}
+		goto yy826
+	}
+yy828:
+	in.cursor += 1
+yyFillLabel784:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel784
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy830:
+yy829:
 	in.cursor += 1
 yyFillLabel785:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel785
-			}
-		}
-		goto yy828
-	}
-yy831:
-	in.cursor += 1
-yyFillLabel786:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81:
@@ -17697,18 +17678,18 @@ yyFillLabel786:
 	case 0xAC:
 		fallthrough
 	case 0xAE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel786
+				goto yyFillLabel785
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy832:
+yy830:
 	in.cursor += 1
-yyFillLabel787:
+yyFillLabel786:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4:
@@ -17718,18 +17699,18 @@ yyFillLabel787:
 	case 0xBA,0xBB,0xBC,0xBD:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel787
+				goto yyFillLabel786
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy833:
+yy831:
 	in.cursor += 1
-yyFillLabel788:
+yyFillLabel787:
 	yych = peek(in)
 	switch (yych) {
 	case 0x86:
@@ -17741,35 +17722,35 @@ yyFillLabel788:
 	case 0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1:
 		fallthrough
 	case 0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel787
+			}
+		}
+		goto yy826
+	}
+yy832:
+	in.cursor += 1
+yyFillLabel788:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+		fallthrough
+	case 0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel788
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy834:
+yy833:
 	in.cursor += 1
 yyFillLabel789:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		fallthrough
-	case 0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel789
-			}
-		}
-		goto yy828
-	}
-yy835:
-	in.cursor += 1
-yyFillLabel790:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81:
@@ -17777,35 +17758,35 @@ yyFillLabel790:
 	case 0x83,0x84,0x85,0x86,0x87:
 		fallthrough
 	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel789
+			}
+		}
+		goto yy826
+	}
+yy834:
+	in.cursor += 1
+yyFillLabel790:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		fallthrough
+	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel790
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy836:
+yy835:
 	in.cursor += 1
 yyFillLabel791:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		fallthrough
-	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel791
-			}
-		}
-		goto yy828
-	}
-yy837:
-	in.cursor += 1
-yyFillLabel792:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
@@ -17813,18 +17794,18 @@ yyFillLabel792:
 	case 0x99:
 		fallthrough
 	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel792
+				goto yyFillLabel791
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy838:
+yy836:
 	in.cursor += 1
-yyFillLabel793:
+yyFillLabel792:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
@@ -17832,18 +17813,18 @@ yyFillLabel793:
 	case 0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel793
+				goto yyFillLabel792
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy839:
+yy837:
 	in.cursor += 1
-yyFillLabel794:
+yyFillLabel793:
 	yych = peek(in)
 	switch (yych) {
 	case 0x81,0x82:
@@ -17855,52 +17836,52 @@ yyFillLabel794:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel793
+			}
+		}
+		goto yy826
+	}
+yy838:
+	in.cursor += 1
+yyFillLabel794:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel794
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy840:
+yy839:
 	in.cursor += 1
 yyFillLabel795:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
 		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel795
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy841:
+yy840:
 	in.cursor += 1
 yyFillLabel796:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		fallthrough
-	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel796
-			}
-		}
-		goto yy828
-	}
-yy842:
-	in.cursor += 1
-yyFillLabel797:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93:
@@ -17912,159 +17893,159 @@ yyFillLabel797:
 	case 0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel796
+			}
+		}
+		goto yy826
+	}
+yy841:
+	in.cursor += 1
+yyFillLabel797:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel797
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy843:
+yy842:
 	in.cursor += 1
 yyFillLabel798:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
+		fallthrough
+	case 0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel798
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy844:
+yy843:
 	in.cursor += 1
 yyFillLabel799:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
-		fallthrough
-	case 0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel799
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy845:
+yy844:
 	in.cursor += 1
 yyFillLabel800:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+		fallthrough
+	case 0xBA:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel800
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy846:
+yy845:
 	in.cursor += 1
 yyFillLabel801:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		fallthrough
+	case 0xA0:
+		goto yy997
+	case 0xA1:
+		goto yy998
+	case 0xA2:
+		goto yy859
+	case 0xA3:
+		goto yy999
+	case 0xA4:
+		goto yy828
+	case 0xA5:
+		goto yy1000
+	case 0xA6:
+		goto yy1001
+	case 0xA7:
+		goto yy1002
+	case 0xA8:
+		goto yy1003
+	case 0xA9:
+		goto yy1004
+	case 0xAA:
+		goto yy1005
+	case 0xAB:
+		goto yy1006
+	case 0xAC:
+		goto yy1007
+	case 0xAD:
+		goto yy1008
+	case 0xAE:
+		goto yy1009
+	case 0xAF:
+		goto yy1010
+	case 0xB0:
+		goto yy1011
+	case 0xB1:
+		goto yy1012
+	case 0xB2:
+		goto yy1013
+	case 0xB3:
+		goto yy1014
+	case 0xB4:
+		goto yy1015
+	case 0xB5:
+		goto yy1016
+	case 0xB6:
+		goto yy1017
+	case 0xB7:
+		goto yy1018
+	case 0xB8:
+		goto yy1019
+	case 0xB9:
+		goto yy1020
 	case 0xBA:
-		goto yy794
+		goto yy1021
+	case 0xBB:
+		goto yy1022
+	case 0xBC:
+		goto yy1023
+	case 0xBD:
+		goto yy1024
+	case 0xBE:
+		goto yy1025
+	case 0xBF:
+		goto yy1026
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel801
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy847:
+yy846:
 	in.cursor += 1
 yyFillLabel802:
-	yych = peek(in)
-	switch (yych) {
-	case 0xA0:
-		goto yy998
-	case 0xA1:
-		goto yy999
-	case 0xA2:
-		goto yy861
-	case 0xA3:
-		goto yy1000
-	case 0xA4:
-		goto yy830
-	case 0xA5:
-		goto yy1001
-	case 0xA6:
-		goto yy1002
-	case 0xA7:
-		goto yy1003
-	case 0xA8:
-		goto yy1004
-	case 0xA9:
-		goto yy1005
-	case 0xAA:
-		goto yy1006
-	case 0xAB:
-		goto yy1007
-	case 0xAC:
-		goto yy1008
-	case 0xAD:
-		goto yy1009
-	case 0xAE:
-		goto yy1010
-	case 0xAF:
-		goto yy1011
-	case 0xB0:
-		goto yy1012
-	case 0xB1:
-		goto yy1013
-	case 0xB2:
-		goto yy1014
-	case 0xB3:
-		goto yy1015
-	case 0xB4:
-		goto yy1016
-	case 0xB5:
-		goto yy1017
-	case 0xB6:
-		goto yy1018
-	case 0xB7:
-		goto yy1019
-	case 0xB8:
-		goto yy1020
-	case 0xB9:
-		goto yy1021
-	case 0xBA:
-		goto yy1022
-	case 0xBB:
-		goto yy1023
-	case 0xBC:
-		goto yy1024
-	case 0xBD:
-		goto yy1025
-	case 0xBE:
-		goto yy1026
-	case 0xBF:
-		goto yy1027
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel802
-			}
-		}
-		goto yy828
-	}
-yy848:
-	in.cursor += 1
-yyFillLabel803:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -18082,221 +18063,221 @@ yyFillLabel803:
 	case 0xB4,0xB5,0xB6:
 		fallthrough
 	case 0xB8,0xB9,0xBA,0xBB:
-		goto yy830
+		goto yy828
 	case 0x81:
-		goto yy1028
+		goto yy1027
 	case 0x82:
-		goto yy952
+		goto yy951
 	case 0x83:
-		goto yy891
+		goto yy890
 	case 0x89:
-		goto yy892
+		goto yy891
 	case 0x8A:
-		goto yy893
+		goto yy892
 	case 0x8B:
-		goto yy894
+		goto yy893
 	case 0x8C:
-		goto yy895
+		goto yy894
 	case 0x8D:
-		goto yy1029
+		goto yy1028
 	case 0x8E:
-		goto yy897
+		goto yy896
 	case 0x8F:
-		goto yy898
+		goto yy897
 	case 0x90:
-		goto yy899
+		goto yy898
 	case 0x99:
-		goto yy900
+		goto yy899
 	case 0x9A:
-		goto yy901
+		goto yy900
 	case 0x9B:
-		goto yy902
+		goto yy901
 	case 0x9C:
-		goto yy1030
+		goto yy1029
 	case 0x9D:
-		goto yy1031
+		goto yy1030
 	case 0x9F:
-		goto yy1032
+		goto yy1031
 	case 0xA0:
-		goto yy1033
+		goto yy1032
 	case 0xA1:
 		fallthrough
 	case 0xB0:
-		goto yy908
+		goto yy907
 	case 0xA2:
-		goto yy1034
+		goto yy1033
 	case 0xA3:
-		goto yy910
+		goto yy909
 	case 0xA4:
-		goto yy1035
+		goto yy1034
 	case 0xA5:
-		goto yy1036
+		goto yy911
 	case 0xA6:
-		goto yy1037
+		goto yy1035
 	case 0xA7:
-		goto yy1038
+		goto yy1036
 	case 0xA8:
-		goto yy1039
+		goto yy1037
 	case 0xA9:
-		goto yy1040
+		goto yy1038
 	case 0xAA:
-		goto yy1041
+		goto yy1039
 	case 0xAD:
-		goto yy1042
+		goto yy1040
 	case 0xAF:
-		goto yy905
+		goto yy904
 	case 0xB1:
-		goto yy1043
+		goto yy922
 	case 0xB3:
-		goto yy1044
+		goto yy1041
 	case 0xB7:
-		goto yy1045
+		goto yy1042
 	case 0xBC:
-		goto yy925
+		goto yy924
 	case 0xBD:
-		goto yy926
+		goto yy925
 	case 0xBE:
-		goto yy927
+		goto yy926
 	case 0xBF:
-		goto yy928
+		goto yy927
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel802
+			}
+		}
+		goto yy826
+	}
+yy847:
+	in.cursor += 1
+yyFillLabel803:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80:
+		goto yy1043
+	case 0x81:
+		goto yy1044
+	case 0x82:
+		goto yy929
+	case 0x83:
+		goto yy1045
+	case 0x84:
+		goto yy930
+	case 0x85:
+		goto yy931
+	case 0x86:
+		goto yy932
+	case 0xB0:
+		goto yy933
+	case 0xB1:
+		goto yy934
+	case 0xB2:
+		goto yy828
+	case 0xB3:
+		goto yy1046
+	case 0xB4:
+		goto yy936
+	case 0xB5:
+		goto yy1047
+	case 0xB6:
+		goto yy938
+	case 0xB7:
+		goto yy1048
+	case 0xB8:
+		goto yy940
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel803
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy849:
+yy848:
 	in.cursor += 1
 yyFillLabel804:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy1046
-	case 0x81:
-		goto yy1047
-	case 0x82:
-		goto yy930
-	case 0x83:
-		goto yy1048
-	case 0x84:
-		goto yy931
-	case 0x85:
-		goto yy932
-	case 0x86:
-		goto yy933
-	case 0xB0:
-		goto yy934
-	case 0xB1:
-		goto yy935
-	case 0xB2:
-		goto yy830
-	case 0xB3:
 		goto yy1049
-	case 0xB4:
-		goto yy937
-	case 0xB5:
+	case 0x81:
+		goto yy898
+	case 0x82:
 		goto yy1050
-	case 0xB6:
-		goto yy939
-	case 0xB7:
-		goto yy1051
-	case 0xB8:
-		goto yy941
+	case 0x83:
+		goto yy943
+	case 0x84:
+		goto yy944
+	case 0x85:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy828
+	case 0x86:
+		goto yy945
+	case 0x87:
+		goto yy946
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel804
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy850:
+yy849:
 	in.cursor += 1
 yyFillLabel805:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1052
-	case 0x81:
-		goto yy899
-	case 0x82:
-		goto yy1053
-	case 0x83:
-		goto yy944
-	case 0x84:
-		goto yy945
-	case 0x85:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
 		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
-	case 0x86:
-		goto yy946
-	case 0x87:
-		goto yy947
+	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy828
+	case 0xB6:
+		goto yy909
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel805
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy851:
+yy850:
 	in.cursor += 1
 yyFillLabel806:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		fallthrough
-	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
-	case 0xB6:
-		goto yy910
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy828
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel806
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy852:
+yy851:
 	in.cursor += 1
 yyFillLabel807:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
+		goto yy828
+	case 0xBF:
+		goto yy947
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel807
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy853:
+yy852:
 	in.cursor += 1
 yyFillLabel808:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy830
-	case 0xBF:
-		goto yy948
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel808
-			}
-		}
-		goto yy828
-	}
-yy854:
-	in.cursor += 1
-yyFillLabel809:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
@@ -18312,79 +18293,79 @@ yyFillLabel809:
 	case 0xAA:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
+		goto yy828
 	case 0x92:
-		goto yy948
+		goto yy947
 	case 0x93:
-		goto yy949
+		goto yy948
 	case 0x98:
-		goto yy1054
+		goto yy949
 	case 0x99:
-		goto yy1055
+		goto yy1051
 	case 0x9A:
-		goto yy1056
+		goto yy1052
 	case 0x9B:
-		goto yy845
+		goto yy843
 	case 0x9C:
-		goto yy954
+		goto yy953
 	case 0x9E:
-		goto yy955
+		goto yy954
 	case 0x9F:
-		goto yy956
+		goto yy955
 	case 0xA0:
-		goto yy1057
+		goto yy1053
 	case 0xA1:
-		goto yy905
+		goto yy904
 	case 0xA3:
-		goto yy1058
+		goto yy1054
 	case 0xA4:
-		goto yy973
+		goto yy972
 	case 0xA5:
-		goto yy1059
+		goto yy1055
 	case 0xA7:
-		goto yy1060
+		goto yy1056
 	case 0xA8:
-		goto yy1061
+		goto yy1057
 	case 0xA9:
-		goto yy1062
+		goto yy1058
 	case 0xAB:
-		goto yy1063
+		goto yy1059
 	case 0xAC:
-		goto yy968
+		goto yy967
 	case 0xAD:
-		goto yy969
+		goto yy968
 	case 0xAF:
-		goto yy1064
+		goto yy1060
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel808
+			}
+		}
+		goto yy826
+	}
+yy853:
+	in.cursor += 1
+yyFillLabel809:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
+		goto yy828
+	case 0x9E:
+		goto yy970
+	case 0x9F:
+		goto yy971
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel809
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy855:
+yy854:
 	in.cursor += 1
 yyFillLabel810:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
-		goto yy830
-	case 0x9E:
-		goto yy971
-	case 0x9F:
-		goto yy972
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel810
-			}
-		}
-		goto yy828
-	}
-yy856:
-	in.cursor += 1
-yyFillLabel811:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA4,0xA5,0xA6,0xA7,0xA8:
@@ -18394,104 +18375,104 @@ yyFillLabel811:
 	case 0xB0,0xB1,0xB2,0xB3:
 		fallthrough
 	case 0xBA:
-		goto yy830
+		goto yy828
 	case 0xA9:
-		goto yy973
+		goto yy972
 	case 0xAB:
-		goto yy974
+		goto yy973
 	case 0xAC:
-		goto yy1065
+		goto yy1061
 	case 0xAD:
-		goto yy976
+		goto yy975
 	case 0xAE:
-		goto yy845
-	case 0xAF:
-		goto yy977
-	case 0xB4:
-		goto yy978
-	case 0xB5:
 		goto yy843
+	case 0xAF:
+		goto yy976
+	case 0xB4:
+		goto yy977
+	case 0xB5:
+		goto yy841
 	case 0xB6:
-		goto yy979
+		goto yy978
 	case 0xB7:
-		goto yy980
+		goto yy979
 	case 0xB8:
-		goto yy1066
+		goto yy1062
 	case 0xB9:
-		goto yy1067
+		goto yy1063
 	case 0xBB:
-		goto yy982
+		goto yy981
 	case 0xBC:
-		goto yy1068
+		goto yy1064
 	case 0xBD:
-		goto yy984
+		goto yy983
 	case 0xBE:
-		goto yy985
+		goto yy984
 	case 0xBF:
-		goto yy986
+		goto yy985
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel810
+			}
+		}
+		goto yy826
+	}
+yy855:
+	in.cursor += 1
+yyFillLabel811:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90:
+		goto yy1065
+	case 0x91:
+		goto yy1066
+	case 0x92:
+		goto yy988
+	case 0x93:
+		goto yy989
+	case 0x96:
+		goto yy1067
+	case 0x9B:
+		goto yy1068
+	case 0x9D:
+		goto yy1069
+	case 0x9E:
+		goto yy1070
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		goto yy850
+	case 0xAA:
+		goto yy994
+	case 0xAB:
+		goto yy995
+	case 0xAF:
+		goto yy996
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel811
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy857:
+yy856:
 	in.cursor += 1
 yyFillLabel812:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90:
-		goto yy1069
-	case 0x91:
-		goto yy1070
-	case 0x92:
-		goto yy989
-	case 0x93:
-		goto yy990
-	case 0x96:
+	case 0xA0:
 		goto yy1071
-	case 0x9B:
-		goto yy1072
-	case 0x9D:
-		goto yy1073
-	case 0x9E:
-		goto yy1074
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		goto yy852
-	case 0xAA:
-		goto yy995
-	case 0xAB:
-		goto yy996
-	case 0xAF:
-		goto yy997
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel812
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy858:
+yy857:
 	in.cursor += 1
 yyFillLabel813:
-	yych = peek(in)
-	switch (yych) {
-	case 0xA0:
-		goto yy1075
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel813
-			}
-		}
-		goto yy828
-	}
-yy859:
-	in.cursor += 1
-yyFillLabel814:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
@@ -18501,84 +18482,86 @@ yyFillLabel814:
 	case 0xA4:
 		fallthrough
 	case 0xA8:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel813
+			}
+		}
+		goto yy826
+	}
+yy858:
+	in.cursor += 1
+yyFillLabel814:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel814
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy860:
+yy859:
 	in.cursor += 1
 yyFillLabel815:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98:
-		goto yy794
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel815
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy861:
+yy860:
 	in.cursor += 1
 yyFillLabel816:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
-		goto yy794
+	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
+		fallthrough
+	case 0xBD:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel816
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy862:
+yy861:
 	in.cursor += 1
 yyFillLabel817:
-	yych = peek(in)
-	switch (yych) {
-	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
-		fallthrough
-	case 0xBD:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel817
-			}
-		}
-		goto yy828
-	}
-yy863:
-	in.cursor += 1
-yyFillLabel818:
 	yych = peek(in)
 	switch (yych) {
 	case 0x90:
 		fallthrough
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1:
 		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		fallthrough
 	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel818
+				goto yyFillLabel817
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy864:
+yy862:
 	in.cursor += 1
-yyFillLabel819:
+yyFillLabel818:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -18596,18 +18579,18 @@ yyFillLabel819:
 	case 0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel819
+				goto yyFillLabel818
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy865:
+yy863:
 	in.cursor += 1
-yyFillLabel820:
+yyFillLabel819:
 	yych = peek(in)
 	switch (yych) {
 	case 0x8E:
@@ -18616,19 +18599,19 @@ yyFillLabel820:
 		fallthrough
 	case 0x9F,0xA0,0xA1:
 		fallthrough
-	case 0xB0,0xB1:
-		goto yy794
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel820
+				goto yyFillLabel819
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy866:
+yy864:
 	in.cursor += 1
-yyFillLabel821:
+yyFillLabel820:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A:
@@ -18644,37 +18627,39 @@ yyFillLabel821:
 	case 0xB5,0xB6:
 		fallthrough
 	case 0xB8,0xB9:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel821
+				goto yyFillLabel820
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy867:
+yy865:
 	in.cursor += 1
-yyFillLabel822:
+yyFillLabel821:
 	yych = peek(in)
 	switch (yych) {
 	case 0x99,0x9A,0x9B,0x9C:
 		fallthrough
 	case 0x9E:
 		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		fallthrough
 	case 0xB2,0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel822
+				goto yyFillLabel821
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy868:
+yy866:
 	in.cursor += 1
-yyFillLabel823:
+yyFillLabel822:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D:
@@ -18690,35 +18675,37 @@ yyFillLabel823:
 	case 0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel822
+			}
+		}
+		goto yy826
+	}
+yy867:
+	in.cursor += 1
+yyFillLabel823:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90:
+		fallthrough
+	case 0xA0,0xA1:
+		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel823
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy869:
+yy868:
 	in.cursor += 1
 yyFillLabel824:
-	yych = peek(in)
-	switch (yych) {
-	case 0x90:
-		fallthrough
-	case 0xA0,0xA1:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel824
-			}
-		}
-		goto yy828
-	}
-yy870:
-	in.cursor += 1
-yyFillLabel825:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
@@ -18734,37 +18721,39 @@ yyFillLabel825:
 	case 0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel825
+				goto yyFillLabel824
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy871:
+yy869:
 	in.cursor += 1
-yyFillLabel826:
+yyFillLabel825:
 	yych = peek(in)
 	switch (yych) {
 	case 0x9C,0x9D:
 		fallthrough
 	case 0x9F,0xA0,0xA1:
 		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		fallthrough
 	case 0xB1:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel826
+				goto yyFillLabel825
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy872:
+yy870:
 	in.cursor += 1
-yyFillLabel827:
+yyFillLabel826:
 	yych = peek(in)
 	switch (yych) {
 	case 0x83:
@@ -18786,33 +18775,35 @@ yyFillLabel827:
 	case 0xA8,0xA9,0xAA:
 		fallthrough
 	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel826
+			}
+		}
+		goto yy826
+	}
+yy871:
+	in.cursor += 1
+yyFillLabel827:
+	yych = peek(in)
+	switch (yych) {
+	case 0x90:
+		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel827
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy873:
+yy872:
 	in.cursor += 1
 yyFillLabel828:
-	yych = peek(in)
-	switch (yych) {
-	case 0x90:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel828
-			}
-		}
-		goto yy828
-	}
-yy874:
-	in.cursor += 1
-yyFillLabel829:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
@@ -18824,35 +18815,37 @@ yyFillLabel829:
 	case 0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel828
+			}
+		}
+		goto yy826
+	}
+yy873:
+	in.cursor += 1
+yyFillLabel829:
+	yych = peek(in)
+	switch (yych) {
+	case 0x98,0x99:
+		fallthrough
+	case 0xA0,0xA1:
+		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel829
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy875:
+yy874:
 	in.cursor += 1
 yyFillLabel830:
-	yych = peek(in)
-	switch (yych) {
-	case 0x98,0x99:
-		fallthrough
-	case 0xA0,0xA1:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel830
-			}
-		}
-		goto yy828
-	}
-yy876:
-	in.cursor += 1
-yyFillLabel831:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
@@ -18866,37 +18859,39 @@ yyFillLabel831:
 	case 0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel831
+				goto yyFillLabel830
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy877:
+yy875:
 	in.cursor += 1
-yyFillLabel832:
+yyFillLabel831:
 	yych = peek(in)
 	switch (yych) {
 	case 0x9E:
 		fallthrough
 	case 0xA0,0xA1:
 		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		fallthrough
 	case 0xB1,0xB2:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel832
+				goto yyFillLabel831
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy878:
+yy876:
 	in.cursor += 1
-yyFillLabel833:
+yyFillLabel832:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
@@ -18906,37 +18901,39 @@ yyFillLabel833:
 	case 0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel833
+				goto yyFillLabel832
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy879:
+yy877:
 	in.cursor += 1
-yyFillLabel834:
+yyFillLabel833:
 	yych = peek(in)
 	switch (yych) {
 	case 0x8E:
 		fallthrough
 	case 0xA0,0xA1:
 		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		fallthrough
 	case 0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel834
+				goto yyFillLabel833
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy880:
+yy878:
 	in.cursor += 1
-yyFillLabel835:
+yyFillLabel834:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
@@ -18946,48 +18943,67 @@ yyFillLabel835:
 	case 0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel834
+			}
+		}
+		goto yy826
+	}
+yy879:
+	in.cursor += 1
+yyFillLabel835:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
+		fallthrough
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel835
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy881:
+yy880:
 	in.cursor += 1
 yyFillLabel836:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
-		goto yy794
+	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0:
+		fallthrough
+	case 0xB2,0xB3:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel836
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy882:
+yy881:
 	in.cursor += 1
 yyFillLabel837:
 	yych = peek(in)
 	switch (yych) {
-	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
 		fallthrough
-	case 0xB2,0xB3:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel837
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy883:
+yy882:
 	in.cursor += 1
 yyFillLabel838:
 	yych = peek(in)
@@ -19019,16 +19035,16 @@ yyFillLabel838:
 	case 0xB2,0xB3:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel838
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy884:
+yy883:
 	in.cursor += 1
 yyFillLabel839:
 	yych = peek(in)
@@ -19037,32 +19053,36 @@ yyFillLabel839:
 		fallthrough
 	case 0x86:
 		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0x9C,0x9D,0x9E,0x9F:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel839
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy885:
+yy884:
 	in.cursor += 1
 yyFillLabel840:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy794
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel840
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy886:
+yy885:
 	in.cursor += 1
 yyFillLabel841:
 	yych = peek(in)
@@ -19070,31 +19090,31 @@ yyFillLabel841:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
 		fallthrough
 	case 0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel841
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy887:
+yy886:
 	in.cursor += 1
 yyFillLabel842:
 	yych = peek(in)
 	switch (yych) {
 	case 0x88,0x89,0x8A,0x8B,0x8C:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel842
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy888:
+yy887:
 	in.cursor += 1
 yyFillLabel843:
 	yych = peek(in)
@@ -19102,20 +19122,22 @@ yyFillLabel843:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel843
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy889:
+yy888:
 	in.cursor += 1
 yyFillLabel844:
 	yych = peek(in)
 	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
+		fallthrough
 	case 0x90,0x91,0x92,0x93,0x94,0x95:
 		fallthrough
 	case 0x9A,0x9B,0x9C,0x9D:
@@ -19127,16 +19149,16 @@ yyFillLabel844:
 	case 0xAE,0xAF,0xB0:
 		fallthrough
 	case 0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel844
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy890:
+yy889:
 	in.cursor += 1
 yyFillLabel845:
 	yych = peek(in)
@@ -19145,17 +19167,19 @@ yyFillLabel845:
 		fallthrough
 	case 0x8E:
 		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel845
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy891:
+yy890:
 	in.cursor += 1
 yyFillLabel846:
 	yych = peek(in)
@@ -19169,16 +19193,16 @@ yyFillLabel846:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel846
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy892:
+yy891:
 	in.cursor += 1
 yyFillLabel847:
 	yych = peek(in)
@@ -19194,16 +19218,16 @@ yyFillLabel847:
 	case 0x9A,0x9B,0x9C,0x9D:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel847
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy893:
+yy892:
 	in.cursor += 1
 yyFillLabel848:
 	yych = peek(in)
@@ -19217,16 +19241,16 @@ yyFillLabel848:
 	case 0xB2,0xB3,0xB4,0xB5:
 		fallthrough
 	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel848
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy894:
+yy893:
 	in.cursor += 1
 yyFillLabel849:
 	yych = peek(in)
@@ -19238,16 +19262,16 @@ yyFillLabel849:
 	case 0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
 		fallthrough
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel849
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy895:
+yy894:
 	in.cursor += 1
 yyFillLabel850:
 	yych = peek(in)
@@ -19257,31 +19281,31 @@ yyFillLabel850:
 	case 0x92,0x93,0x94,0x95:
 		fallthrough
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel850
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy896:
+yy895:
 	in.cursor += 1
 yyFillLabel851:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel851
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy897:
+yy896:
 	in.cursor += 1
 yyFillLabel852:
 	yych = peek(in)
@@ -19289,46 +19313,46 @@ yyFillLabel852:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel852
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy898:
+yy897:
 	in.cursor += 1
 yyFillLabel853:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel853
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy899:
+yy898:
 	in.cursor += 1
 yyFillLabel854:
 	yych = peek(in)
 	switch (yych) {
 	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel854
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy900:
+yy899:
 	in.cursor += 1
 yyFillLabel855:
 	yych = peek(in)
@@ -19336,16 +19360,16 @@ yyFillLabel855:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC:
 		fallthrough
 	case 0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel855
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy901:
+yy900:
 	in.cursor += 1
 yyFillLabel856:
 	yych = peek(in)
@@ -19353,16 +19377,16 @@ yyFillLabel856:
 	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel856
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy902:
+yy901:
 	in.cursor += 1
 yyFillLabel857:
 	yych = peek(in)
@@ -19370,16 +19394,16 @@ yyFillLabel857:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
 	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel857
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy903:
+yy902:
 	in.cursor += 1
 yyFillLabel858:
 	yych = peek(in)
@@ -19389,16 +19413,16 @@ yyFillLabel858:
 	case 0x8E,0x8F,0x90,0x91:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel858
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy904:
+yy903:
 	in.cursor += 1
 yyFillLabel859:
 	yych = peek(in)
@@ -19408,31 +19432,31 @@ yyFillLabel859:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC:
 		fallthrough
 	case 0xAE,0xAF,0xB0:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel859
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy905:
+yy904:
 	in.cursor += 1
 yyFillLabel860:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel860
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy906:
+yy905:
 	in.cursor += 1
 yyFillLabel861:
 	yych = peek(in)
@@ -19440,46 +19464,50 @@ yyFillLabel861:
 	case 0x97:
 		fallthrough
 	case 0x9C:
-		goto yy794
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel861
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy907:
+yy906:
 	in.cursor += 1
 yyFillLabel862:
 	yych = peek(in)
 	switch (yych) {
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel862
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy908:
+yy907:
 	in.cursor += 1
 yyFillLabel863:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel863
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy909:
+yy908:
 	in.cursor += 1
 yyFillLabel864:
 	yych = peek(in)
@@ -19489,93 +19517,95 @@ yyFillLabel864:
 	case 0xAA:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel864
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy910:
+yy909:
 	in.cursor += 1
 yyFillLabel865:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel865
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy911:
+yy910:
 	in.cursor += 1
 yyFillLabel866:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel866
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy912:
+yy911:
 	in.cursor += 1
 yyFillLabel867:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
+	case 0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel867
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy913:
+yy912:
 	in.cursor += 1
 yyFillLabel868:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel868
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy914:
+yy913:
 	in.cursor += 1
 yyFillLabel869:
 	yych = peek(in)
 	switch (yych) {
 	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87:
-		goto yy794
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel869
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy915:
+yy914:
 	in.cursor += 1
 yyFillLabel870:
 	yych = peek(in)
@@ -19583,142 +19613,146 @@ yyFillLabel870:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel870
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy916:
+yy915:
 	in.cursor += 1
 yyFillLabel871:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel871
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy917:
+yy916:
 	in.cursor += 1
 yyFillLabel872:
 	yych = peek(in)
 	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0xA7:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel872
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy918:
+yy917:
 	in.cursor += 1
 yyFillLabel873:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel873
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy919:
+yy918:
 	in.cursor += 1
 yyFillLabel874:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
-		goto yy794
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel874
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy920:
+yy919:
 	in.cursor += 1
 yyFillLabel875:
 	yych = peek(in)
 	switch (yych) {
 	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0:
 		fallthrough
-	case 0xAE,0xAF:
-		fallthrough
-	case 0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel875
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy921:
+yy920:
 	in.cursor += 1
 yyFillLabel876:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel876
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy922:
+yy921:
 	in.cursor += 1
 yyFillLabel877:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel877
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy923:
+yy922:
 	in.cursor += 1
 yyFillLabel878:
 	yych = peek(in)
 	switch (yych) {
-	case 0x8D,0x8E,0x8F:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
 		fallthrough
-	case 0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
+	case 0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel878
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy924:
+yy923:
 	in.cursor += 1
 yyFillLabel879:
 	yych = peek(in)
@@ -19728,16 +19762,16 @@ yyFillLabel879:
 	case 0xAE,0xAF,0xB0,0xB1:
 		fallthrough
 	case 0xB5,0xB6:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel879
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy925:
+yy924:
 	in.cursor += 1
 yyFillLabel880:
 	yych = peek(in)
@@ -19747,16 +19781,16 @@ yyFillLabel880:
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel880
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy926:
+yy925:
 	in.cursor += 1
 yyFillLabel881:
 	yych = peek(in)
@@ -19774,16 +19808,16 @@ yyFillLabel881:
 	case 0x9D:
 		fallthrough
 	case 0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel881
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy927:
+yy926:
 	in.cursor += 1
 yyFillLabel882:
 	yych = peek(in)
@@ -19793,16 +19827,16 @@ yyFillLabel882:
 	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel882
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy928:
+yy927:
 	in.cursor += 1
 yyFillLabel883:
 	yych = peek(in)
@@ -19820,16 +19854,16 @@ yyFillLabel883:
 	case 0xB2,0xB3,0xB4:
 		fallthrough
 	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel883
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy929:
+yy928:
 	in.cursor += 1
 yyFillLabel884:
 	yych = peek(in)
@@ -19837,31 +19871,31 @@ yyFillLabel884:
 	case 0xB1:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel884
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy930:
+yy929:
 	in.cursor += 1
 yyFillLabel885:
 	yych = peek(in)
 	switch (yych) {
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel885
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy931:
+yy930:
 	in.cursor += 1
 yyFillLabel886:
 	yych = peek(in)
@@ -19887,16 +19921,16 @@ yyFillLabel886:
 	case 0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel886
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy932:
+yy931:
 	in.cursor += 1
 yyFillLabel887:
 	yych = peek(in)
@@ -19906,31 +19940,31 @@ yyFillLabel887:
 	case 0x8E:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel887
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy933:
+yy932:
 	in.cursor += 1
 yyFillLabel888:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel888
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy934:
+yy933:
 	in.cursor += 1
 yyFillLabel889:
 	yych = peek(in)
@@ -19938,16 +19972,16 @@ yyFillLabel889:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel889
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy935:
+yy934:
 	in.cursor += 1
 yyFillLabel890:
 	yych = peek(in)
@@ -19955,16 +19989,16 @@ yyFillLabel890:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel890
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy936:
+yy935:
 	in.cursor += 1
 yyFillLabel891:
 	yych = peek(in)
@@ -19974,16 +20008,16 @@ yyFillLabel891:
 	case 0xAB,0xAC,0xAD,0xAE:
 		fallthrough
 	case 0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel891
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy937:
+yy936:
 	in.cursor += 1
 yyFillLabel892:
 	yych = peek(in)
@@ -19995,16 +20029,16 @@ yyFillLabel892:
 	case 0xAD:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel892
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy938:
+yy937:
 	in.cursor += 1
 yyFillLabel893:
 	yych = peek(in)
@@ -20012,16 +20046,16 @@ yyFillLabel893:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
 		fallthrough
 	case 0xAF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel893
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy939:
+yy938:
 	in.cursor += 1
 yyFillLabel894:
 	yych = peek(in)
@@ -20035,16 +20069,16 @@ yyFillLabel894:
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
 		fallthrough
 	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel894
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy940:
+yy939:
 	in.cursor += 1
 yyFillLabel895:
 	yych = peek(in)
@@ -20056,31 +20090,31 @@ yyFillLabel895:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96:
 		fallthrough
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel895
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy941:
+yy940:
 	in.cursor += 1
 yyFillLabel896:
 	yych = peek(in)
 	switch (yych) {
 	case 0xAF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel896
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy942:
+yy941:
 	in.cursor += 1
 yyFillLabel897:
 	yych = peek(in)
@@ -20092,16 +20126,16 @@ yyFillLabel897:
 	case 0xB1,0xB2,0xB3,0xB4,0xB5:
 		fallthrough
 	case 0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel897
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy943:
+yy942:
 	in.cursor += 1
 yyFillLabel898:
 	yych = peek(in)
@@ -20111,16 +20145,16 @@ yyFillLabel898:
 	case 0x9D,0x9E,0x9F:
 		fallthrough
 	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel898
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy944:
+yy943:
 	in.cursor += 1
 yyFillLabel899:
 	yych = peek(in)
@@ -20128,16 +20162,16 @@ yyFillLabel899:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel899
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy945:
+yy944:
 	in.cursor += 1
 yyFillLabel900:
 	yych = peek(in)
@@ -20145,16 +20179,16 @@ yyFillLabel900:
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
 		fallthrough
 	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel900
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy946:
+yy945:
 	in.cursor += 1
 yyFillLabel901:
 	yych = peek(in)
@@ -20162,80 +20196,78 @@ yyFillLabel901:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel901
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy947:
+yy946:
 	in.cursor += 1
 yyFillLabel902:
 	yych = peek(in)
 	switch (yych) {
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel902
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy948:
+yy947:
 	in.cursor += 1
 yyFillLabel903:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel903
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy949:
+yy948:
 	in.cursor += 1
 yyFillLabel904:
 	yych = peek(in)
 	switch (yych) {
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel904
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy950:
+yy949:
 	in.cursor += 1
 yyFillLabel905:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
 		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
-		fallthrough
-	case 0xAA,0xAB:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel905
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy951:
+yy950:
 	in.cursor += 1
 yyFillLabel906:
 	yych = peek(in)
@@ -20243,16 +20275,16 @@ yyFillLabel906:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel906
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy952:
+yy951:
 	in.cursor += 1
 yyFillLabel907:
 	yych = peek(in)
@@ -20260,31 +20292,31 @@ yyFillLabel907:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel907
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy953:
+yy952:
 	in.cursor += 1
 yyFillLabel908:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel908
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy954:
+yy953:
 	in.cursor += 1
 yyFillLabel909:
 	yych = peek(in)
@@ -20292,16 +20324,16 @@ yyFillLabel909:
 	case 0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
 		fallthrough
 	case 0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel909
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy955:
+yy954:
 	in.cursor += 1
 yyFillLabel910:
 	yych = peek(in)
@@ -20313,31 +20345,31 @@ yyFillLabel910:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
 		fallthrough
 	case 0xB0,0xB1:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel910
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy956:
+yy955:
 	in.cursor += 1
 yyFillLabel911:
 	yych = peek(in)
 	switch (yych) {
 	case 0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel911
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy957:
+yy956:
 	in.cursor += 1
 yyFillLabel912:
 	yych = peek(in)
@@ -20349,65 +20381,67 @@ yyFillLabel912:
 	case 0x87,0x88,0x89,0x8A:
 		fallthrough
 	case 0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel912
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy958:
+yy957:
 	in.cursor += 1
 yyFillLabel913:
 	yych = peek(in)
 	switch (yych) {
 	case 0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel913
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy959:
+yy958:
 	in.cursor += 1
 yyFillLabel914:
 	yych = peek(in)
 	switch (yych) {
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
 		fallthrough
 	case 0xBB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel914
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy960:
+yy959:
 	in.cursor += 1
 yyFillLabel915:
 	yych = peek(in)
 	switch (yych) {
-	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel915
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy961:
+yy960:
 	in.cursor += 1
 yyFillLabel916:
 	yych = peek(in)
@@ -20415,67 +20449,65 @@ yyFillLabel916:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel916
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy962:
+yy961:
 	in.cursor += 1
 yyFillLabel917:
 	yych = peek(in)
 	switch (yych) {
 	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel917
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy963:
+yy962:
 	in.cursor += 1
 yyFillLabel918:
 	yych = peek(in)
 	switch (yych) {
-	case 0x8F:
+	case 0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4:
 		fallthrough
-	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		fallthrough
-	case 0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel918
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy964:
+yy963:
 	in.cursor += 1
 yyFillLabel919:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel919
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy965:
+yy964:
 	in.cursor += 1
 yyFillLabel920:
 	yych = peek(in)
@@ -20484,21 +20516,23 @@ yyFillLabel920:
 		fallthrough
 	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
 		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
 		fallthrough
 	case 0xBA:
 		fallthrough
 	case 0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel920
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy966:
+yy965:
 	in.cursor += 1
 yyFillLabel921:
 	yych = peek(in)
@@ -20510,16 +20544,16 @@ yyFillLabel921:
 	case 0xB5,0xB6:
 		fallthrough
 	case 0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel921
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy967:
+yy966:
 	in.cursor += 1
 yyFillLabel922:
 	yych = peek(in)
@@ -20533,16 +20567,16 @@ yyFillLabel922:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
 	case 0xB2,0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel922
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy968:
+yy967:
 	in.cursor += 1
 yyFillLabel923:
 	yych = peek(in)
@@ -20558,16 +20592,16 @@ yyFillLabel923:
 	case 0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel923
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy969:
+yy968:
 	in.cursor += 1
 yyFillLabel924:
 	yych = peek(in)
@@ -20577,31 +20611,33 @@ yyFillLabel924:
 	case 0x9C,0x9D,0x9E,0x9F:
 		fallthrough
 	case 0xA4,0xA5:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel924
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy970:
+yy969:
 	in.cursor += 1
 yyFillLabel925:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2:
-		goto yy794
+		fallthrough
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel925
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy971:
+yy970:
 	in.cursor += 1
 yyFillLabel926:
 	yych = peek(in)
@@ -20609,16 +20645,16 @@ yyFillLabel926:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel926
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy972:
+yy971:
 	in.cursor += 1
 yyFillLabel927:
 	yych = peek(in)
@@ -20626,16 +20662,16 @@ yyFillLabel927:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
 		fallthrough
 	case 0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel927
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy973:
+yy972:
 	in.cursor += 1
 yyFillLabel928:
 	yych = peek(in)
@@ -20643,31 +20679,31 @@ yyFillLabel928:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel928
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy974:
+yy973:
 	in.cursor += 1
 yyFillLabel929:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel929
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy975:
+yy974:
 	in.cursor += 1
 yyFillLabel930:
 	yych = peek(in)
@@ -20685,16 +20721,16 @@ yyFillLabel930:
 	case 0xB8,0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel930
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy976:
+yy975:
 	in.cursor += 1
 yyFillLabel931:
 	yych = peek(in)
@@ -20704,46 +20740,46 @@ yyFillLabel931:
 	case 0x83,0x84:
 		fallthrough
 	case 0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel931
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy977:
+yy976:
 	in.cursor += 1
 yyFillLabel932:
 	yych = peek(in)
 	switch (yych) {
 	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel932
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy978:
+yy977:
 	in.cursor += 1
 yyFillLabel933:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel933
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy979:
+yy978:
 	in.cursor += 1
 yyFillLabel934:
 	yych = peek(in)
@@ -20751,16 +20787,16 @@ yyFillLabel934:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
 		fallthrough
 	case 0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel934
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy980:
+yy979:
 	in.cursor += 1
 yyFillLabel935:
 	yych = peek(in)
@@ -20768,16 +20804,16 @@ yyFillLabel935:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel935
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy981:
+yy980:
 	in.cursor += 1
 yyFillLabel936:
 	yych = peek(in)
@@ -20785,46 +20821,48 @@ yyFillLabel936:
 	case 0xB0,0xB1,0xB2,0xB3,0xB4:
 		fallthrough
 	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel936
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy982:
+yy981:
 	in.cursor += 1
 yyFillLabel937:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel937
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy983:
+yy982:
 	in.cursor += 1
 yyFillLabel938:
 	yych = peek(in)
 	switch (yych) {
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
 	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel938
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy984:
+yy983:
 	in.cursor += 1
 yyFillLabel939:
 	yych = peek(in)
@@ -20832,31 +20870,31 @@ yyFillLabel939:
 	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
 		fallthrough
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel939
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy985:
+yy984:
 	in.cursor += 1
 yyFillLabel940:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel940
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy986:
+yy985:
 	in.cursor += 1
 yyFillLabel941:
 	yych = peek(in)
@@ -20868,24 +20906,24 @@ yyFillLabel941:
 	case 0x92,0x93,0x94,0x95,0x96,0x97:
 		fallthrough
 	case 0x9A,0x9B,0x9C:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel941
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy987:
+yy986:
 	in.cursor += 1
 yyFillLabel942:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy1076
+		goto yy1072
 	case 0x81:
-		goto yy1077
+		goto yy1073
 	case 0x82:
 		fallthrough
 	case 0x90,0x91:
@@ -20893,110 +20931,114 @@ yyFillLabel942:
 	case 0x98,0x99,0x9A,0x9B:
 		fallthrough
 	case 0xB0:
-		goto yy830
+		goto yy828
 	case 0x83:
-		goto yy1078
+		goto yy1074
 	case 0x85:
-		goto yy898
+		goto yy897
 	case 0x8A:
-		goto yy1079
+		goto yy1075
 	case 0x8B:
-		goto yy1080
+		goto yy1076
 	case 0x8C:
-		goto yy1081
+		goto yy1077
 	case 0x8D:
-		goto yy1082
+		goto yy1078
 	case 0x8E:
-		goto yy952
+		goto yy951
 	case 0x8F:
-		goto yy1083
+		goto yy1079
 	case 0x92:
-		goto yy1084
+		goto yy1080
 	case 0x94:
-		goto yy1085
+		goto yy1081
 	case 0x95:
-		goto yy922
+		goto yy921
 	case 0x9C:
-		goto yy1061
+		goto yy1057
 	case 0x9D:
-		goto yy1086
+		goto yy1082
 	case 0xA0:
-		goto yy1087
+		goto yy1083
 	case 0xA1:
-		goto yy1088
+		goto yy1084
 	case 0xA2:
-		goto yy911
-	case 0xA4:
-		goto yy1089
-	case 0xA6:
-		goto yy1090
-	case 0xA8:
-		goto yy1091
-	case 0xA9:
-		goto yy1092
-	case 0xAA:
-		goto yy1093
-	case 0xAB:
-		goto yy1094
-	case 0xAC:
 		goto yy910
+	case 0xA4:
+		goto yy1085
+	case 0xA6:
+		goto yy1086
+	case 0xA8:
+		goto yy1087
+	case 0xA9:
+		goto yy1088
+	case 0xAA:
+		goto yy1089
+	case 0xAB:
+		goto yy1090
+	case 0xAC:
+		goto yy909
 	case 0xAD:
-		goto yy1095
+		goto yy1091
 	case 0xAE:
-		goto yy1096
+		goto yy1092
 	case 0xB1:
-		goto yy933
+		goto yy932
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel942
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy988:
+yy987:
 	in.cursor += 1
 yyFillLabel943:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy1097
+		goto yy1093
+	case 0x81:
+		goto yy1094
 	case 0x82:
-		goto yy1098
+		goto yy1095
 	case 0x83:
-		goto yy1099
+		goto yy1096
 	case 0x84:
-		goto yy1100
+		goto yy1097
 	case 0x85:
-		goto yy1101
+		goto yy1098
 	case 0x86:
-		goto yy1102
+		goto yy1099
 	case 0x87:
-		goto yy1103
+		goto yy1100
 	case 0x88:
-		goto yy1104
+		goto yy1101
 	case 0x8A:
-		goto yy947
+		goto yy946
 	case 0x8B:
-		goto yy911
+		goto yy1102
 	case 0x8C:
-		goto yy870
+		goto yy868
 	case 0x8D:
-		goto yy1105
+		goto yy1103
 	case 0x92:
 		fallthrough
 	case 0x98:
-		goto yy953
+		goto yy952
 	case 0x93:
-		goto yy1106
+		goto yy1104
 	case 0x96:
-		goto yy1107
+		goto yy1105
 	case 0x99:
-		goto yy1108
+		goto yy1106
 	case 0x9A:
-		goto yy1109
+		goto yy1107
+	case 0x9B:
+		goto yy1108
 	case 0xA2:
-		goto yy907
+		goto yy1109
 	case 0xA3:
 		goto yy1110
 	case 0xAB:
@@ -21007,9 +21049,9 @@ yyFillLabel943:
 				goto yyFillLabel943
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy989:
+yy988:
 	in.cursor += 1
 yyFillLabel944:
 	yych = peek(in)
@@ -21017,37 +21059,37 @@ yyFillLabel944:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D:
 		fallthrough
 	case 0x90:
-		goto yy830
+		goto yy828
 	case 0x8E:
-		goto yy860
+		goto yy858
 	case 0x91:
-		goto yy1107
+		goto yy1105
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel944
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy990:
+yy989:
 	in.cursor += 1
 yyFillLabel945:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
-		goto yy830
+		goto yy828
 	case 0x90:
-		goto yy1107
+		goto yy1105
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel945
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy991:
+yy990:
 	in.cursor += 1
 yyFillLabel946:
 	yych = peek(in)
@@ -21055,53 +21097,53 @@ yyFillLabel946:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
 		fallthrough
 	case 0xBC:
-		goto yy830
+		goto yy828
 	case 0xA8:
 		goto yy1111
 	case 0xA9:
-		goto yy911
-	case 0xAB:
 		goto yy1112
-	case 0xAC:
-		goto yy953
-	case 0xAD:
+	case 0xAB:
 		goto yy1113
-	case 0xAE:
+	case 0xAC:
+		goto yy952
+	case 0xAD:
 		goto yy1114
-	case 0xBD:
+	case 0xAE:
 		goto yy1115
-	case 0xBE:
+	case 0xBD:
 		goto yy1116
+	case 0xBE:
+		goto yy1117
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel946
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy992:
+yy991:
 	in.cursor += 1
 yyFillLabel947:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy1117
-	case 0xB0:
-		goto yy830
-	case 0xB1:
 		goto yy1118
-	case 0xB2:
+	case 0xB0:
+		goto yy828
+	case 0xB1:
 		goto yy1119
+	case 0xB2:
+		goto yy1120
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel947
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy993:
+yy992:
 	in.cursor += 1
 yyFillLabel948:
 	yych = peek(in)
@@ -21109,61 +21151,61 @@ yyFillLabel948:
 	case 0x90:
 		fallthrough
 	case 0x96,0x97,0x98,0x99:
-		goto yy830
+		goto yy828
 	case 0x91:
-		goto yy1120
-	case 0x92:
 		goto yy1121
-	case 0x93:
+	case 0x92:
 		goto yy1122
-	case 0x94:
+	case 0x93:
 		goto yy1123
-	case 0x95:
+	case 0x94:
 		goto yy1124
-	case 0x9A:
+	case 0x95:
 		goto yy1125
-	case 0x9B:
+	case 0x9A:
 		goto yy1126
-	case 0x9C:
+	case 0x9B:
 		goto yy1127
-	case 0x9D:
+	case 0x9C:
 		goto yy1128
-	case 0x9E:
+	case 0x9D:
 		goto yy1129
-	case 0x9F:
+	case 0x9E:
 		goto yy1130
+	case 0x9F:
+		goto yy1131
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel948
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy994:
+yy993:
 	in.cursor += 1
 yyFillLabel949:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA0,0xA1,0xA2:
-		goto yy830
+		goto yy828
 	case 0xA3:
-		goto yy1131
-	case 0xB8:
 		goto yy1132
-	case 0xB9:
+	case 0xB8:
 		goto yy1133
-	case 0xBA:
+	case 0xB9:
 		goto yy1134
+	case 0xBA:
+		goto yy1135
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel949
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy995:
+yy994:
 	in.cursor += 1
 yyFillLabel950:
 	yych = peek(in)
@@ -21171,18 +21213,18 @@ yyFillLabel950:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
 		fallthrough
 	case 0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy830
+		goto yy828
 	case 0x9B:
-		goto yy1135
+		goto yy1136
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel950
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy996:
+yy995:
 	in.cursor += 1
 yyFillLabel951:
 	yych = peek(in)
@@ -21190,82 +21232,82 @@ yyFillLabel951:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B:
 		fallthrough
 	case 0x9D,0x9E,0x9F:
-		goto yy830
+		goto yy828
 	case 0x9C:
-		goto yy898
+		goto yy897
 	case 0xA0:
-		goto yy1084
+		goto yy1137
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel951
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy997:
+yy996:
 	in.cursor += 1
 yyFillLabel952:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
-		goto yy830
+		goto yy828
 	case 0xA8:
-		goto yy1084
+		goto yy1137
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel952
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy998:
+yy997:
 	in.cursor += 1
 yyFillLabel953:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel953
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy999:
+yy998:
 	in.cursor += 1
 yyFillLabel954:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel954
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1000:
+yy999:
 	in.cursor += 1
 yyFillLabel955:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel955
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1001:
+yy1000:
 	in.cursor += 1
 yyFillLabel956:
 	yych = peek(in)
@@ -21275,16 +21317,16 @@ yyFillLabel956:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel956
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1002:
+yy1001:
 	in.cursor += 1
 yyFillLabel957:
 	yych = peek(in)
@@ -21304,16 +21346,16 @@ yyFillLabel957:
 	case 0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel957
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1003:
+yy1002:
 	in.cursor += 1
 yyFillLabel958:
 	yych = peek(in)
@@ -21331,16 +21373,16 @@ yyFillLabel958:
 	case 0x9F,0xA0,0xA1,0xA2,0xA3:
 		fallthrough
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel958
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1004:
+yy1003:
 	in.cursor += 1
 yyFillLabel959:
 	yych = peek(in)
@@ -21364,16 +21406,16 @@ yyFillLabel959:
 	case 0xBC:
 		fallthrough
 	case 0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel959
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1005:
+yy1004:
 	in.cursor += 1
 yyFillLabel960:
 	yych = peek(in)
@@ -21391,16 +21433,16 @@ yyFillLabel960:
 	case 0x9E:
 		fallthrough
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel960
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1006:
+yy1005:
 	in.cursor += 1
 yyFillLabel961:
 	yych = peek(in)
@@ -21420,16 +21462,16 @@ yyFillLabel961:
 	case 0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel961
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1007:
+yy1006:
 	in.cursor += 1
 yyFillLabel962:
 	yych = peek(in)
@@ -21445,16 +21487,16 @@ yyFillLabel962:
 	case 0xA0,0xA1,0xA2,0xA3:
 		fallthrough
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel962
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1008:
+yy1007:
 	in.cursor += 1
 yyFillLabel963:
 	yych = peek(in)
@@ -21474,16 +21516,16 @@ yyFillLabel963:
 	case 0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel963
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1009:
+yy1008:
 	in.cursor += 1
 yyFillLabel964:
 	yych = peek(in)
@@ -21503,16 +21545,16 @@ yyFillLabel964:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xB1:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel964
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1010:
+yy1009:
 	in.cursor += 1
 yyFillLabel965:
 	yych = peek(in)
@@ -21538,16 +21580,16 @@ yyFillLabel965:
 	case 0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel965
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1011:
+yy1010:
 	in.cursor += 1
 yyFillLabel966:
 	yych = peek(in)
@@ -21563,16 +21605,16 @@ yyFillLabel966:
 	case 0x97:
 		fallthrough
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel966
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1012:
+yy1011:
 	in.cursor += 1
 yyFillLabel967:
 	yych = peek(in)
@@ -21588,16 +21630,16 @@ yyFillLabel967:
 	case 0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel967
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1013:
+yy1012:
 	in.cursor += 1
 yyFillLabel968:
 	yych = peek(in)
@@ -21615,16 +21657,16 @@ yyFillLabel968:
 	case 0xA0,0xA1,0xA2,0xA3:
 		fallthrough
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel968
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1014:
+yy1013:
 	in.cursor += 1
 yyFillLabel969:
 	yych = peek(in)
@@ -21642,16 +21684,16 @@ yyFillLabel969:
 	case 0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel969
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1015:
+yy1014:
 	in.cursor += 1
 yyFillLabel970:
 	yych = peek(in)
@@ -21671,16 +21713,16 @@ yyFillLabel970:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xB1,0xB2:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel970
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1016:
+yy1015:
 	in.cursor += 1
 yyFillLabel971:
 	yych = peek(in)
@@ -21694,16 +21736,16 @@ yyFillLabel971:
 	case 0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel971
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1017:
+yy1016:
 	in.cursor += 1
 yyFillLabel972:
 	yych = peek(in)
@@ -21721,16 +21763,16 @@ yyFillLabel972:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel972
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1018:
+yy1017:
 	in.cursor += 1
 yyFillLabel973:
 	yych = peek(in)
@@ -21744,16 +21786,16 @@ yyFillLabel973:
 	case 0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB:
 		fallthrough
 	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel973
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1019:
+yy1018:
 	in.cursor += 1
 yyFillLabel974:
 	yych = peek(in)
@@ -21771,31 +21813,31 @@ yyFillLabel974:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel974
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1020:
+yy1019:
 	in.cursor += 1
 yyFillLabel975:
 	yych = peek(in)
 	switch (yych) {
 	case 0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel975
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1021:
+yy1020:
 	in.cursor += 1
 yyFillLabel976:
 	yych = peek(in)
@@ -21803,16 +21845,16 @@ yyFillLabel976:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E:
 		fallthrough
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel976
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1022:
+yy1021:
 	in.cursor += 1
 yyFillLabel977:
 	yych = peek(in)
@@ -21842,16 +21884,16 @@ yyFillLabel977:
 	case 0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBB,0xBC,0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel977
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1023:
+yy1022:
 	in.cursor += 1
 yyFillLabel978:
 	yych = peek(in)
@@ -21865,16 +21907,16 @@ yyFillLabel978:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
 		fallthrough
 	case 0x9C,0x9D,0x9E,0x9F:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel978
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1024:
+yy1023:
 	in.cursor += 1
 yyFillLabel979:
 	yych = peek(in)
@@ -21892,16 +21934,16 @@ yyFillLabel979:
 	case 0xB9:
 		fallthrough
 	case 0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel979
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1025:
+yy1024:
 	in.cursor += 1
 yyFillLabel980:
 	yych = peek(in)
@@ -21911,16 +21953,16 @@ yyFillLabel980:
 	case 0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC:
 		fallthrough
 	case 0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel980
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1026:
+yy1025:
 	in.cursor += 1
 yyFillLabel981:
 	yych = peek(in)
@@ -21930,31 +21972,31 @@ yyFillLabel981:
 	case 0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97:
 		fallthrough
 	case 0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel981
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1027:
+yy1026:
 	in.cursor += 1
 yyFillLabel982:
 	yych = peek(in)
 	switch (yych) {
 	case 0x86:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel982
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1028:
+yy1027:
 	in.cursor += 1
 yyFillLabel983:
 	yych = peek(in)
@@ -21962,16 +22004,16 @@ yyFillLabel983:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
 		fallthrough
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel983
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1029:
+yy1028:
 	in.cursor += 1
 yyFillLabel984:
 	yych = peek(in)
@@ -21979,16 +22021,16 @@ yyFillLabel984:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
 		fallthrough
 	case 0x9D,0x9E,0x9F:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel984
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1030:
+yy1029:
 	in.cursor += 1
 yyFillLabel985:
 	yych = peek(in)
@@ -21998,16 +22040,16 @@ yyFillLabel985:
 	case 0x8E,0x8F,0x90,0x91,0x92,0x93,0x94:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel985
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1031:
+yy1030:
 	in.cursor += 1
 yyFillLabel986:
 	yych = peek(in)
@@ -22019,16 +22061,16 @@ yyFillLabel986:
 	case 0xAE,0xAF,0xB0:
 		fallthrough
 	case 0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel986
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1032:
+yy1031:
 	in.cursor += 1
 yyFillLabel987:
 	yych = peek(in)
@@ -22040,16 +22082,16 @@ yyFillLabel987:
 	case 0x9C,0x9D:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel987
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1033:
+yy1032:
 	in.cursor += 1
 yyFillLabel988:
 	yych = peek(in)
@@ -22059,16 +22101,16 @@ yyFillLabel988:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel988
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1034:
+yy1033:
 	in.cursor += 1
 yyFillLabel989:
 	yych = peek(in)
@@ -22076,16 +22118,16 @@ yyFillLabel989:
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel989
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1035:
+yy1034:
 	in.cursor += 1
 yyFillLabel990:
 	yych = peek(in)
@@ -22095,86 +22137,69 @@ yyFillLabel990:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel990
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1036:
+yy1035:
 	in.cursor += 1
 yyFillLabel991:
 	yych = peek(in)
 	switch (yych) {
-	case 0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
 		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4:
-		goto yy794
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel991
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1037:
+yy1036:
 	in.cursor += 1
 yyFillLabel992:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
 		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel992
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1038:
+yy1037:
 	in.cursor += 1
 yyFillLabel993:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B:
 		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		goto yy794
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel993
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1039:
+yy1038:
 	in.cursor += 1
 yyFillLabel994:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B:
-		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel994
-			}
-		}
-		goto yy828
-	}
-yy1040:
-	in.cursor += 1
-yyFillLabel995:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
@@ -22182,18 +22207,18 @@ yyFillLabel995:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel995
+				goto yyFillLabel994
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1041:
+yy1039:
 	in.cursor += 1
-yyFillLabel996:
+yyFillLabel995:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
@@ -22203,18 +22228,18 @@ yyFillLabel996:
 	case 0xA7:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel996
+				goto yyFillLabel995
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1042:
+yy1040:
 	in.cursor += 1
-yyFillLabel997:
+yyFillLabel996:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
@@ -22222,35 +22247,18 @@ yyFillLabel997:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
 		fallthrough
 	case 0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel997
+				goto yyFillLabel996
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1043:
+yy1041:
 	in.cursor += 1
-yyFillLabel998:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
-		fallthrough
-	case 0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel998
-			}
-		}
-		goto yy828
-	}
-yy1044:
-	in.cursor += 1
-yyFillLabel999:
+yyFillLabel997:
 	yych = peek(in)
 	switch (yych) {
 	case 0x90,0x91,0x92:
@@ -22258,52 +22266,52 @@ yyFillLabel999:
 	case 0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
 		fallthrough
 	case 0xB8,0xB9:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel997
+			}
+		}
+		goto yy826
+	}
+yy1042:
+	in.cursor += 1
+yyFillLabel998:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+		fallthrough
+	case 0xBC,0xBD,0xBE,0xBF:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel998
+			}
+		}
+		goto yy826
+	}
+yy1043:
+	in.cursor += 1
+yyFillLabel999:
+	yych = peek(in)
+	switch (yych) {
+	case 0x8D:
+		fallthrough
+	case 0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel999
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1045:
+yy1044:
 	in.cursor += 1
 yyFillLabel1000:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		fallthrough
-	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1000
-			}
-		}
-		goto yy828
-	}
-yy1046:
-	in.cursor += 1
-yyFillLabel1001:
-	yych = peek(in)
-	switch (yych) {
-	case 0x8D:
-		fallthrough
-	case 0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1001
-			}
-		}
-		goto yy828
-	}
-yy1047:
-	in.cursor += 1
-yyFillLabel1002:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -22313,18 +22321,18 @@ yyFillLabel1002:
 	case 0xB1:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1002
+				goto yyFillLabel1000
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1048:
+yy1045:
 	in.cursor += 1
-yyFillLabel1003:
+yyFillLabel1001:
 	yych = peek(in)
 	switch (yych) {
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
@@ -22332,35 +22340,35 @@ yyFillLabel1003:
 	case 0xA1:
 		fallthrough
 	case 0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1003
+				goto yyFillLabel1001
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1049:
+yy1046:
 	in.cursor += 1
-yyFillLabel1004:
+yyFillLabel1002:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4:
 		fallthrough
 	case 0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1004
+				goto yyFillLabel1002
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1050:
+yy1047:
 	in.cursor += 1
-yyFillLabel1005:
+yyFillLabel1003:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
@@ -22368,18 +22376,18 @@ yyFillLabel1005:
 	case 0xAF:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1005
+				goto yyFillLabel1003
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1051:
+yy1048:
 	in.cursor += 1
-yyFillLabel1006:
+yyFillLabel1004:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
@@ -22391,18 +22399,18 @@ yyFillLabel1006:
 	case 0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1006
+				goto yyFillLabel1004
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1052:
+yy1049:
 	in.cursor += 1
-yyFillLabel1007:
+yyFillLabel1005:
 	yych = peek(in)
 	switch (yych) {
 	case 0x85,0x86,0x87:
@@ -22412,18 +22420,18 @@ yyFillLabel1007:
 	case 0xB1,0xB2,0xB3,0xB4,0xB5:
 		fallthrough
 	case 0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1007
+				goto yyFillLabel1005
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1053:
+yy1050:
 	in.cursor += 1
-yyFillLabel1008:
+yyFillLabel1006:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
@@ -22433,35 +22441,18 @@ yyFillLabel1008:
 	case 0x9D,0x9E,0x9F:
 		fallthrough
 	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1008
+				goto yyFillLabel1006
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1054:
+yy1051:
 	in.cursor += 1
-yyFillLabel1009:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1009
-			}
-		}
-		goto yy828
-	}
-yy1055:
-	in.cursor += 1
-yyFillLabel1010:
+yyFillLabel1007:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
@@ -22469,50 +22460,50 @@ yyFillLabel1010:
 	case 0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1010
+				goto yyFillLabel1007
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1056:
+yy1052:
 	in.cursor += 1
-yyFillLabel1011:
+yyFillLabel1008:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
 		fallthrough
 	case 0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1011
+				goto yyFillLabel1008
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1057:
+yy1053:
 	in.cursor += 1
-yyFillLabel1012:
+yyFillLabel1009:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1012
+				goto yyFillLabel1009
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1058:
+yy1054:
 	in.cursor += 1
-yyFillLabel1013:
+yyFillLabel1010:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84:
@@ -22522,35 +22513,35 @@ yyFillLabel1013:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
 		fallthrough
 	case 0xBB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1013
+				goto yyFillLabel1010
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1059:
+yy1055:
 	in.cursor += 1
-yyFillLabel1014:
+yyFillLabel1011:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1014
+				goto yyFillLabel1011
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1060:
+yy1056:
 	in.cursor += 1
-yyFillLabel1015:
+yyFillLabel1012:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -22558,33 +22549,33 @@ yyFillLabel1015:
 	case 0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
 		fallthrough
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1015
+				goto yyFillLabel1012
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1061:
+yy1057:
 	in.cursor += 1
-yyFillLabel1016:
+yyFillLabel1013:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1016
+				goto yyFillLabel1013
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1062:
+yy1058:
 	in.cursor += 1
-yyFillLabel1017:
+yyFillLabel1014:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D:
@@ -22594,18 +22585,18 @@ yyFillLabel1017:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
 		fallthrough
 	case 0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1017
+				goto yyFillLabel1014
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1063:
+yy1059:
 	in.cursor += 1
-yyFillLabel1018:
+yyFillLabel1015:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82:
@@ -22615,18 +22606,18 @@ yyFillLabel1018:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xB2,0xB3,0xB4,0xB5,0xB6:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1018
+				goto yyFillLabel1015
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1064:
+yy1060:
 	in.cursor += 1
-yyFillLabel1019:
+yyFillLabel1016:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
@@ -22634,18 +22625,18 @@ yyFillLabel1019:
 	case 0xAC,0xAD:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1019
+				goto yyFillLabel1016
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1065:
+yy1061:
 	in.cursor += 1
-yyFillLabel1020:
+yyFillLabel1017:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
@@ -22659,18 +22650,18 @@ yyFillLabel1020:
 	case 0xB8,0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1020
+				goto yyFillLabel1017
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1066:
+yy1062:
 	in.cursor += 1
-yyFillLabel1021:
+yyFillLabel1018:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
@@ -22678,18 +22669,18 @@ yyFillLabel1021:
 	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
 		fallthrough
 	case 0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1021
+				goto yyFillLabel1018
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1067:
+yy1063:
 	in.cursor += 1
-yyFillLabel1022:
+yyFillLabel1019:
 	yych = peek(in)
 	switch (yych) {
 	case 0x8D,0x8E,0x8F:
@@ -22697,18 +22688,18 @@ yyFillLabel1022:
 	case 0xB0,0xB1,0xB2,0xB3,0xB4:
 		fallthrough
 	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1022
+				goto yyFillLabel1019
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1068:
+yy1064:
 	in.cursor += 1
-yyFillLabel1023:
+yyFillLabel1020:
 	yych = peek(in)
 	switch (yych) {
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
@@ -22716,24 +22707,24 @@ yyFillLabel1023:
 	case 0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1023
+				goto yyFillLabel1020
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1069:
+yy1065:
 	in.cursor += 1
-yyFillLabel1024:
+yyFillLabel1021:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
-		goto yy1076
+		goto yy1072
 	case 0x81:
-		goto yy1077
+		goto yy1073
 	case 0x82:
 		fallthrough
 	case 0x90,0x91:
@@ -22741,72 +22732,72 @@ yyFillLabel1024:
 	case 0x98,0x99,0x9A,0x9B:
 		fallthrough
 	case 0xB0:
-		goto yy830
+		goto yy828
 	case 0x83:
-		goto yy1078
+		goto yy1074
 	case 0x85:
-		goto yy898
+		goto yy897
 	case 0x87:
-		goto yy1136
-	case 0x8A:
-		goto yy1079
-	case 0x8B:
-		goto yy1137
-	case 0x8C:
-		goto yy1081
-	case 0x8D:
 		goto yy1138
-	case 0x8E:
-		goto yy952
-	case 0x8F:
-		goto yy1083
-	case 0x92:
+	case 0x8A:
+		goto yy1075
+	case 0x8B:
 		goto yy1139
-	case 0x94:
-		goto yy1085
-	case 0x95:
-		goto yy922
-	case 0x9C:
-		goto yy1061
-	case 0x9D:
-		goto yy1086
-	case 0xA0:
-		goto yy1087
-	case 0xA1:
-		goto yy1088
-	case 0xA2:
-		goto yy911
-	case 0xA4:
-		goto yy1089
-	case 0xA6:
-		goto yy1090
-	case 0xA8:
+	case 0x8C:
+		goto yy1077
+	case 0x8D:
 		goto yy1140
-	case 0xA9:
-		goto yy1092
-	case 0xAA:
-		goto yy1093
-	case 0xAB:
-		goto yy1141
-	case 0xAC:
+	case 0x8E:
+		goto yy951
+	case 0x8F:
+		goto yy1079
+	case 0x92:
+		goto yy1080
+	case 0x94:
+		goto yy1081
+	case 0x95:
+		goto yy921
+	case 0x9C:
+		goto yy1057
+	case 0x9D:
+		goto yy1082
+	case 0xA0:
+		goto yy1083
+	case 0xA1:
+		goto yy1084
+	case 0xA2:
 		goto yy910
+	case 0xA4:
+		goto yy1085
+	case 0xA6:
+		goto yy1086
+	case 0xA8:
+		goto yy1141
+	case 0xA9:
+		goto yy1088
+	case 0xAA:
+		goto yy1089
+	case 0xAB:
+		goto yy1142
+	case 0xAC:
+		goto yy909
 	case 0xAD:
-		goto yy1095
+		goto yy1091
 	case 0xAE:
-		goto yy1096
+		goto yy1092
 	case 0xB1:
-		goto yy933
+		goto yy932
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1024
+				goto yyFillLabel1021
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1070:
+yy1066:
 	in.cursor += 1
-yyFillLabel1025:
+yyFillLabel1022:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -22816,13 +22807,13 @@ yyFillLabel1025:
 	case 0x92:
 		fallthrough
 	case 0x98:
-		goto yy830
+		goto yy828
 	case 0x81:
-		goto yy1142
-	case 0x82:
-		goto yy1078
-	case 0x83:
 		goto yy1143
+	case 0x82:
+		goto yy1074
+	case 0x83:
+		goto yy1096
 	case 0x84:
 		goto yy1144
 	case 0x85:
@@ -22832,11 +22823,11 @@ yyFillLabel1025:
 	case 0x88:
 		goto yy1147
 	case 0x8A:
-		goto yy947
+		goto yy946
 	case 0x8B:
 		goto yy1148
 	case 0x8C:
-		goto yy1008
+		goto yy1007
 	case 0x8D:
 		goto yy1149
 	case 0x93:
@@ -22844,169 +22835,169 @@ yyFillLabel1025:
 	case 0x96:
 		goto yy1151
 	case 0x97:
-		goto yy885
-	case 0x99:
 		goto yy1152
-	case 0x9A:
-		goto yy908
-	case 0x9B:
+	case 0x99:
 		goto yy1153
-	case 0xA2:
+	case 0x9A:
 		goto yy907
+	case 0x9B:
+		goto yy1108
+	case 0xA2:
+		goto yy1109
 	case 0xA3:
-		goto yy1154
+		goto yy1110
 	case 0xAB:
 		goto yy1111
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1022
+			}
+		}
+		goto yy826
+	}
+yy1067:
+	in.cursor += 1
+yyFillLabel1023:
+	yych = peek(in)
+	switch (yych) {
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
+		fallthrough
+	case 0xBC:
+		goto yy828
+	case 0xA8:
+		goto yy1111
+	case 0xA9:
+		goto yy1112
+	case 0xAB:
+		goto yy1154
+	case 0xAC:
+		goto yy1057
+	case 0xAD:
+		goto yy1114
+	case 0xAE:
+		goto yy1115
+	case 0xBD:
+		goto yy1155
+	case 0xBE:
+		goto yy1156
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1023
+			}
+		}
+		goto yy826
+	}
+yy1068:
+	in.cursor += 1
+yyFillLabel1024:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80:
+		goto yy1118
+	case 0xB0:
+		goto yy828
+	case 0xB1:
+		goto yy1119
+	case 0xB2:
+		goto yy1157
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1024
+			}
+		}
+		goto yy826
+	}
+yy1069:
+	in.cursor += 1
+yyFillLabel1025:
+	yych = peek(in)
+	switch (yych) {
+	case 0x85:
+		goto yy1158
+	case 0x86:
+		goto yy1159
+	case 0x89:
+		goto yy1160
+	case 0x90:
+		fallthrough
+	case 0x96,0x97,0x98,0x99:
+		goto yy828
+	case 0x91:
+		goto yy1121
+	case 0x92:
+		goto yy1122
+	case 0x93:
+		goto yy1123
+	case 0x94:
+		goto yy1124
+	case 0x95:
+		goto yy1125
+	case 0x9A:
+		goto yy1126
+	case 0x9B:
+		goto yy1127
+	case 0x9C:
+		goto yy1128
+	case 0x9D:
+		goto yy1129
+	case 0x9E:
+		goto yy1130
+	case 0x9F:
+		goto yy1131
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1025
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1071:
+yy1070:
 	in.cursor += 1
 yyFillLabel1026:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
-		fallthrough
-	case 0xBC:
-		goto yy830
-	case 0xA8:
-		goto yy1111
-	case 0xA9:
-		goto yy1155
-	case 0xAB:
-		goto yy912
-	case 0xAC:
-		goto yy1061
-	case 0xAD:
-		goto yy1156
-	case 0xAE:
-		goto yy1114
-	case 0xBD:
-		goto yy1157
-	case 0xBE:
-		goto yy1158
+	case 0xA0,0xA1,0xA2:
+		goto yy828
+	case 0xA3:
+		goto yy1161
+	case 0xB8:
+		goto yy1133
+	case 0xB9:
+		goto yy1134
+	case 0xBA:
+		goto yy1135
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1026
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1072:
+yy1071:
 	in.cursor += 1
 yyFillLabel1027:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1117
-	case 0xB0:
-		goto yy830
-	case 0xB1:
-		goto yy1118
-	case 0xB2:
-		goto yy1159
+	case 0x84,0x85,0x86:
+		goto yy828
+	case 0x87:
+		goto yy952
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1027
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1073:
+yy1072:
 	in.cursor += 1
 yyFillLabel1028:
-	yych = peek(in)
-	switch (yych) {
-	case 0x85:
-		goto yy1160
-	case 0x86:
-		goto yy1161
-	case 0x89:
-		goto yy1162
-	case 0x90:
-		fallthrough
-	case 0x96,0x97,0x98,0x99:
-		goto yy830
-	case 0x91:
-		goto yy1120
-	case 0x92:
-		goto yy1121
-	case 0x93:
-		goto yy1122
-	case 0x94:
-		goto yy1123
-	case 0x95:
-		goto yy1124
-	case 0x9A:
-		goto yy1125
-	case 0x9B:
-		goto yy1126
-	case 0x9C:
-		goto yy1127
-	case 0x9D:
-		goto yy1128
-	case 0x9E:
-		goto yy1129
-	case 0x9F:
-		goto yy1163
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1028
-			}
-		}
-		goto yy828
-	}
-yy1074:
-	in.cursor += 1
-yyFillLabel1029:
-	yych = peek(in)
-	switch (yych) {
-	case 0xA0,0xA1,0xA2:
-		goto yy830
-	case 0xA3:
-		goto yy1164
-	case 0xB8:
-		goto yy1132
-	case 0xB9:
-		goto yy1133
-	case 0xBA:
-		goto yy1134
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1029
-			}
-		}
-		goto yy828
-	}
-yy1075:
-	in.cursor += 1
-yyFillLabel1030:
-	yych = peek(in)
-	switch (yych) {
-	case 0x84,0x85,0x86:
-		goto yy830
-	case 0x87:
-		goto yy953
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1030
-			}
-		}
-		goto yy828
-	}
-yy1076:
-	in.cursor += 1
-yyFillLabel1031:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
@@ -23018,116 +23009,116 @@ yyFillLabel1031:
 	case 0xBC,0xBD:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1028
+			}
+		}
+		goto yy826
+	}
+yy1073:
+	in.cursor += 1
+yyFillLabel1029:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1029
+			}
+		}
+		goto yy826
+	}
+yy1074:
+	in.cursor += 1
+yyFillLabel1030:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1030
+			}
+		}
+		goto yy826
+	}
+yy1075:
+	in.cursor += 1
+yyFillLabel1031:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1031
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1077:
+yy1076:
 	in.cursor += 1
 yyFillLabel1032:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1032
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1078:
+yy1077:
 	in.cursor += 1
 yyFillLabel1033:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
+		fallthrough
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1033
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1079:
+yy1078:
 	in.cursor += 1
 yyFillLabel1034:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
 		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1034
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1080:
+yy1079:
 	in.cursor += 1
 yyFillLabel1035:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1035
-			}
-		}
-		goto yy828
-	}
-yy1081:
-	in.cursor += 1
-yyFillLabel1036:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
-		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1036
-			}
-		}
-		goto yy828
-	}
-yy1082:
-	in.cursor += 1
-yyFillLabel1037:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1037
-			}
-		}
-		goto yy828
-	}
-yy1083:
-	in.cursor += 1
-yyFillLabel1038:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83:
@@ -23135,67 +23126,69 @@ yyFillLabel1038:
 	case 0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
 		fallthrough
 	case 0x91,0x92,0x93,0x94,0x95:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1035
+			}
+		}
+		goto yy826
+	}
+yy1080:
+	in.cursor += 1
+yyFillLabel1036:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1036
+			}
+		}
+		goto yy826
+	}
+yy1081:
+	in.cursor += 1
+yyFillLabel1037:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
+		fallthrough
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1037
+			}
+		}
+		goto yy826
+	}
+yy1082:
+	in.cursor += 1
+yyFillLabel1038:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1038
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1084:
+yy1083:
 	in.cursor += 1
 yyFillLabel1039:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1039
-			}
-		}
-		goto yy828
-	}
-yy1085:
-	in.cursor += 1
-yyFillLabel1040:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
-		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1040
-			}
-		}
-		goto yy828
-	}
-yy1086:
-	in.cursor += 1
-yyFillLabel1041:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
-		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1041
-			}
-		}
-		goto yy828
-	}
-yy1087:
-	in.cursor += 1
-yyFillLabel1042:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85:
@@ -23209,69 +23202,69 @@ yyFillLabel1042:
 	case 0xBC:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1039
+			}
+		}
+		goto yy826
+	}
+yy1084:
+	in.cursor += 1
+yyFillLabel1040:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1040
+			}
+		}
+		goto yy826
+	}
+yy1085:
+	in.cursor += 1
+yyFillLabel1041:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1041
+			}
+		}
+		goto yy826
+	}
+yy1086:
+	in.cursor += 1
+yyFillLabel1042:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
+		fallthrough
+	case 0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1042
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1088:
+yy1087:
 	in.cursor += 1
 yyFillLabel1043:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
-		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1043
-			}
-		}
-		goto yy828
-	}
-yy1089:
-	in.cursor += 1
-yyFillLabel1044:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
-		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1044
-			}
-		}
-		goto yy828
-	}
-yy1090:
-	in.cursor += 1
-yyFillLabel1045:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
-		fallthrough
-	case 0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1045
-			}
-		}
-		goto yy828
-	}
-yy1091:
-	in.cursor += 1
-yyFillLabel1046:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -23281,479 +23274,568 @@ yyFillLabel1046:
 	case 0x95,0x96,0x97:
 		fallthrough
 	case 0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1043
+			}
+		}
+		goto yy826
+	}
+yy1088:
+	in.cursor += 1
+yyFillLabel1044:
+	yych = peek(in)
+	switch (yych) {
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1044
+			}
+		}
+		goto yy826
+	}
+yy1089:
+	in.cursor += 1
+yyFillLabel1045:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1045
+			}
+		}
+		goto yy826
+	}
+yy1090:
+	in.cursor += 1
+yyFillLabel1046:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
+		fallthrough
+	case 0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1046
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1092:
+yy1091:
 	in.cursor += 1
 yyFillLabel1047:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
+		fallthrough
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1047
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1093:
+yy1092:
 	in.cursor += 1
 yyFillLabel1048:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1048
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1094:
+yy1093:
 	in.cursor += 1
 yyFillLabel1049:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
-		fallthrough
-	case 0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4:
-		goto yy794
+	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1049
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1095:
+yy1094:
 	in.cursor += 1
 yyFillLabel1050:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95:
-		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
-		goto yy794
+	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1050
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1096:
+yy1095:
 	in.cursor += 1
 yyFillLabel1051:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
-		goto yy794
+	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1051
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1097:
+yy1096:
 	in.cursor += 1
 yyFillLabel1052:
 	yych = peek(in)
 	switch (yych) {
-	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8:
+		fallthrough
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1052
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1098:
+yy1097:
 	in.cursor += 1
 yyFillLabel1053:
 	yych = peek(in)
 	switch (yych) {
-	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
-		goto yy794
+	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6:
+		fallthrough
+	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1053
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1099:
+yy1098:
 	in.cursor += 1
 yyFillLabel1054:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
+		fallthrough
+	case 0xB6:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1054
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1100:
+yy1099:
 	in.cursor += 1
 yyFillLabel1055:
 	yych = peek(in)
 	switch (yych) {
-	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6:
-		goto yy794
+	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1055
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1101:
+yy1100:
 	in.cursor += 1
 yyFillLabel1056:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
+	case 0x81,0x82,0x83,0x84:
 		fallthrough
-	case 0xB6:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1056
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1102:
+yy1101:
 	in.cursor += 1
 yyFillLabel1057:
 	yych = peek(in)
 	switch (yych) {
-	case 0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
+		fallthrough
+	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1057
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1103:
+yy1102:
 	in.cursor += 1
 yyFillLabel1058:
 	yych = peek(in)
 	switch (yych) {
-	case 0x81,0x82,0x83,0x84:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
 		fallthrough
-	case 0x9A:
-		goto yy794
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1058
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1104:
+yy1103:
 	in.cursor += 1
 yyFillLabel1059:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
-		fallthrough
-	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB:
-		goto yy794
+	case 0x9D,0x9E,0x9F,0xA0,0xA1:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1059
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1105:
+yy1104:
 	in.cursor += 1
 yyFillLabel1060:
 	yych = peek(in)
 	switch (yych) {
-	case 0x9D,0x9E,0x9F,0xA0,0xA1:
-		goto yy794
+	case 0x84,0x85:
+		fallthrough
+	case 0x87:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1060
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1106:
+yy1105:
 	in.cursor += 1
 yyFillLabel1061:
 	yych = peek(in)
 	switch (yych) {
-	case 0x84,0x85:
-		fallthrough
-	case 0x87:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1061
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1107:
+yy1106:
 	in.cursor += 1
 yyFillLabel1062:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE:
-		goto yy794
+	case 0x84:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1062
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1108:
+yy1107:
 	in.cursor += 1
 yyFillLabel1063:
 	yych = peek(in)
 	switch (yych) {
-	case 0x84:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1063
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1109:
+yy1108:
 	in.cursor += 1
 yyFillLabel1064:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1064
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1110:
+yy1109:
 	in.cursor += 1
 yyFillLabel1065:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
-		fallthrough
-	case 0xBF:
-		goto yy794
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1065
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1111:
+yy1110:
 	in.cursor += 1
 yyFillLabel1066:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		fallthrough
+	case 0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1066
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1112:
+yy1111:
 	in.cursor += 1
 yyFillLabel1067:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1067
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1113:
+yy1112:
 	in.cursor += 1
 yyFillLabel1068:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
 		fallthrough
-	case 0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
-		fallthrough
-	case 0xBD,0xBE,0xBF:
-		goto yy794
+	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1068
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1114:
+yy1113:
 	in.cursor += 1
 yyFillLabel1069:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1069
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1115:
+yy1114:
 	in.cursor += 1
 yyFillLabel1070:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84:
+	case 0x80,0x81,0x82,0x83:
 		fallthrough
-	case 0x90:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		fallthrough
+	case 0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
+		fallthrough
+	case 0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1070
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1116:
+yy1115:
 	in.cursor += 1
 yyFillLabel1071:
 	yych = peek(in)
 	switch (yych) {
-	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1071
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1117:
+yy1116:
 	in.cursor += 1
 yyFillLabel1072:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84:
+		fallthrough
+	case 0x90:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1072
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1118:
+yy1117:
 	in.cursor += 1
 yyFillLabel1073:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
-		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
-		goto yy794
+	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1073
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1119:
+yy1118:
 	in.cursor += 1
 yyFillLabel1074:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		goto yy794
+	case 0x80,0x81:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1074
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1120:
+yy1119:
 	in.cursor += 1
 yyFillLabel1075:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
 		fallthrough
-	case 0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1075
 			}
 		}
-		goto yy828
+		goto yy826
+	}
+yy1120:
+	in.cursor += 1
+yyFillLabel1076:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1076
+			}
+		}
+		goto yy826
 	}
 yy1121:
 	in.cursor += 1
-yyFillLabel1076:
+yyFillLabel1077:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94:
+		fallthrough
+	case 0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1077
+			}
+		}
+		goto yy826
+	}
+yy1122:
+	in.cursor += 1
+yyFillLabel1078:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C:
@@ -23771,35 +23853,35 @@ yyFillLabel1076:
 	case 0xBB:
 		fallthrough
 	case 0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1076
+				goto yyFillLabel1078
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1122:
+yy1123:
 	in.cursor += 1
-yyFillLabel1077:
+yyFillLabel1079:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83:
 		fallthrough
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1077
+				goto yyFillLabel1079
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1123:
+yy1124:
 	in.cursor += 1
-yyFillLabel1078:
+yyFillLabel1080:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85:
@@ -23813,18 +23895,18 @@ yyFillLabel1078:
 	case 0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
 		fallthrough
 	case 0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1078
+				goto yyFillLabel1080
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1124:
+yy1125:
 	in.cursor += 1
-yyFillLabel1079:
+yyFillLabel1081:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84:
@@ -23834,35 +23916,35 @@ yyFillLabel1079:
 	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90:
 		fallthrough
 	case 0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1079
+				goto yyFillLabel1081
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1125:
+yy1126:
 	in.cursor += 1
-yyFillLabel1080:
+yyFillLabel1082:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5:
 		fallthrough
 	case 0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1080
+				goto yyFillLabel1082
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1126:
+yy1127:
 	in.cursor += 1
-yyFillLabel1081:
+yyFillLabel1083:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -23872,18 +23954,18 @@ yyFillLabel1081:
 	case 0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1081
+				goto yyFillLabel1083
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1127:
+yy1128:
 	in.cursor += 1
-yyFillLabel1082:
+yyFillLabel1084:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94:
@@ -23891,18 +23973,18 @@ yyFillLabel1082:
 	case 0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4:
 		fallthrough
 	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1082
+				goto yyFillLabel1084
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1128:
+yy1129:
 	in.cursor += 1
-yyFillLabel1083:
+yyFillLabel1085:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E:
@@ -23910,18 +23992,18 @@ yyFillLabel1083:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1083
+				goto yyFillLabel1085
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1129:
+yy1130:
 	in.cursor += 1
-yyFillLabel1084:
+yyFillLabel1086:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88:
@@ -23929,50 +24011,52 @@ yyFillLabel1084:
 	case 0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8:
 		fallthrough
 	case 0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1084
-			}
-		}
-		goto yy828
-	}
-yy1130:
-	in.cursor += 1
-yyFillLabel1085:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82:
-		fallthrough
-	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1085
-			}
-		}
-		goto yy828
-	}
-yy1131:
-	in.cursor += 1
-yyFillLabel1086:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1086
 			}
 		}
-		goto yy828
+		goto yy826
+	}
+yy1131:
+	in.cursor += 1
+yyFillLabel1087:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82:
+		fallthrough
+	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
+		fallthrough
+	case 0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1087
+			}
+		}
+		goto yy826
 	}
 yy1132:
 	in.cursor += 1
-yyFillLabel1087:
+yyFillLabel1088:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1088
+			}
+		}
+		goto yy826
+	}
+yy1133:
+	in.cursor += 1
+yyFillLabel1089:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83:
@@ -23992,18 +24076,18 @@ yyFillLabel1087:
 	case 0xB9:
 		fallthrough
 	case 0xBB:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1087
+				goto yyFillLabel1089
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1133:
+yy1134:
 	in.cursor += 1
-yyFillLabel1088:
+yyFillLabel1090:
 	yych = peek(in)
 	switch (yych) {
 	case 0x82:
@@ -24043,18 +24127,18 @@ yyFillLabel1088:
 	case 0xB9,0xBA,0xBB,0xBC:
 		fallthrough
 	case 0xBE:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1088
+				goto yyFillLabel1090
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1134:
+yy1135:
 	in.cursor += 1
-yyFillLabel1089:
+yyFillLabel1091:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
@@ -24066,99 +24150,97 @@ yyFillLabel1089:
 	case 0xA5,0xA6,0xA7,0xA8,0xA9:
 		fallthrough
 	case 0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1089
-			}
-		}
-		goto yy828
-	}
-yy1135:
-	in.cursor += 1
-yyFillLabel1090:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1090
-			}
-		}
-		goto yy828
-	}
-yy1136:
-	in.cursor += 1
-yyFillLabel1091:
-	yych = peek(in)
-	switch (yych) {
-	case 0xBD:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1091
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1137:
+yy1136:
 	in.cursor += 1
 yyFillLabel1092:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90:
-		fallthrough
-	case 0xA0:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1092
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1138:
+yy1137:
 	in.cursor += 1
 yyFillLabel1093:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1093
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1139:
+yy1138:
 	in.cursor += 1
 yyFillLabel1094:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D:
-		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		goto yy794
+	case 0xBD:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1094
 			}
 		}
-		goto yy828
+		goto yy826
+	}
+yy1139:
+	in.cursor += 1
+yyFillLabel1095:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90:
+		fallthrough
+	case 0xA0:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1095
+			}
+		}
+		goto yy826
 	}
 yy1140:
 	in.cursor += 1
-yyFillLabel1095:
+yyFillLabel1096:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1096
+			}
+		}
+		goto yy826
+	}
+yy1141:
+	in.cursor += 1
+yyFillLabel1097:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83:
@@ -24174,35 +24256,35 @@ yyFillLabel1095:
 	case 0xB8,0xB9,0xBA:
 		fallthrough
 	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1095
+				goto yyFillLabel1097
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1141:
+yy1142:
 	in.cursor += 1
-yyFillLabel1096:
+yyFillLabel1098:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87:
 		fallthrough
 	case 0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1096
+				goto yyFillLabel1098
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1142:
+yy1143:
 	in.cursor += 1
-yyFillLabel1097:
+yyFillLabel1099:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86:
@@ -24210,120 +24292,103 @@ yyFillLabel1097:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF:
 		fallthrough
 	case 0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1097
-			}
-		}
-		goto yy828
-	}
-yy1143:
-	in.cursor += 1
-yyFillLabel1098:
-	yych = peek(in)
-	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8:
-		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1098
-			}
-		}
-		goto yy828
-	}
-yy1144:
-	in.cursor += 1
-yyFillLabel1099:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4:
-		fallthrough
-	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1099
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1145:
+yy1144:
 	in.cursor += 1
 yyFillLabel1100:
 	yych = peek(in)
 	switch (yych) {
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4:
 		fallthrough
-	case 0xB6:
-		goto yy794
+	case 0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1100
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1146:
+yy1145:
 	in.cursor += 1
 yyFillLabel1101:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84:
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3:
 		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
-		goto yy794
+	case 0xB6:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1101
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1147:
+yy1146:
 	in.cursor += 1
 yyFillLabel1102:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
+	case 0x80,0x81,0x82,0x83,0x84:
 		fallthrough
-	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1102
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1148:
+yy1147:
 	in.cursor += 1
 yyFillLabel1103:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91:
 		fallthrough
-	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
-		goto yy794
+	case 0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1103
 			}
 		}
-		goto yy828
+		goto yy826
+	}
+yy1148:
+	in.cursor += 1
+yyFillLabel1104:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA:
+		fallthrough
+	case 0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1104
+			}
+		}
+		goto yy826
 	}
 yy1149:
 	in.cursor += 1
-yyFillLabel1104:
+yyFillLabel1105:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84:
@@ -24339,18 +24404,18 @@ yyFillLabel1104:
 	case 0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC:
 		fallthrough
 	case 0xB0,0xB1,0xB2,0xB3,0xB4:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1104
+				goto yyFillLabel1105
 			}
 		}
-		goto yy828
+		goto yy826
 	}
 yy1150:
 	in.cursor += 1
-yyFillLabel1105:
+yyFillLabel1106:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85:
@@ -24358,35 +24423,50 @@ yyFillLabel1105:
 	case 0x87:
 		fallthrough
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1105
-			}
-		}
-		goto yy828
-	}
-yy1151:
-	in.cursor += 1
-yyFillLabel1106:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
-		fallthrough
-	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1106
 			}
 		}
-		goto yy828
+		goto yy826
+	}
+yy1151:
+	in.cursor += 1
+yyFillLabel1107:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5:
+		fallthrough
+	case 0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1107
+			}
+		}
+		goto yy826
 	}
 yy1152:
 	in.cursor += 1
-yyFillLabel1107:
+yyFillLabel1108:
+	yych = peek(in)
+	switch (yych) {
+	case 0x80:
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1108
+			}
+		}
+		goto yy826
+	}
+yy1153:
+	in.cursor += 1
+yyFillLabel1109:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80:
@@ -24394,120 +24474,67 @@ yyFillLabel1107:
 	case 0x84:
 		fallthrough
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1107
-			}
-		}
-		goto yy828
-	}
-yy1153:
-	in.cursor += 1
-yyFillLabel1108:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1108
-			}
-		}
-		goto yy828
-	}
-yy1154:
-	in.cursor += 1
-yyFillLabel1109:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		fallthrough
-	case 0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1109
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1155:
+yy1154:
 	in.cursor += 1
 yyFillLabel1110:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B,0x8C,0x8D,0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E:
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD:
 		fallthrough
-	case 0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9:
-		goto yy794
+	case 0xB0,0xB1,0xB2,0xB3,0xB4:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1110
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1156:
+yy1155:
 	in.cursor += 1
 yyFillLabel1111:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83:
+	case 0x80,0x81,0x82,0x83,0x84:
 		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
-		fallthrough
-	case 0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7:
-		fallthrough
-	case 0xBD,0xBE,0xBF:
-		goto yy794
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1111
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1157:
+yy1156:
 	in.cursor += 1
 yyFillLabel1112:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE:
-		goto yy794
+	case 0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1112
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1158:
+yy1157:
 	in.cursor += 1
 yyFillLabel1113:
-	yych = peek(in)
-	switch (yych) {
-	case 0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1113
-			}
-		}
-		goto yy828
-	}
-yy1159:
-	in.cursor += 1
-yyFillLabel1114:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88:
@@ -24515,18 +24542,18 @@ yyFillLabel1114:
 	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99:
 		fallthrough
 	case 0x9D,0x9E:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1114
+				goto yyFillLabel1113
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1160:
+yy1158:
 	in.cursor += 1
-yyFillLabel1115:
+yyFillLabel1114:
 	yych = peek(in)
 	switch (yych) {
 	case 0xA5,0xA6,0xA7,0xA8,0xA9:
@@ -24534,18 +24561,18 @@ yyFillLabel1115:
 	case 0xAD,0xAE,0xAF,0xB0,0xB1,0xB2:
 		fallthrough
 	case 0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1115
+				goto yyFillLabel1114
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1161:
+yy1159:
 	in.cursor += 1
-yyFillLabel1116:
+yyFillLabel1115:
 	yych = peek(in)
 	switch (yych) {
 	case 0x80,0x81,0x82:
@@ -24553,72 +24580,53 @@ yyFillLabel1116:
 	case 0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
 		fallthrough
 	case 0xAA,0xAB,0xAC,0xAD:
-		goto yy794
+		goto yy792
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1115
+			}
+		}
+		goto yy826
+	}
+yy1160:
+	in.cursor += 1
+yyFillLabel1116:
+	yych = peek(in)
+	switch (yych) {
+	case 0x82,0x83,0x84:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1116
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1162:
+yy1161:
 	in.cursor += 1
 yyFillLabel1117:
 	yych = peek(in)
 	switch (yych) {
-	case 0x82,0x83,0x84:
-		goto yy794
+	case 0x80,0x81,0x82,0x83,0x84:
+		fallthrough
+	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96:
+		goto yy792
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1117
 			}
 		}
-		goto yy828
+		goto yy826
 	}
-yy1163:
-	in.cursor += 1
-yyFillLabel1118:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82:
-		fallthrough
-	case 0x84,0x85,0x86,0x87,0x88,0x89,0x8A,0x8B:
-		fallthrough
-	case 0x8E,0x8F,0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F,0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1118
-			}
-		}
-		goto yy828
-	}
-yy1164:
-	in.cursor += 1
-yyFillLabel1119:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84:
-		fallthrough
-	case 0x90,0x91,0x92,0x93,0x94,0x95,0x96:
-		goto yy794
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1119
-			}
-		}
-		goto yy828
-	}
-yy1165:
-//line "js.re":101
+yy1162:
+//line "js.re":100
 	{ return END }
-//line "js.go":24620
+//line "js.go":24628
 }
-//line "js.re":104
+//line "js.re":102
 
 	}
 }
@@ -24659,11 +24667,11 @@ func js_lex(in *Input) TokenType {
 		}
 
     
-//line "js.go":24663
+//line "js.go":24671
 {
 	var yych byte
 	yyaccept := 0
-yyFillLabel1120:
+yyFillLabel1118:
 	yych = peek(in)
 	switch (yych) {
 	case '\t':
@@ -24671,15 +24679,15 @@ yyFillLabel1120:
 	case '\v','\f','\r':
 		fallthrough
 	case ' ':
-		goto yy1169
+		goto yy1166
 	case '\n':
-		goto yy1171
+		goto yy1168
 	case '!':
-		goto yy1172
+		goto yy1169
 	case '"':
-		goto yy1174
+		goto yy1171
 	case '#':
-		goto yy1175
+		goto yy1172
 	case '$':
 		fallthrough
 	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
@@ -24699,121 +24707,121 @@ yyFillLabel1120:
 	case 'x':
 		fallthrough
 	case 'z':
-		goto yy1177
+		goto yy1174
 	case '%':
-		goto yy1180
+		goto yy1177
 	case '&':
-		goto yy1182
+		goto yy1179
 	case '\'':
-		goto yy1184
+		goto yy1181
 	case '(':
-		goto yy1185
+		goto yy1182
 	case ')':
-		goto yy1186
+		goto yy1183
 	case '*':
-		goto yy1187
+		goto yy1184
 	case '+':
-		goto yy1189
+		goto yy1186
 	case ',':
-		goto yy1191
+		goto yy1188
 	case '-':
-		goto yy1192
+		goto yy1189
 	case '.':
-		goto yy1194
+		goto yy1191
 	case '/':
-		goto yy1196
+		goto yy1193
 	case '0':
-		goto yy1198
+		goto yy1195
 	case '1','2','3','4','5','6','7','8','9':
-		goto yy1200
+		goto yy1197
 	case ':':
-		goto yy1202
+		goto yy1199
 	case ';':
-		goto yy1203
+		goto yy1200
 	case '<':
-		goto yy1204
+		goto yy1201
 	case '=':
-		goto yy1206
+		goto yy1203
 	case '>':
-		goto yy1208
+		goto yy1205
 	case '?':
-		goto yy1210
+		goto yy1207
 	case '[':
-		goto yy1212
+		goto yy1209
 	case '\\':
-		goto yy1213
+		goto yy1210
 	case ']':
-		goto yy1214
+		goto yy1211
 	case '^':
-		goto yy1215
+		goto yy1212
 	case '`':
-		goto yy1217
+		goto yy1214
 	case 'a':
-		goto yy1218
+		goto yy1215
 	case 'b':
-		goto yy1219
+		goto yy1216
 	case 'c':
-		goto yy1220
+		goto yy1217
 	case 'd':
-		goto yy1221
+		goto yy1218
 	case 'e':
-		goto yy1222
+		goto yy1219
 	case 'f':
-		goto yy1223
+		goto yy1220
 	case 'i':
-		goto yy1224
+		goto yy1221
 	case 'l':
-		goto yy1225
+		goto yy1222
 	case 'n':
-		goto yy1226
+		goto yy1223
 	case 'r':
-		goto yy1227
+		goto yy1224
 	case 's':
-		goto yy1228
+		goto yy1225
 	case 't':
-		goto yy1229
+		goto yy1226
 	case 'v':
-		goto yy1230
+		goto yy1227
 	case 'w':
-		goto yy1231
+		goto yy1228
 	case 'y':
-		goto yy1232
+		goto yy1229
 	case '{':
-		goto yy1233
+		goto yy1230
 	case '|':
-		goto yy1234
+		goto yy1231
 	case '}':
-		goto yy1236
+		goto yy1233
 	case '~':
-		goto yy1237
+		goto yy1234
 	case 0xC2:
-		goto yy1238
+		goto yy1235
 	case 0xE1:
-		goto yy1239
+		goto yy1236
 	case 0xE2:
-		goto yy1240
+		goto yy1237
 	case 0xE3:
-		goto yy1241
+		goto yy1238
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1120
+				goto yyFillLabel1118
 			}
-			goto yy1497
+			goto yy1494
 		}
-		goto yy1167
+		goto yy1164
 	}
-yy1167:
+yy1164:
 	in.cursor += 1
-yy1168:
-//line "js.re":149
+yy1165:
+//line "js.re":147
 	{ fmt.Printf("%s: %d: unrecognised character %2x\n", in.filename, in.line, in.data[in.cursor-1]); continue }
-//line "js.go":24812
-yy1169:
+//line "js.go":24820
+yy1166:
 	yyaccept = 0
 	in.cursor += 1
 	in.marker = in.cursor
-yyFillLabel1121:
+yyFillLabel1119:
 	yych = peek(in)
 	switch (yych) {
 	case '\t':
@@ -24821,14 +24829,62 @@ yyFillLabel1121:
 	case '\v','\f','\r':
 		fallthrough
 	case ' ':
-		goto yy1169
+		goto yy1166
 	case 0xC2:
-		goto yy1242
+		goto yy1239
 	case 0xE1:
-		goto yy1244
+		goto yy1241
 	case 0xE2:
-		goto yy1245
+		goto yy1242
 	case 0xE3:
+		goto yy1243
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1119
+			}
+		}
+		goto yy1167
+	}
+yy1167:
+//line "js.re":144
+	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; continue }
+//line "js.go":24853
+yy1168:
+	in.cursor += 1
+//line "js.re":145
+	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; in.bolcursor = in.cursor; in.line += 1; continue }
+//line "js.go":24858
+yy1169:
+	in.cursor += 1
+yyFillLabel1120:
+	yych = peek(in)
+	switch (yych) {
+	case '=':
+		goto yy1244
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1120
+			}
+		}
+		goto yy1170
+	}
+yy1170:
+//line "js.re":224
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":24877
+yy1171:
+	in.cursor += 1
+//line "js.re":162
+	{ in.state = STATE_STRINGLITERAL; return STRING }
+//line "js.go":24882
+yy1172:
+	in.cursor += 1
+yyFillLabel1121:
+	yych = peek(in)
+	switch (yych) {
+	case '!':
 		goto yy1246
 	default:
 		if (in.limit <= in.cursor + 1) {
@@ -24836,65 +24892,17 @@ yyFillLabel1121:
 				goto yyFillLabel1121
 			}
 		}
-		goto yy1170
-	}
-yy1170:
-//line "js.re":146
-	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; continue }
-//line "js.go":24845
-yy1171:
-	in.cursor += 1
-//line "js.re":147
-	{ if mightBeRegex { in.state = STATE_POSSIBLEREGEX }; in.bolcursor = in.cursor; in.line += 1; continue }
-//line "js.go":24850
-yy1172:
-	in.cursor += 1
-yyFillLabel1122:
-	yych = peek(in)
-	switch (yych) {
-	case '=':
-		goto yy1247
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1122
-			}
-		}
 		goto yy1173
 	}
 yy1173:
-//line "js.re":226
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24869
+//line "js.re":152
+	{ continue }
+//line "js.go":24901
 yy1174:
 	in.cursor += 1
-//line "js.re":164
-	{ in.state = STATE_STRINGLITERAL; return STRING }
-//line "js.go":24874
+yyFillLabel1122:
+	yych = peek(in)
 yy1175:
-	in.cursor += 1
-yyFillLabel1123:
-	yych = peek(in)
-	switch (yych) {
-	case '!':
-		goto yy1249
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1123
-			}
-		}
-		goto yy1176
-	}
-yy1176:
-//line "js.re":154
-	{ continue }
-//line "js.go":24893
-yy1177:
-	in.cursor += 1
-yyFillLabel1124:
-	yych = peek(in)
-yy1178:
 	switch (yych) {
 	case '$':
 		fallthrough
@@ -24905,131 +24913,173 @@ yy1178:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1122
+			}
+		}
+		goto yy1176
+	}
+yy1176:
+//line "js.re":270
+	{ return IDENTIFIER }
+//line "js.go":24929
+yy1177:
+	in.cursor += 1
+yyFillLabel1123:
+	yych = peek(in)
+	switch (yych) {
+	case '=':
+		goto yy1247
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1123
+			}
+		}
+		goto yy1178
+	}
+yy1178:
+//line "js.re":216
+	{ return PUNCTUATION }
+//line "js.go":24948
+yy1179:
+	in.cursor += 1
+yyFillLabel1124:
+	yych = peek(in)
+	switch (yych) {
+	case '&':
+		goto yy1248
+	case '=':
+		goto yy1250
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1124
 			}
 		}
-		goto yy1179
+		goto yy1180
 	}
-yy1179:
-//line "js.re":272
-	{ return IDENTIFIER }
-//line "js.go":24921
 yy1180:
+//line "js.re":220
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":24969
+yy1181:
+	in.cursor += 1
+//line "js.re":163
+	{ in.state = STATE_CHARLITERAL; return STRING }
+//line "js.go":24974
+yy1182:
+	in.cursor += 1
+//line "js.re":231
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":24979
+yy1183:
+	in.cursor += 1
+//line "js.re":232
+	{ return PUNCTUATION }
+//line "js.go":24984
+yy1184:
 	in.cursor += 1
 yyFillLabel1125:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1250
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1125
-			}
-		}
-		goto yy1181
-	}
-yy1181:
-//line "js.re":218
-	{ return PUNCTUATION }
-//line "js.go":24940
-yy1182:
-	in.cursor += 1
-yyFillLabel1126:
-	yych = peek(in)
-	switch (yych) {
-	case '&':
+	case '*':
 		goto yy1251
 	case '=':
 		goto yy1253
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
+				goto yyFillLabel1125
+			}
+		}
+		goto yy1185
+	}
+yy1185:
+//line "js.re":215
+	{ return PUNCTUATION }
+//line "js.go":25005
+yy1186:
+	in.cursor += 1
+yyFillLabel1126:
+	yych = peek(in)
+	switch (yych) {
+	case '+':
+		goto yy1254
+	case '=':
+		goto yy1255
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
 				goto yyFillLabel1126
 			}
 		}
-		goto yy1183
+		goto yy1187
 	}
-yy1183:
-//line "js.re":222
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24961
-yy1184:
-	in.cursor += 1
-//line "js.re":165
-	{ in.state = STATE_CHARLITERAL; return STRING }
-//line "js.go":24966
-yy1185:
-	in.cursor += 1
-//line "js.re":233
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":24971
-yy1186:
-	in.cursor += 1
-//line "js.re":234
-	{ return PUNCTUATION }
-//line "js.go":24976
 yy1187:
+//line "js.re":212
+	{ return PUNCTUATION }
+//line "js.go":25026
+yy1188:
+	in.cursor += 1
+//line "js.re":230
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25031
+yy1189:
 	in.cursor += 1
 yyFillLabel1127:
 	yych = peek(in)
 	switch (yych) {
-	case '*':
-		goto yy1254
-	case '=':
+	case '-':
 		goto yy1256
+	case '=':
+		goto yy1257
+	case '>':
+		goto yy1258
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1127
 			}
 		}
-		goto yy1188
+		goto yy1190
 	}
-yy1188:
-//line "js.re":217
+yy1190:
+//line "js.re":213
 	{ return PUNCTUATION }
-//line "js.go":24997
-yy1189:
+//line "js.go":25054
+yy1191:
+	yyaccept = 1
 	in.cursor += 1
+	in.marker = in.cursor
 yyFillLabel1128:
 	yych = peek(in)
 	switch (yych) {
-	case '+':
-		goto yy1257
-	case '=':
-		goto yy1258
+	case '.':
+		goto yy1259
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1128
 			}
 		}
-		goto yy1190
+		goto yy1192
 	}
-yy1190:
-//line "js.re":214
-	{ return PUNCTUATION }
-//line "js.go":25018
-yy1191:
-	in.cursor += 1
-//line "js.re":232
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25023
 yy1192:
+//line "js.re":228
+	{ return PUNCTUATION }
+//line "js.go":25075
+yy1193:
 	in.cursor += 1
 yyFillLabel1129:
 	yych = peek(in)
 	switch (yych) {
-	case '-':
-		goto yy1259
-	case '=':
+	case '*':
 		goto yy1260
-	case '>':
+	case '/':
 		goto yy1261
 	default:
 		if (in.limit <= in.cursor + 1) {
@@ -25037,228 +25087,220 @@ yyFillLabel1129:
 				goto yyFillLabel1129
 			}
 		}
-		goto yy1193
+		goto yy1194
 	}
-yy1193:
-//line "js.re":215
-	{ return PUNCTUATION }
-//line "js.go":25046
 yy1194:
-	yyaccept = 1
+//line "js.re":214
+	{ if mightBeRegex { in.state = STATE_REGEX; in.raw_str_delim = in.data[in.cursor-1:] }; return PUNCTUATION }
+//line "js.go":25096
+yy1195:
+	yyaccept = 2
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel1130:
 	yych = peek(in)
 	switch (yych) {
-	case '.':
-		goto yy1262
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1130
 			}
 		}
-		goto yy1195
+		goto yy1196
+	case 'x':
+		goto yy1264
+	default:
+		goto yy1263
 	}
-yy1195:
-//line "js.re":230
-	{ return PUNCTUATION }
-//line "js.go":25067
 yy1196:
+//line "js.re":160
+	{ return LITERAL }
+//line "js.go":25119
+yy1197:
 	in.cursor += 1
 yyFillLabel1131:
 	yych = peek(in)
 	switch (yych) {
-	case '*':
-		goto yy1263
-	case '/':
-		goto yy1264
+	case '0','1','2','3','4','5','6','7','8','9':
+		goto yy1197
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1131
 			}
 		}
-		goto yy1197
+		goto yy1198
 	}
-yy1197:
-//line "js.re":216
-	{ if mightBeRegex { in.state = STATE_REGEX; in.raw_str_delim = in.data[in.cursor-1:] }; return PUNCTUATION }
-//line "js.go":25088
 yy1198:
-	yyaccept = 2
+//line "js.re":158
+	{ return LITERAL }
+//line "js.go":25138
+yy1199:
 	in.cursor += 1
-	in.marker = in.cursor
+//line "js.re":267
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25143
+yy1200:
+	in.cursor += 1
+//line "js.re":227
+	{ return PUNCTUATION }
+//line "js.go":25148
+yy1201:
+	in.cursor += 1
 yyFillLabel1132:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '<':
+		goto yy1265
+	case '=':
+		goto yy1267
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1132
 			}
 		}
-		goto yy1199
-	case 'x':
-		goto yy1267
-	default:
-		goto yy1266
+		goto yy1202
 	}
-yy1199:
-//line "js.re":162
-	{ return LITERAL }
-//line "js.go":25111
-yy1200:
+yy1202:
+//line "js.re":256
+	{ return PUNCTUATION }
+//line "js.go":25169
+yy1203:
 	in.cursor += 1
 yyFillLabel1133:
 	yych = peek(in)
 	switch (yych) {
-	case '0','1','2','3','4','5','6','7','8','9':
-		goto yy1200
+	case '=':
+		goto yy1268
+	case '>':
+		goto yy1270
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1133
 			}
 		}
-		goto yy1201
+		goto yy1204
 	}
-yy1201:
-//line "js.re":160
-	{ return LITERAL }
-//line "js.go":25130
-yy1202:
-	in.cursor += 1
-//line "js.re":269
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25135
-yy1203:
-	in.cursor += 1
-//line "js.re":229
-	{ return PUNCTUATION }
-//line "js.go":25140
 yy1204:
+//line "js.re":237
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25190
+yy1205:
 	in.cursor += 1
 yyFillLabel1134:
 	yych = peek(in)
 	switch (yych) {
-	case '<':
-		goto yy1268
 	case '=':
-		goto yy1270
+		goto yy1271
+	case '>':
+		goto yy1272
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1134
 			}
 		}
-		goto yy1205
+		goto yy1206
 	}
-yy1205:
-//line "js.re":258
-	{ return PUNCTUATION }
-//line "js.go":25161
 yy1206:
+//line "js.re":257
+	{ return PUNCTUATION }
+//line "js.go":25211
+yy1207:
 	in.cursor += 1
 yyFillLabel1135:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1271
-	case '>':
-		goto yy1273
+	case '?':
+		goto yy1274
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1135
 			}
 		}
-		goto yy1207
+		goto yy1208
 	}
-yy1207:
-//line "js.re":239
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25182
 yy1208:
+//line "js.re":265
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25230
+yy1209:
+	in.cursor += 1
+//line "js.re":235
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25235
+yy1210:
+	in.cursor += 1
+//line "js.re":142
+	{ continue }
+//line "js.go":25240
+yy1211:
+	in.cursor += 1
+//line "js.re":236
+	{ return PUNCTUATION }
+//line "js.go":25245
+yy1212:
 	in.cursor += 1
 yyFillLabel1136:
 	yych = peek(in)
 	switch (yych) {
 	case '=':
-		goto yy1274
-	case '>':
-		goto yy1275
+		goto yy1276
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1136
 			}
 		}
-		goto yy1209
+		goto yy1213
 	}
-yy1209:
-//line "js.re":259
+yy1213:
+//line "js.re":225
 	{ return PUNCTUATION }
-//line "js.go":25203
-yy1210:
+//line "js.go":25264
+yy1214:
+	in.cursor += 1
+//line "js.re":164
+	{ in.state = STATE_LONGSTRINGLITERAL; return STRING }
+//line "js.go":25269
+yy1215:
 	in.cursor += 1
 yyFillLabel1137:
 	yych = peek(in)
 	switch (yych) {
-	case '?':
-		goto yy1277
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1137
 			}
 		}
-		goto yy1211
+		goto yy1176
+	case 'w':
+		goto yy1277
+	default:
+		goto yy1175
 	}
-yy1211:
-//line "js.re":267
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25222
-yy1212:
-	in.cursor += 1
-//line "js.re":237
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25227
-yy1213:
-	in.cursor += 1
-//line "js.re":144
-	{ continue }
-//line "js.go":25232
-yy1214:
-	in.cursor += 1
-//line "js.re":238
-	{ return PUNCTUATION }
-//line "js.go":25237
-yy1215:
+yy1216:
 	in.cursor += 1
 yyFillLabel1138:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1279
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1138
 			}
 		}
-		goto yy1216
+		goto yy1176
+	case 'r':
+		goto yy1278
+	default:
+		goto yy1175
 	}
-yy1216:
-//line "js.re":227
-	{ return PUNCTUATION }
-//line "js.go":25256
 yy1217:
-	in.cursor += 1
-//line "js.re":166
-	{ in.state = STATE_LONGSTRINGLITERAL; return STRING }
-//line "js.go":25261
-yy1218:
 	in.cursor += 1
 yyFillLabel1139:
 	yych = peek(in)
@@ -25269,13 +25311,17 @@ yyFillLabel1139:
 				goto yyFillLabel1139
 			}
 		}
-		goto yy1179
-	case 'w':
+		goto yy1176
+	case 'a':
+		goto yy1279
+	case 'l':
 		goto yy1280
+	case 'o':
+		goto yy1281
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1219:
+yy1218:
 	in.cursor += 1
 yyFillLabel1140:
 	yych = peek(in)
@@ -25286,13 +25332,15 @@ yyFillLabel1140:
 				goto yyFillLabel1140
 			}
 		}
-		goto yy1179
-	case 'r':
-		goto yy1281
+		goto yy1176
+	case 'e':
+		goto yy1282
+	case 'o':
+		goto yy1283
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1220:
+yy1219:
 	in.cursor += 1
 yyFillLabel1141:
 	yych = peek(in)
@@ -25303,17 +25351,17 @@ yyFillLabel1141:
 				goto yyFillLabel1141
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1282
+		goto yy1176
 	case 'l':
-		goto yy1283
-	case 'o':
-		goto yy1284
+		goto yy1285
+	case 'n':
+		goto yy1286
+	case 'x':
+		goto yy1287
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1221:
+yy1220:
 	in.cursor += 1
 yyFillLabel1142:
 	yych = peek(in)
@@ -25324,15 +25372,19 @@ yyFillLabel1142:
 				goto yyFillLabel1142
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1285
+		goto yy1176
+	case 'a':
+		goto yy1288
+	case 'i':
+		goto yy1289
 	case 'o':
-		goto yy1286
+		goto yy1290
+	case 'u':
+		goto yy1291
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1222:
+yy1221:
 	in.cursor += 1
 yyFillLabel1143:
 	yych = peek(in)
@@ -25343,17 +25395,17 @@ yyFillLabel1143:
 				goto yyFillLabel1143
 			}
 		}
-		goto yy1179
-	case 'l':
-		goto yy1288
+		goto yy1176
+	case 'f':
+		goto yy1292
+	case 'm':
+		goto yy1294
 	case 'n':
-		goto yy1289
-	case 'x':
-		goto yy1290
+		goto yy1295
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1223:
+yy1222:
 	in.cursor += 1
 yyFillLabel1144:
 	yych = peek(in)
@@ -25364,19 +25416,15 @@ yyFillLabel1144:
 				goto yyFillLabel1144
 			}
 		}
-		goto yy1179
+		goto yy1176
 	case 'a':
-		goto yy1291
-	case 'i':
-		goto yy1292
-	case 'o':
-		goto yy1293
-	case 'u':
-		goto yy1294
+		goto yy1297
+	case 'e':
+		goto yy1298
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1224:
+yy1223:
 	in.cursor += 1
 yyFillLabel1145:
 	yych = peek(in)
@@ -25387,17 +25435,15 @@ yyFillLabel1145:
 				goto yyFillLabel1145
 			}
 		}
-		goto yy1179
-	case 'f':
-		goto yy1295
-	case 'm':
-		goto yy1297
-	case 'n':
-		goto yy1298
+		goto yy1176
+	case 'e':
+		goto yy1299
+	case 'u':
+		goto yy1300
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1225:
+yy1224:
 	in.cursor += 1
 yyFillLabel1146:
 	yych = peek(in)
@@ -25408,15 +25454,13 @@ yyFillLabel1146:
 				goto yyFillLabel1146
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1300
+		goto yy1176
 	case 'e':
 		goto yy1301
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1226:
+yy1225:
 	in.cursor += 1
 yyFillLabel1147:
 	yych = peek(in)
@@ -25427,15 +25471,17 @@ yyFillLabel1147:
 				goto yyFillLabel1147
 			}
 		}
-		goto yy1179
-	case 'e':
+		goto yy1176
+	case 't':
 		goto yy1302
 	case 'u':
 		goto yy1303
+	case 'w':
+		goto yy1304
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1227:
+yy1226:
 	in.cursor += 1
 yyFillLabel1148:
 	yych = peek(in)
@@ -25446,13 +25492,17 @@ yyFillLabel1148:
 				goto yyFillLabel1148
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1304
+		goto yy1176
+	case 'h':
+		goto yy1305
+	case 'r':
+		goto yy1306
+	case 'y':
+		goto yy1307
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1228:
+yy1227:
 	in.cursor += 1
 yyFillLabel1149:
 	yych = peek(in)
@@ -25463,17 +25513,15 @@ yyFillLabel1149:
 				goto yyFillLabel1149
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1305
-	case 'u':
-		goto yy1306
-	case 'w':
-		goto yy1307
+		goto yy1176
+	case 'a':
+		goto yy1308
+	case 'o':
+		goto yy1309
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1229:
+yy1228:
 	in.cursor += 1
 yyFillLabel1150:
 	yych = peek(in)
@@ -25484,17 +25532,15 @@ yyFillLabel1150:
 				goto yyFillLabel1150
 			}
 		}
-		goto yy1179
+		goto yy1176
 	case 'h':
-		goto yy1308
-	case 'r':
-		goto yy1309
-	case 'y':
 		goto yy1310
+	case 'i':
+		goto yy1311
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1230:
+yy1229:
 	in.cursor += 1
 yyFillLabel1151:
 	yych = peek(in)
@@ -25505,374 +25551,336 @@ yyFillLabel1151:
 				goto yyFillLabel1151
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1311
-	case 'o':
+		goto yy1176
+	case 'i':
 		goto yy1312
 	default:
-		goto yy1178
+		goto yy1175
 	}
+yy1230:
+	in.cursor += 1
+//line "js.re":233
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25565
 yy1231:
 	in.cursor += 1
 yyFillLabel1152:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '=':
+		goto yy1313
+	case '|':
+		goto yy1314
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1152
 			}
 		}
-		goto yy1179
-	case 'h':
-		goto yy1313
-	case 'i':
-		goto yy1314
-	default:
-		goto yy1178
+		goto yy1232
 	}
 yy1232:
+//line "js.re":221
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25586
+yy1233:
+	in.cursor += 1
+//line "js.re":234
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25591
+yy1234:
+	in.cursor += 1
+//line "js.re":226
+	{ return PUNCTUATION }
+//line "js.go":25596
+yy1235:
 	in.cursor += 1
 yyFillLabel1153:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case 0xA0:
+		goto yy1166
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1153
 			}
 		}
-		goto yy1179
-	case 'i':
-		goto yy1315
-	default:
-		goto yy1178
+		goto yy1165
 	}
-yy1233:
+yy1236:
+	yyaccept = 3
 	in.cursor += 1
-//line "js.re":235
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25557
-yy1234:
-	in.cursor += 1
+	in.marker = in.cursor
 yyFillLabel1154:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
+	case 0x9A:
 		goto yy1316
-	case '|':
-		goto yy1317
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1154
 			}
 		}
-		goto yy1235
+		goto yy1165
 	}
-yy1235:
-//line "js.re":223
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25578
-yy1236:
-	in.cursor += 1
-//line "js.re":236
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25583
 yy1237:
+	yyaccept = 3
 	in.cursor += 1
-//line "js.re":228
-	{ return PUNCTUATION }
-//line "js.go":25588
-yy1238:
-	in.cursor += 1
+	in.marker = in.cursor
 yyFillLabel1155:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0:
-		goto yy1169
+	case 0x80:
+		goto yy1317
+	case 0x81:
+		goto yy1318
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1155
 			}
 		}
-		goto yy1168
+		goto yy1165
 	}
-yy1239:
+yy1238:
 	yyaccept = 3
 	in.cursor += 1
 	in.marker = in.cursor
 yyFillLabel1156:
 	yych = peek(in)
 	switch (yych) {
-	case 0x9A:
-		goto yy1319
+	case 0x80:
+		goto yy1316
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1156
 			}
 		}
-		goto yy1168
+		goto yy1165
 	}
-yy1240:
-	yyaccept = 3
+yy1239:
 	in.cursor += 1
-	in.marker = in.cursor
 yyFillLabel1157:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1320
-	case 0x81:
-		goto yy1321
+	case 0xA0:
+		goto yy1166
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1157
 			}
 		}
-		goto yy1168
+		goto yy1240
+	}
+yy1240:
+	in.cursor = in.marker
+	switch (yyaccept) {
+	case 0:
+		goto yy1167
+	case 1:
+		goto yy1192
+	case 2:
+		goto yy1196
+	default:
+		goto yy1165
 	}
 yy1241:
-	yyaccept = 3
 	in.cursor += 1
-	in.marker = in.cursor
 yyFillLabel1158:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1319
+	case 0x9A:
+		goto yy1316
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1158
 			}
 		}
-		goto yy1168
+		goto yy1240
 	}
 yy1242:
 	in.cursor += 1
 yyFillLabel1159:
 	yych = peek(in)
 	switch (yych) {
-	case 0xA0:
-		goto yy1169
+	case 0x80:
+		goto yy1317
+	case 0x81:
+		goto yy1318
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1159
 			}
 		}
-		goto yy1243
+		goto yy1240
 	}
 yy1243:
-	in.cursor = in.marker
-	switch (yyaccept) {
-	case 0:
-		goto yy1170
-	case 1:
-		goto yy1195
-	case 2:
-		goto yy1199
-	default:
-		goto yy1168
-	}
-yy1244:
 	in.cursor += 1
 yyFillLabel1160:
 	yych = peek(in)
 	switch (yych) {
-	case 0x9A:
-		goto yy1319
+	case 0x80:
+		goto yy1316
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1160
 			}
 		}
-		goto yy1243
+		goto yy1240
 	}
-yy1245:
+yy1244:
 	in.cursor += 1
 yyFillLabel1161:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1320
-	case 0x81:
-		goto yy1321
+	case '=':
+		goto yy1319
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1161
 			}
 		}
-		goto yy1243
+		goto yy1245
 	}
+yy1245:
+//line "js.re":253
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25757
 yy1246:
+	in.cursor += 1
+//line "js.re":150
+	{ if in.cursor == 2 { continue } }
+//line "js.go":25762
+yy1247:
+	in.cursor += 1
+//line "js.re":241
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25767
+yy1248:
 	in.cursor += 1
 yyFillLabel1162:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1319
+	case '=':
+		goto yy1320
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1162
 			}
 		}
-		goto yy1243
+		goto yy1249
 	}
-yy1247:
+yy1249:
+//line "js.re":222
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25786
+yy1250:
+	in.cursor += 1
+//line "js.re":246
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25791
+yy1251:
 	in.cursor += 1
 yyFillLabel1163:
 	yych = peek(in)
 	switch (yych) {
 	case '=':
-		goto yy1322
+		goto yy1321
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1163
 			}
 		}
-		goto yy1248
+		goto yy1252
 	}
-yy1248:
-//line "js.re":255
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25749
-yy1249:
+yy1252:
+//line "js.re":217
+	{ return PUNCTUATION }
+//line "js.go":25810
+yy1253:
 	in.cursor += 1
-//line "js.re":152
-	{ if in.cursor == 2 { continue } }
-//line "js.go":25754
-yy1250:
-	in.cursor += 1
-//line "js.re":243
+//line "js.re":240
 	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25759
-yy1251:
+//line "js.go":25815
+yy1254:
+	in.cursor += 1
+//line "js.re":218
+	{ return PUNCTUATION }
+//line "js.go":25820
+yy1255:
+	in.cursor += 1
+//line "js.re":238
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25825
+yy1256:
+	in.cursor += 1
+//line "js.re":219
+	{ return PUNCTUATION }
+//line "js.go":25830
+yy1257:
+	in.cursor += 1
+//line "js.re":239
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25835
+yy1258:
+	in.cursor += 1
+//line "js.re":264
+	{ return PUNCTUATION }
+//line "js.go":25840
+yy1259:
 	in.cursor += 1
 yyFillLabel1164:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1323
+	case '.':
+		goto yy1322
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1164
 			}
 		}
-		goto yy1252
+		goto yy1240
 	}
-yy1252:
-//line "js.re":224
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25778
-yy1253:
+yy1260:
 	in.cursor += 1
-//line "js.re":248
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25783
-yy1254:
+//line "js.re":166
+	{ in.state = STATE_MLCOMMENT; return COMMENT }
+//line "js.go":25860
+yy1261:
+	in.cursor += 1
+//line "js.re":165
+	{ in.state = STATE_EOLCOMMENT; return COMMENT }
+//line "js.go":25865
+yy1262:
 	in.cursor += 1
 yyFillLabel1165:
 	yych = peek(in)
+yy1263:
 	switch (yych) {
-	case '=':
-		goto yy1324
+	case '0','1','2','3','4','5','6','7':
+		goto yy1262
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1165
 			}
 		}
-		goto yy1255
+		goto yy1196
 	}
-yy1255:
-//line "js.re":219
-	{ return PUNCTUATION }
-//line "js.go":25802
-yy1256:
-	in.cursor += 1
-//line "js.re":242
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25807
-yy1257:
-	in.cursor += 1
-//line "js.re":220
-	{ return PUNCTUATION }
-//line "js.go":25812
-yy1258:
-	in.cursor += 1
-//line "js.re":240
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25817
-yy1259:
-	in.cursor += 1
-//line "js.re":221
-	{ return PUNCTUATION }
-//line "js.go":25822
-yy1260:
-	in.cursor += 1
-//line "js.re":241
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25827
-yy1261:
-	in.cursor += 1
-//line "js.re":266
-	{ return PUNCTUATION }
-//line "js.go":25832
-yy1262:
-	in.cursor += 1
-yyFillLabel1166:
-	yych = peek(in)
-	switch (yych) {
-	case '.':
-		goto yy1325
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1166
-			}
-		}
-		goto yy1243
-	}
-yy1263:
-	in.cursor += 1
-//line "js.re":168
-	{ in.state = STATE_MLCOMMENT; return COMMENT }
-//line "js.go":25852
 yy1264:
 	in.cursor += 1
-//line "js.re":167
-	{ in.state = STATE_EOLCOMMENT; return COMMENT }
-//line "js.go":25857
-yy1265:
-	in.cursor += 1
-yyFillLabel1167:
-	yych = peek(in)
-yy1266:
-	switch (yych) {
-	case '0','1','2','3','4','5','6','7':
-		goto yy1265
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1167
-			}
-		}
-		goto yy1199
-	}
-yy1267:
-	in.cursor += 1
-yyFillLabel1168:
+yyFillLabel1166:
 	yych = peek(in)
 	switch (yych) {
 	case '0','1','2','3','4','5','6','7','8','9':
@@ -25880,6 +25888,45 @@ yyFillLabel1168:
 	case 'A','B','C','D','E','F':
 		fallthrough
 	case 'a','b','c','d','e','f':
+		goto yy1323
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1166
+			}
+		}
+		goto yy1240
+	}
+yy1265:
+	in.cursor += 1
+yyFillLabel1167:
+	yych = peek(in)
+	switch (yych) {
+	case '=':
+		goto yy1325
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1167
+			}
+		}
+		goto yy1266
+	}
+yy1266:
+//line "js.re":261
+	{ return PUNCTUATION }
+//line "js.go":25919
+yy1267:
+	in.cursor += 1
+//line "js.re":258
+	{ return PUNCTUATION }
+//line "js.go":25924
+yy1268:
+	in.cursor += 1
+yyFillLabel1168:
+	yych = peek(in)
+	switch (yych) {
+	case '=':
 		goto yy1326
 	default:
 		if (in.limit <= in.cursor + 1) {
@@ -25887,14 +25934,30 @@ yyFillLabel1168:
 				goto yyFillLabel1168
 			}
 		}
-		goto yy1243
+		goto yy1269
 	}
-yy1268:
+yy1269:
+//line "js.re":252
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25943
+yy1270:
+	in.cursor += 1
+//line "js.re":260
+	{ return PUNCTUATION }
+//line "js.go":25948
+yy1271:
+	in.cursor += 1
+//line "js.re":259
+	{ return PUNCTUATION }
+//line "js.go":25953
+yy1272:
 	in.cursor += 1
 yyFillLabel1169:
 	yych = peek(in)
 	switch (yych) {
 	case '=':
+		goto yy1327
+	case '>':
 		goto yy1328
 	default:
 		if (in.limit <= in.cursor + 1) {
@@ -25902,92 +25965,71 @@ yyFillLabel1169:
 				goto yyFillLabel1169
 			}
 		}
-		goto yy1269
+		goto yy1273
 	}
-yy1269:
-//line "js.re":263
+yy1273:
+//line "js.re":262
 	{ return PUNCTUATION }
-//line "js.go":25911
-yy1270:
-	in.cursor += 1
-//line "js.re":260
-	{ return PUNCTUATION }
-//line "js.go":25916
-yy1271:
+//line "js.go":25974
+yy1274:
 	in.cursor += 1
 yyFillLabel1170:
 	yych = peek(in)
 	switch (yych) {
 	case '=':
-		goto yy1329
+		goto yy1330
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1170
 			}
 		}
-		goto yy1272
+		goto yy1275
 	}
-yy1272:
-//line "js.re":254
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25935
-yy1273:
-	in.cursor += 1
-//line "js.re":262
-	{ return PUNCTUATION }
-//line "js.go":25940
-yy1274:
-	in.cursor += 1
-//line "js.re":261
-	{ return PUNCTUATION }
-//line "js.go":25945
 yy1275:
+//line "js.re":266
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25993
+yy1276:
+	in.cursor += 1
+//line "js.re":248
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":25998
+yy1277:
 	in.cursor += 1
 yyFillLabel1171:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1330
-	case '>':
-		goto yy1331
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1171
 			}
 		}
-		goto yy1276
+		goto yy1176
+	case 'a':
+		goto yy1331
+	default:
+		goto yy1175
 	}
-yy1276:
-//line "js.re":264
-	{ return PUNCTUATION }
-//line "js.go":25966
-yy1277:
+yy1278:
 	in.cursor += 1
 yyFillLabel1172:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1333
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1172
 			}
 		}
-		goto yy1278
+		goto yy1176
+	case 'e':
+		goto yy1332
+	default:
+		goto yy1175
 	}
-yy1278:
-//line "js.re":268
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25985
 yy1279:
-	in.cursor += 1
-//line "js.re":250
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":25990
-yy1280:
 	in.cursor += 1
 yyFillLabel1173:
 	yych = peek(in)
@@ -25998,13 +26040,15 @@ yyFillLabel1173:
 				goto yyFillLabel1173
 			}
 		}
-		goto yy1179
-	case 'a':
+		goto yy1176
+	case 's':
+		goto yy1333
+	case 't':
 		goto yy1334
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1281:
+yy1280:
 	in.cursor += 1
 yyFillLabel1174:
 	yych = peek(in)
@@ -26015,13 +26059,13 @@ yyFillLabel1174:
 				goto yyFillLabel1174
 			}
 		}
-		goto yy1179
-	case 'e':
+		goto yy1176
+	case 'a':
 		goto yy1335
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1282:
+yy1281:
 	in.cursor += 1
 yyFillLabel1175:
 	yych = peek(in)
@@ -26032,15 +26076,13 @@ yyFillLabel1175:
 				goto yyFillLabel1175
 			}
 		}
-		goto yy1179
-	case 's':
+		goto yy1176
+	case 'n':
 		goto yy1336
-	case 't':
-		goto yy1337
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1283:
+yy1282:
 	in.cursor += 1
 yyFillLabel1176:
 	yych = peek(in)
@@ -26051,29 +26093,43 @@ yyFillLabel1176:
 				goto yyFillLabel1176
 			}
 		}
-		goto yy1179
-	case 'a':
+		goto yy1176
+	case 'b':
+		goto yy1337
+	case 'f':
 		goto yy1338
+	case 'l':
+		goto yy1339
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1284:
+yy1283:
 	in.cursor += 1
 yyFillLabel1177:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1177
 			}
 		}
-		goto yy1179
-	case 'n':
-		goto yy1339
-	default:
-		goto yy1178
+		goto yy1284
 	}
+yy1284:
+//line "js.re":178
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":26133
 yy1285:
 	in.cursor += 1
 yyFillLabel1178:
@@ -26085,19 +26141,119 @@ yyFillLabel1178:
 				goto yyFillLabel1178
 			}
 		}
-		goto yy1179
-	case 'b':
+		goto yy1176
+	case 's':
 		goto yy1340
-	case 'f':
-		goto yy1341
-	case 'l':
-		goto yy1342
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1286:
 	in.cursor += 1
 yyFillLabel1179:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1179
+			}
+		}
+		goto yy1176
+	case 'u':
+		goto yy1341
+	default:
+		goto yy1175
+	}
+yy1287:
+	in.cursor += 1
+yyFillLabel1180:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1180
+			}
+		}
+		goto yy1176
+	case 'p':
+		goto yy1342
+	case 't':
+		goto yy1343
+	default:
+		goto yy1175
+	}
+yy1288:
+	in.cursor += 1
+yyFillLabel1181:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1181
+			}
+		}
+		goto yy1176
+	case 'l':
+		goto yy1344
+	default:
+		goto yy1175
+	}
+yy1289:
+	in.cursor += 1
+yyFillLabel1182:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1182
+			}
+		}
+		goto yy1176
+	case 'n':
+		goto yy1345
+	default:
+		goto yy1175
+	}
+yy1290:
+	in.cursor += 1
+yyFillLabel1183:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1183
+			}
+		}
+		goto yy1176
+	case 'r':
+		goto yy1346
+	default:
+		goto yy1175
+	}
+yy1291:
+	in.cursor += 1
+yyFillLabel1184:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1184
+			}
+		}
+		goto yy1176
+	case 'n':
+		goto yy1348
+	default:
+		goto yy1175
+	}
+yy1292:
+	in.cursor += 1
+yyFillLabel1185:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -26109,123 +26265,19 @@ yyFillLabel1179:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1179
-			}
-		}
-		goto yy1287
-	}
-yy1287:
-//line "js.re":180
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":26125
-yy1288:
-	in.cursor += 1
-yyFillLabel1180:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1180
-			}
-		}
-		goto yy1179
-	case 's':
-		goto yy1343
-	default:
-		goto yy1178
-	}
-yy1289:
-	in.cursor += 1
-yyFillLabel1181:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1181
-			}
-		}
-		goto yy1179
-	case 'u':
-		goto yy1344
-	default:
-		goto yy1178
-	}
-yy1290:
-	in.cursor += 1
-yyFillLabel1182:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1182
-			}
-		}
-		goto yy1179
-	case 'p':
-		goto yy1345
-	case 't':
-		goto yy1346
-	default:
-		goto yy1178
-	}
-yy1291:
-	in.cursor += 1
-yyFillLabel1183:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1183
-			}
-		}
-		goto yy1179
-	case 'l':
-		goto yy1347
-	default:
-		goto yy1178
-	}
-yy1292:
-	in.cursor += 1
-yyFillLabel1184:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1184
-			}
-		}
-		goto yy1179
-	case 'n':
-		goto yy1348
-	default:
-		goto yy1178
-	}
-yy1293:
-	in.cursor += 1
-yyFillLabel1185:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1185
 			}
 		}
-		goto yy1179
-	case 'r':
-		goto yy1349
-	default:
-		goto yy1178
+		goto yy1293
 	}
+yy1293:
+//line "js.re":187
+	{ return KEYWORD }
+//line "js.go":26281
 yy1294:
 	in.cursor += 1
 yyFillLabel1186:
@@ -26237,11 +26289,11 @@ yyFillLabel1186:
 				goto yyFillLabel1186
 			}
 		}
-		goto yy1179
-	case 'n':
-		goto yy1351
+		goto yy1176
+	case 'p':
+		goto yy1349
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1295:
 	in.cursor += 1
@@ -26256,8 +26308,12 @@ yyFillLabel1187:
 		fallthrough
 	case '_':
 		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r':
+		fallthrough
+	case 't','u','v','w','x','y','z':
+		goto yy1174
+	case 's':
+		goto yy1350
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -26268,8 +26324,8 @@ yyFillLabel1187:
 	}
 yy1296:
 //line "js.re":189
-	{ return KEYWORD }
-//line "js.go":26273
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":26329
 yy1297:
 	in.cursor += 1
 yyFillLabel1188:
@@ -26281,44 +26337,30 @@ yyFillLabel1188:
 				goto yyFillLabel1188
 			}
 		}
-		goto yy1179
-	case 'p':
-		goto yy1352
+		goto yy1176
+	case 'm':
+		goto yy1351
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1298:
 	in.cursor += 1
 yyFillLabel1189:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r':
-		fallthrough
-	case 't','u','v','w','x','y','z':
-		goto yy1177
-	case 's':
-		goto yy1353
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1189
 			}
 		}
-		goto yy1299
+		goto yy1176
+	case 't':
+		goto yy1352
+	default:
+		goto yy1175
 	}
 yy1299:
-//line "js.re":191
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":26321
-yy1300:
 	in.cursor += 1
 yyFillLabel1190:
 	yych = peek(in)
@@ -26329,13 +26371,13 @@ yyFillLabel1190:
 				goto yyFillLabel1190
 			}
 		}
-		goto yy1179
-	case 'm':
+		goto yy1176
+	case 'w':
 		goto yy1354
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1301:
+yy1300:
 	in.cursor += 1
 yyFillLabel1191:
 	yych = peek(in)
@@ -26346,13 +26388,13 @@ yyFillLabel1191:
 				goto yyFillLabel1191
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1355
+		goto yy1176
+	case 'l':
+		goto yy1356
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1302:
+yy1301:
 	in.cursor += 1
 yyFillLabel1192:
 	yych = peek(in)
@@ -26363,13 +26405,13 @@ yyFillLabel1192:
 				goto yyFillLabel1192
 			}
 		}
-		goto yy1179
-	case 'w':
+		goto yy1176
+	case 't':
 		goto yy1357
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1303:
+yy1302:
 	in.cursor += 1
 yyFillLabel1193:
 	yych = peek(in)
@@ -26380,13 +26422,13 @@ yyFillLabel1193:
 				goto yyFillLabel1193
 			}
 		}
-		goto yy1179
-	case 'l':
-		goto yy1359
+		goto yy1176
+	case 'a':
+		goto yy1358
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1304:
+yy1303:
 	in.cursor += 1
 yyFillLabel1194:
 	yych = peek(in)
@@ -26397,13 +26439,13 @@ yyFillLabel1194:
 				goto yyFillLabel1194
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1360
+		goto yy1176
+	case 'p':
+		goto yy1359
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1305:
+yy1304:
 	in.cursor += 1
 yyFillLabel1195:
 	yych = peek(in)
@@ -26414,13 +26456,13 @@ yyFillLabel1195:
 				goto yyFillLabel1195
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1361
+		goto yy1176
+	case 'i':
+		goto yy1360
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1306:
+yy1305:
 	in.cursor += 1
 yyFillLabel1196:
 	yych = peek(in)
@@ -26431,13 +26473,15 @@ yyFillLabel1196:
 				goto yyFillLabel1196
 			}
 		}
-		goto yy1179
-	case 'p':
+		goto yy1176
+	case 'i':
+		goto yy1361
+	case 'r':
 		goto yy1362
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1307:
+yy1306:
 	in.cursor += 1
 yyFillLabel1197:
 	yych = peek(in)
@@ -26448,13 +26492,15 @@ yyFillLabel1197:
 				goto yyFillLabel1197
 			}
 		}
-		goto yy1179
-	case 'i':
+		goto yy1176
+	case 'u':
 		goto yy1363
+	case 'y':
+		goto yy1364
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1308:
+yy1307:
 	in.cursor += 1
 yyFillLabel1198:
 	yych = peek(in)
@@ -26465,15 +26511,13 @@ yyFillLabel1198:
 				goto yyFillLabel1198
 			}
 		}
-		goto yy1179
-	case 'i':
-		goto yy1364
-	case 'r':
-		goto yy1365
+		goto yy1176
+	case 'p':
+		goto yy1366
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1309:
+yy1308:
 	in.cursor += 1
 yyFillLabel1199:
 	yych = peek(in)
@@ -26484,15 +26528,13 @@ yyFillLabel1199:
 				goto yyFillLabel1199
 			}
 		}
-		goto yy1179
-	case 'u':
-		goto yy1366
-	case 'y':
+		goto yy1176
+	case 'r':
 		goto yy1367
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1310:
+yy1309:
 	in.cursor += 1
 yyFillLabel1200:
 	yych = peek(in)
@@ -26503,13 +26545,13 @@ yyFillLabel1200:
 				goto yyFillLabel1200
 			}
 		}
-		goto yy1179
-	case 'p':
+		goto yy1176
+	case 'i':
 		goto yy1369
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1311:
+yy1310:
 	in.cursor += 1
 yyFillLabel1201:
 	yych = peek(in)
@@ -26520,13 +26562,13 @@ yyFillLabel1201:
 				goto yyFillLabel1201
 			}
 		}
-		goto yy1179
-	case 'r':
+		goto yy1176
+	case 'i':
 		goto yy1370
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1312:
+yy1311:
 	in.cursor += 1
 yyFillLabel1202:
 	yych = peek(in)
@@ -26537,13 +26579,13 @@ yyFillLabel1202:
 				goto yyFillLabel1202
 			}
 		}
-		goto yy1179
-	case 'i':
-		goto yy1372
+		goto yy1176
+	case 't':
+		goto yy1371
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1313:
+yy1312:
 	in.cursor += 1
 yyFillLabel1203:
 	yych = peek(in)
@@ -26554,140 +26596,106 @@ yyFillLabel1203:
 				goto yyFillLabel1203
 			}
 		}
-		goto yy1179
-	case 'i':
-		goto yy1373
+		goto yy1176
+	case 'e':
+		goto yy1372
 	default:
-		goto yy1178
+		goto yy1175
 	}
+yy1313:
+	in.cursor += 1
+//line "js.re":247
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26610
 yy1314:
 	in.cursor += 1
 yyFillLabel1204:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '=':
+		goto yy1373
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1204
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1374
-	default:
-		goto yy1178
+		goto yy1315
 	}
 yy1315:
+//line "js.re":223
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26629
+yy1316:
 	in.cursor += 1
 yyFillLabel1205:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case 0x80:
+		goto yy1166
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1205
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1375
-	default:
-		goto yy1178
+		goto yy1240
 	}
-yy1316:
-	in.cursor += 1
-//line "js.re":249
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26602
 yy1317:
 	in.cursor += 1
 yyFillLabel1206:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1376
+	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
+		fallthrough
+	case 0xAF:
+		goto yy1166
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1206
 			}
 		}
-		goto yy1318
+		goto yy1240
 	}
 yy1318:
-//line "js.re":225
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26621
-yy1319:
 	in.cursor += 1
 yyFillLabel1207:
 	yych = peek(in)
 	switch (yych) {
-	case 0x80:
-		goto yy1169
+	case 0x9F:
+		goto yy1166
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1207
 			}
 		}
-		goto yy1243
+		goto yy1240
 	}
+yy1319:
+	in.cursor += 1
+//line "js.re":255
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26681
 yy1320:
 	in.cursor += 1
-yyFillLabel1208:
-	yych = peek(in)
-	switch (yych) {
-	case 0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,0x8A:
-		fallthrough
-	case 0xAF:
-		goto yy1169
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1208
-			}
-		}
-		goto yy1243
-	}
+//line "js.re":249
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26686
 yy1321:
 	in.cursor += 1
-yyFillLabel1209:
-	yych = peek(in)
-	switch (yych) {
-	case 0x9F:
-		goto yy1169
-	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1209
-			}
-		}
-		goto yy1243
-	}
+//line "js.re":242
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26691
 yy1322:
 	in.cursor += 1
-//line "js.re":257
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26673
+//line "js.re":229
+	{ return PUNCTUATION }
+//line "js.go":26696
 yy1323:
 	in.cursor += 1
-//line "js.re":251
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26678
-yy1324:
-	in.cursor += 1
-//line "js.re":244
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26683
-yy1325:
-	in.cursor += 1
-//line "js.re":231
-	{ return PUNCTUATION }
-//line "js.go":26688
-yy1326:
-	in.cursor += 1
-yyFillLabel1210:
+yyFillLabel1208:
 	yych = peek(in)
 	switch (yych) {
 	case '0','1','2','3','4','5','6','7','8','9':
@@ -26695,59 +26703,93 @@ yyFillLabel1210:
 	case 'A','B','C','D','E','F':
 		fallthrough
 	case 'a','b','c','d','e','f':
-		goto yy1326
+		goto yy1323
 	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1208
+			}
+		}
+		goto yy1324
+	}
+yy1324:
+//line "js.re":159
+	{ return LITERAL }
+//line "js.go":26719
+yy1325:
+	in.cursor += 1
+//line "js.re":243
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26724
+yy1326:
+	in.cursor += 1
+//line "js.re":254
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26729
+yy1327:
+	in.cursor += 1
+//line "js.re":244
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26734
+yy1328:
+	in.cursor += 1
+yyFillLabel1209:
+	yych = peek(in)
+	switch (yych) {
+	case '=':
+		goto yy1374
+	default:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1209
+			}
+		}
+		goto yy1329
+	}
+yy1329:
+//line "js.re":263
+	{ return PUNCTUATION }
+//line "js.go":26753
+yy1330:
+	in.cursor += 1
+//line "js.re":251
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":26758
+yy1331:
+	in.cursor += 1
+yyFillLabel1210:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1210
 			}
 		}
-		goto yy1327
+		goto yy1176
+	case 'i':
+		goto yy1375
+	default:
+		goto yy1175
 	}
-yy1327:
-//line "js.re":161
-	{ return LITERAL }
-//line "js.go":26711
-yy1328:
-	in.cursor += 1
-//line "js.re":245
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26716
-yy1329:
-	in.cursor += 1
-//line "js.re":256
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26721
-yy1330:
-	in.cursor += 1
-//line "js.re":246
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26726
-yy1331:
+yy1332:
 	in.cursor += 1
 yyFillLabel1211:
 	yych = peek(in)
 	switch (yych) {
-	case '=':
-		goto yy1377
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1211
 			}
 		}
-		goto yy1332
+		goto yy1176
+	case 'a':
+		goto yy1376
+	default:
+		goto yy1175
 	}
-yy1332:
-//line "js.re":265
-	{ return PUNCTUATION }
-//line "js.go":26745
 yy1333:
-	in.cursor += 1
-//line "js.re":253
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":26750
-yy1334:
 	in.cursor += 1
 yyFillLabel1212:
 	yych = peek(in)
@@ -26758,13 +26800,13 @@ yyFillLabel1212:
 				goto yyFillLabel1212
 			}
 		}
-		goto yy1179
-	case 'i':
-		goto yy1378
+		goto yy1176
+	case 'e':
+		goto yy1377
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1335:
+yy1334:
 	in.cursor += 1
 yyFillLabel1213:
 	yych = peek(in)
@@ -26775,13 +26817,13 @@ yyFillLabel1213:
 				goto yyFillLabel1213
 			}
 		}
-		goto yy1179
-	case 'a':
+		goto yy1176
+	case 'c':
 		goto yy1379
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1336:
+yy1335:
 	in.cursor += 1
 yyFillLabel1214:
 	yych = peek(in)
@@ -26792,13 +26834,13 @@ yyFillLabel1214:
 				goto yyFillLabel1214
 			}
 		}
-		goto yy1179
-	case 'e':
+		goto yy1176
+	case 's':
 		goto yy1380
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1337:
+yy1336:
 	in.cursor += 1
 yyFillLabel1215:
 	yych = peek(in)
@@ -26809,13 +26851,15 @@ yyFillLabel1215:
 				goto yyFillLabel1215
 			}
 		}
-		goto yy1179
-	case 'c':
+		goto yy1176
+	case 's':
+		goto yy1381
+	case 't':
 		goto yy1382
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1338:
+yy1337:
 	in.cursor += 1
 yyFillLabel1216:
 	yych = peek(in)
@@ -26826,13 +26870,13 @@ yyFillLabel1216:
 				goto yyFillLabel1216
 			}
 		}
-		goto yy1179
-	case 's':
+		goto yy1176
+	case 'u':
 		goto yy1383
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1339:
+yy1338:
 	in.cursor += 1
 yyFillLabel1217:
 	yych = peek(in)
@@ -26843,15 +26887,13 @@ yyFillLabel1217:
 				goto yyFillLabel1217
 			}
 		}
-		goto yy1179
-	case 's':
+		goto yy1176
+	case 'a':
 		goto yy1384
-	case 't':
-		goto yy1385
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1340:
+yy1339:
 	in.cursor += 1
 yyFillLabel1218:
 	yych = peek(in)
@@ -26862,13 +26904,13 @@ yyFillLabel1218:
 				goto yyFillLabel1218
 			}
 		}
-		goto yy1179
-	case 'u':
-		goto yy1386
+		goto yy1176
+	case 'e':
+		goto yy1385
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1341:
+yy1340:
 	in.cursor += 1
 yyFillLabel1219:
 	yych = peek(in)
@@ -26879,13 +26921,13 @@ yyFillLabel1219:
 				goto yyFillLabel1219
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1387
+		goto yy1176
+	case 'e':
+		goto yy1386
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1342:
+yy1341:
 	in.cursor += 1
 yyFillLabel1220:
 	yych = peek(in)
@@ -26896,13 +26938,13 @@ yyFillLabel1220:
 				goto yyFillLabel1220
 			}
 		}
-		goto yy1179
-	case 'e':
+		goto yy1176
+	case 'm':
 		goto yy1388
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1343:
+yy1342:
 	in.cursor += 1
 yyFillLabel1221:
 	yych = peek(in)
@@ -26913,13 +26955,13 @@ yyFillLabel1221:
 				goto yyFillLabel1221
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1389
+		goto yy1176
+	case 'o':
+		goto yy1390
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1344:
+yy1343:
 	in.cursor += 1
 yyFillLabel1222:
 	yych = peek(in)
@@ -26930,13 +26972,13 @@ yyFillLabel1222:
 				goto yyFillLabel1222
 			}
 		}
-		goto yy1179
-	case 'm':
+		goto yy1176
+	case 'e':
 		goto yy1391
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1345:
+yy1344:
 	in.cursor += 1
 yyFillLabel1223:
 	yych = peek(in)
@@ -26947,13 +26989,13 @@ yyFillLabel1223:
 				goto yyFillLabel1223
 			}
 		}
-		goto yy1179
-	case 'o':
-		goto yy1393
+		goto yy1176
+	case 's':
+		goto yy1392
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1346:
+yy1345:
 	in.cursor += 1
 yyFillLabel1224:
 	yych = peek(in)
@@ -26964,29 +27006,39 @@ yyFillLabel1224:
 				goto yyFillLabel1224
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1394
+		goto yy1176
+	case 'a':
+		goto yy1393
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1347:
+yy1346:
 	in.cursor += 1
 yyFillLabel1225:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1225
 			}
 		}
-		goto yy1179
-	case 's':
-		goto yy1395
-	default:
-		goto yy1178
+		goto yy1347
 	}
+yy1347:
+//line "js.re":185
+	{ return KEYWORD }
+//line "js.go":27042
 yy1348:
 	in.cursor += 1
 yyFillLabel1226:
@@ -26998,40 +27050,30 @@ yyFillLabel1226:
 				goto yyFillLabel1226
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1396
+		goto yy1176
+	case 'c':
+		goto yy1394
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1349:
 	in.cursor += 1
 yyFillLabel1227:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1227
 			}
 		}
-		goto yy1350
+		goto yy1176
+	case 'o':
+		goto yy1395
+	default:
+		goto yy1175
 	}
 yy1350:
-//line "js.re":187
-	{ return KEYWORD }
-//line "js.go":27034
-yy1351:
 	in.cursor += 1
 yyFillLabel1228:
 	yych = peek(in)
@@ -27042,13 +27084,13 @@ yyFillLabel1228:
 				goto yyFillLabel1228
 			}
 		}
-		goto yy1179
-	case 'c':
-		goto yy1397
+		goto yy1176
+	case 't':
+		goto yy1396
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1352:
+yy1351:
 	in.cursor += 1
 yyFillLabel1229:
 	yych = peek(in)
@@ -27059,101 +27101,101 @@ yyFillLabel1229:
 				goto yyFillLabel1229
 			}
 		}
-		goto yy1179
-	case 'o':
-		goto yy1398
+		goto yy1176
+	case 'b':
+		goto yy1397
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1353:
+yy1352:
 	in.cursor += 1
 yyFillLabel1230:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1230
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1399
-	default:
-		goto yy1178
+		goto yy1353
 	}
+yy1353:
+//line "js.re":192
+	{ return KEYWORD }
+//line "js.go":27137
 yy1354:
 	in.cursor += 1
 yyFillLabel1231:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1231
 			}
 		}
-		goto yy1179
-	case 'b':
-		goto yy1400
-	default:
-		goto yy1178
+		goto yy1355
 	}
 yy1355:
+//line "js.re":193
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":27164
+yy1356:
 	in.cursor += 1
 yyFillLabel1232:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1232
 			}
 		}
-		goto yy1356
+		goto yy1176
+	case 'l':
+		goto yy1398
+	default:
+		goto yy1175
 	}
-yy1356:
-//line "js.re":194
-	{ return KEYWORD }
-//line "js.go":27129
 yy1357:
 	in.cursor += 1
 yyFillLabel1233:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1233
 			}
 		}
-		goto yy1358
+		goto yy1176
+	case 'u':
+		goto yy1400
+	default:
+		goto yy1175
 	}
 yy1358:
-//line "js.re":195
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27156
-yy1359:
 	in.cursor += 1
 yyFillLabel1234:
 	yych = peek(in)
@@ -27164,13 +27206,13 @@ yyFillLabel1234:
 				goto yyFillLabel1234
 			}
 		}
-		goto yy1179
-	case 'l':
+		goto yy1176
+	case 't':
 		goto yy1401
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1360:
+yy1359:
 	in.cursor += 1
 yyFillLabel1235:
 	yych = peek(in)
@@ -27181,13 +27223,13 @@ yyFillLabel1235:
 				goto yyFillLabel1235
 			}
 		}
-		goto yy1179
-	case 'u':
-		goto yy1403
+		goto yy1176
+	case 'e':
+		goto yy1402
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1361:
+yy1360:
 	in.cursor += 1
 yyFillLabel1236:
 	yych = peek(in)
@@ -27198,13 +27240,13 @@ yyFillLabel1236:
 				goto yyFillLabel1236
 			}
 		}
-		goto yy1179
+		goto yy1176
 	case 't':
-		goto yy1404
+		goto yy1403
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1362:
+yy1361:
 	in.cursor += 1
 yyFillLabel1237:
 	yych = peek(in)
@@ -27215,13 +27257,13 @@ yyFillLabel1237:
 				goto yyFillLabel1237
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1405
+		goto yy1176
+	case 's':
+		goto yy1404
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1363:
+yy1362:
 	in.cursor += 1
 yyFillLabel1238:
 	yych = peek(in)
@@ -27232,13 +27274,13 @@ yyFillLabel1238:
 				goto yyFillLabel1238
 			}
 		}
-		goto yy1179
-	case 't':
+		goto yy1176
+	case 'o':
 		goto yy1406
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1364:
+yy1363:
 	in.cursor += 1
 yyFillLabel1239:
 	yych = peek(in)
@@ -27249,29 +27291,39 @@ yyFillLabel1239:
 				goto yyFillLabel1239
 			}
 		}
-		goto yy1179
-	case 's':
+		goto yy1176
+	case 'e':
 		goto yy1407
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1365:
+yy1364:
 	in.cursor += 1
 yyFillLabel1240:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1240
 			}
 		}
-		goto yy1179
-	case 'o':
-		goto yy1409
-	default:
-		goto yy1178
+		goto yy1365
 	}
+yy1365:
+//line "js.re":202
+	{ return KEYWORD }
+//line "js.go":27327
 yy1366:
 	in.cursor += 1
 yyFillLabel1241:
@@ -27283,11 +27335,11 @@ yyFillLabel1241:
 				goto yyFillLabel1241
 			}
 		}
-		goto yy1179
+		goto yy1176
 	case 'e':
-		goto yy1410
+		goto yy1409
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1367:
 	in.cursor += 1
@@ -27303,7 +27355,7 @@ yyFillLabel1242:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -27314,8 +27366,8 @@ yyFillLabel1242:
 	}
 yy1368:
 //line "js.re":204
-	{ return KEYWORD }
-//line "js.go":27319
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":27371
 yy1369:
 	in.cursor += 1
 yyFillLabel1243:
@@ -27327,15 +27379,110 @@ yyFillLabel1243:
 				goto yyFillLabel1243
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1412
+		goto yy1176
+	case 'd':
+		goto yy1410
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1370:
 	in.cursor += 1
 yyFillLabel1244:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1244
+			}
+		}
+		goto yy1176
+	case 'l':
+		goto yy1412
+	default:
+		goto yy1175
+	}
+yy1371:
+	in.cursor += 1
+yyFillLabel1245:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1245
+			}
+		}
+		goto yy1176
+	case 'h':
+		goto yy1413
+	default:
+		goto yy1175
+	}
+yy1372:
+	in.cursor += 1
+yyFillLabel1246:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1246
+			}
+		}
+		goto yy1176
+	case 'l':
+		goto yy1415
+	default:
+		goto yy1175
+	}
+yy1373:
+	in.cursor += 1
+//line "js.re":250
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":27444
+yy1374:
+	in.cursor += 1
+//line "js.re":245
+	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
+//line "js.go":27449
+yy1375:
+	in.cursor += 1
+yyFillLabel1247:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1247
+			}
+		}
+		goto yy1176
+	case 't':
+		goto yy1416
+	default:
+		goto yy1175
+	}
+yy1376:
+	in.cursor += 1
+yyFillLabel1248:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1248
+			}
+		}
+		goto yy1176
+	case 'k':
+		goto yy1418
+	default:
+		goto yy1175
+	}
+yy1377:
+	in.cursor += 1
+yyFillLabel1249:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -27347,114 +27494,19 @@ yyFillLabel1244:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1244
-			}
-		}
-		goto yy1371
-	}
-yy1371:
-//line "js.re":206
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27363
-yy1372:
-	in.cursor += 1
-yyFillLabel1245:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1245
-			}
-		}
-		goto yy1179
-	case 'd':
-		goto yy1413
-	default:
-		goto yy1178
-	}
-yy1373:
-	in.cursor += 1
-yyFillLabel1246:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1246
-			}
-		}
-		goto yy1179
-	case 'l':
-		goto yy1415
-	default:
-		goto yy1178
-	}
-yy1374:
-	in.cursor += 1
-yyFillLabel1247:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1247
-			}
-		}
-		goto yy1179
-	case 'h':
-		goto yy1416
-	default:
-		goto yy1178
-	}
-yy1375:
-	in.cursor += 1
-yyFillLabel1248:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1248
-			}
-		}
-		goto yy1179
-	case 'l':
-		goto yy1418
-	default:
-		goto yy1178
-	}
-yy1376:
-	in.cursor += 1
-//line "js.re":252
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":27436
-yy1377:
-	in.cursor += 1
-//line "js.re":247
-	{ in.state = STATE_POSSIBLEREGEX; return PUNCTUATION }
-//line "js.go":27441
-yy1378:
-	in.cursor += 1
-yyFillLabel1249:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1249
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1419
-	default:
-		goto yy1178
+		goto yy1378
 	}
+yy1378:
+//line "js.re":170
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":27510
 yy1379:
 	in.cursor += 1
 yyFillLabel1250:
@@ -27466,40 +27518,30 @@ yyFillLabel1250:
 				goto yyFillLabel1250
 			}
 		}
-		goto yy1179
-	case 'k':
-		goto yy1421
+		goto yy1176
+	case 'h':
+		goto yy1420
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1380:
 	in.cursor += 1
 yyFillLabel1251:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1251
 			}
 		}
-		goto yy1381
+		goto yy1176
+	case 's':
+		goto yy1422
+	default:
+		goto yy1175
 	}
 yy1381:
-//line "js.re":172
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27502
-yy1382:
 	in.cursor += 1
 yyFillLabel1252:
 	yych = peek(in)
@@ -27510,13 +27552,13 @@ yyFillLabel1252:
 				goto yyFillLabel1252
 			}
 		}
-		goto yy1179
-	case 'h':
-		goto yy1423
+		goto yy1176
+	case 't':
+		goto yy1424
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1383:
+yy1382:
 	in.cursor += 1
 yyFillLabel1253:
 	yych = peek(in)
@@ -27527,13 +27569,13 @@ yyFillLabel1253:
 				goto yyFillLabel1253
 			}
 		}
-		goto yy1179
-	case 's':
-		goto yy1425
+		goto yy1176
+	case 'i':
+		goto yy1426
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1384:
+yy1383:
 	in.cursor += 1
 yyFillLabel1254:
 	yych = peek(in)
@@ -27544,13 +27586,13 @@ yyFillLabel1254:
 				goto yyFillLabel1254
 			}
 		}
-		goto yy1179
-	case 't':
+		goto yy1176
+	case 'g':
 		goto yy1427
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1385:
+yy1384:
 	in.cursor += 1
 yyFillLabel1255:
 	yych = peek(in)
@@ -27561,13 +27603,13 @@ yyFillLabel1255:
 				goto yyFillLabel1255
 			}
 		}
-		goto yy1179
-	case 'i':
-		goto yy1429
+		goto yy1176
+	case 'u':
+		goto yy1428
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1386:
+yy1385:
 	in.cursor += 1
 yyFillLabel1256:
 	yych = peek(in)
@@ -27578,101 +27620,101 @@ yyFillLabel1256:
 				goto yyFillLabel1256
 			}
 		}
-		goto yy1179
-	case 'g':
-		goto yy1430
+		goto yy1176
+	case 't':
+		goto yy1429
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1387:
+yy1386:
 	in.cursor += 1
 yyFillLabel1257:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1257
 			}
 		}
-		goto yy1179
-	case 'u':
-		goto yy1431
-	default:
-		goto yy1178
+		goto yy1387
 	}
+yy1387:
+//line "js.re":179
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":27656
 yy1388:
 	in.cursor += 1
 yyFillLabel1258:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1258
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1432
-	default:
-		goto yy1178
+		goto yy1389
 	}
 yy1389:
+//line "js.re":180
+	{ return KEYWORD }
+//line "js.go":27683
+yy1390:
 	in.cursor += 1
 yyFillLabel1259:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1259
 			}
 		}
-		goto yy1390
+		goto yy1176
+	case 'r':
+		goto yy1430
+	default:
+		goto yy1175
 	}
-yy1390:
-//line "js.re":181
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":27648
 yy1391:
 	in.cursor += 1
 yyFillLabel1260:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1260
 			}
 		}
-		goto yy1392
+		goto yy1176
+	case 'n':
+		goto yy1431
+	default:
+		goto yy1175
 	}
 yy1392:
-//line "js.re":182
-	{ return KEYWORD }
-//line "js.go":27675
-yy1393:
 	in.cursor += 1
 yyFillLabel1261:
 	yych = peek(in)
@@ -27683,13 +27725,13 @@ yyFillLabel1261:
 				goto yyFillLabel1261
 			}
 		}
-		goto yy1179
-	case 'r':
-		goto yy1433
+		goto yy1176
+	case 'e':
+		goto yy1432
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1394:
+yy1393:
 	in.cursor += 1
 yyFillLabel1262:
 	yych = peek(in)
@@ -27700,13 +27742,13 @@ yyFillLabel1262:
 				goto yyFillLabel1262
 			}
 		}
-		goto yy1179
-	case 'n':
+		goto yy1176
+	case 'l':
 		goto yy1434
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1395:
+yy1394:
 	in.cursor += 1
 yyFillLabel1263:
 	yych = peek(in)
@@ -27717,13 +27759,13 @@ yyFillLabel1263:
 				goto yyFillLabel1263
 			}
 		}
-		goto yy1179
-	case 'e':
+		goto yy1176
+	case 't':
 		goto yy1435
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1396:
+yy1395:
 	in.cursor += 1
 yyFillLabel1264:
 	yych = peek(in)
@@ -27734,13 +27776,13 @@ yyFillLabel1264:
 				goto yyFillLabel1264
 			}
 		}
-		goto yy1179
-	case 'l':
-		goto yy1437
+		goto yy1176
+	case 'r':
+		goto yy1436
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1397:
+yy1396:
 	in.cursor += 1
 yyFillLabel1265:
 	yych = peek(in)
@@ -27751,13 +27793,13 @@ yyFillLabel1265:
 				goto yyFillLabel1265
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1438
+		goto yy1176
+	case 'a':
+		goto yy1437
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1398:
+yy1397:
 	in.cursor += 1
 yyFillLabel1266:
 	yych = peek(in)
@@ -27768,29 +27810,39 @@ yyFillLabel1266:
 				goto yyFillLabel1266
 			}
 		}
-		goto yy1179
-	case 'r':
-		goto yy1439
+		goto yy1176
+	case 'd':
+		goto yy1438
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1399:
+yy1398:
 	in.cursor += 1
 yyFillLabel1267:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1267
 			}
 		}
-		goto yy1179
-	case 'a':
-		goto yy1440
-	default:
-		goto yy1178
+		goto yy1399
 	}
+yy1399:
+//line "js.re":194
+	{ return KEYWORD }
+//line "js.go":27846
 yy1400:
 	in.cursor += 1
 yyFillLabel1268:
@@ -27802,15 +27854,66 @@ yyFillLabel1268:
 				goto yyFillLabel1268
 			}
 		}
-		goto yy1179
-	case 'd':
-		goto yy1441
+		goto yy1176
+	case 'r':
+		goto yy1439
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1401:
 	in.cursor += 1
 yyFillLabel1269:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1269
+			}
+		}
+		goto yy1176
+	case 'i':
+		goto yy1440
+	default:
+		goto yy1175
+	}
+yy1402:
+	in.cursor += 1
+yyFillLabel1270:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1270
+			}
+		}
+		goto yy1176
+	case 'r':
+		goto yy1441
+	default:
+		goto yy1175
+	}
+yy1403:
+	in.cursor += 1
+yyFillLabel1271:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1271
+			}
+		}
+		goto yy1176
+	case 'c':
+		goto yy1443
+	default:
+		goto yy1175
+	}
+yy1404:
+	in.cursor += 1
+yyFillLabel1272:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -27822,70 +27925,19 @@ yyFillLabel1269:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1269
-			}
-		}
-		goto yy1402
-	}
-yy1402:
-//line "js.re":196
-	{ return KEYWORD }
-//line "js.go":27838
-yy1403:
-	in.cursor += 1
-yyFillLabel1270:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1270
-			}
-		}
-		goto yy1179
-	case 'r':
-		goto yy1442
-	default:
-		goto yy1178
-	}
-yy1404:
-	in.cursor += 1
-yyFillLabel1271:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1271
-			}
-		}
-		goto yy1179
-	case 'i':
-		goto yy1443
-	default:
-		goto yy1178
-	}
-yy1405:
-	in.cursor += 1
-yyFillLabel1272:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1272
 			}
 		}
-		goto yy1179
-	case 'r':
-		goto yy1444
-	default:
-		goto yy1178
+		goto yy1405
 	}
+yy1405:
+//line "js.re":199
+	{ return KEYWORD }
+//line "js.go":27941
 yy1406:
 	in.cursor += 1
 yyFillLabel1273:
@@ -27897,11 +27949,11 @@ yyFillLabel1273:
 				goto yyFillLabel1273
 			}
 		}
-		goto yy1179
-	case 'c':
-		goto yy1446
+		goto yy1176
+	case 'w':
+		goto yy1444
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1407:
 	in.cursor += 1
@@ -27917,7 +27969,7 @@ yyFillLabel1274:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -27929,7 +27981,7 @@ yyFillLabel1274:
 yy1408:
 //line "js.re":201
 	{ return KEYWORD }
-//line "js.go":27933
+//line "js.go":27985
 yy1409:
 	in.cursor += 1
 yyFillLabel1275:
@@ -27941,11 +27993,11 @@ yyFillLabel1275:
 				goto yyFillLabel1275
 			}
 		}
-		goto yy1179
-	case 'w':
-		goto yy1447
+		goto yy1176
+	case 'o':
+		goto yy1446
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1410:
 	in.cursor += 1
@@ -27961,7 +28013,7 @@ yyFillLabel1276:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -27971,9 +28023,9 @@ yyFillLabel1276:
 		goto yy1411
 	}
 yy1411:
-//line "js.re":203
+//line "js.re":205
 	{ return KEYWORD }
-//line "js.go":27977
+//line "js.go":28029
 yy1412:
 	in.cursor += 1
 yyFillLabel1277:
@@ -27985,11 +28037,11 @@ yyFillLabel1277:
 				goto yyFillLabel1277
 			}
 		}
-		goto yy1179
-	case 'o':
-		goto yy1449
+		goto yy1176
+	case 'e':
+		goto yy1447
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1413:
 	in.cursor += 1
@@ -28005,7 +28057,7 @@ yyFillLabel1278:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -28017,7 +28069,7 @@ yyFillLabel1278:
 yy1414:
 //line "js.re":207
 	{ return KEYWORD }
-//line "js.go":28021
+//line "js.go":28073
 yy1415:
 	in.cursor += 1
 yyFillLabel1279:
@@ -28029,11 +28081,11 @@ yyFillLabel1279:
 				goto yyFillLabel1279
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1450
+		goto yy1176
+	case 'd':
+		goto yy1449
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1416:
 	in.cursor += 1
@@ -28049,7 +28101,7 @@ yyFillLabel1280:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -28059,27 +28111,37 @@ yyFillLabel1280:
 		goto yy1417
 	}
 yy1417:
-//line "js.re":209
+//line "js.re":168
 	{ return KEYWORD }
-//line "js.go":28065
+//line "js.go":28117
 yy1418:
 	in.cursor += 1
 yyFillLabel1281:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1281
 			}
 		}
-		goto yy1179
-	case 'd':
-		goto yy1452
-	default:
-		goto yy1178
+		goto yy1419
 	}
 yy1419:
+//line "js.re":169
+	{ return KEYWORD }
+//line "js.go":28144
+yy1420:
 	in.cursor += 1
 yyFillLabel1282:
 	yych = peek(in)
@@ -28093,20 +28155,20 @@ yyFillLabel1282:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1282
 			}
 		}
-		goto yy1420
+		goto yy1421
 	}
-yy1420:
-//line "js.re":170
-	{ return KEYWORD }
-//line "js.go":28109
 yy1421:
+//line "js.re":171
+	{ return KEYWORD }
+//line "js.go":28171
+yy1422:
 	in.cursor += 1
 yyFillLabel1283:
 	yych = peek(in)
@@ -28120,20 +28182,20 @@ yyFillLabel1283:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1283
 			}
 		}
-		goto yy1422
+		goto yy1423
 	}
-yy1422:
-//line "js.re":171
-	{ return KEYWORD }
-//line "js.go":28136
 yy1423:
+//line "js.re":172
+	{ return KEYWORD }
+//line "js.go":28198
+yy1424:
 	in.cursor += 1
 yyFillLabel1284:
 	yych = peek(in)
@@ -28147,74 +28209,54 @@ yyFillLabel1284:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1284
 			}
 		}
-		goto yy1424
+		goto yy1425
 	}
-yy1424:
+yy1425:
 //line "js.re":173
 	{ return KEYWORD }
-//line "js.go":28163
-yy1425:
+//line "js.go":28225
+yy1426:
 	in.cursor += 1
 yyFillLabel1285:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1285
 			}
 		}
-		goto yy1426
+		goto yy1176
+	case 'n':
+		goto yy1451
+	default:
+		goto yy1175
 	}
-yy1426:
-//line "js.re":174
-	{ return KEYWORD }
-//line "js.go":28190
 yy1427:
 	in.cursor += 1
 yyFillLabel1286:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1286
 			}
 		}
-		goto yy1428
+		goto yy1176
+	case 'g':
+		goto yy1452
+	default:
+		goto yy1175
 	}
 yy1428:
-//line "js.re":175
-	{ return KEYWORD }
-//line "js.go":28217
-yy1429:
 	in.cursor += 1
 yyFillLabel1287:
 	yych = peek(in)
@@ -28225,13 +28267,13 @@ yyFillLabel1287:
 				goto yyFillLabel1287
 			}
 		}
-		goto yy1179
-	case 'n':
-		goto yy1454
+		goto yy1176
+	case 'l':
+		goto yy1453
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1430:
+yy1429:
 	in.cursor += 1
 yyFillLabel1288:
 	yych = peek(in)
@@ -28242,13 +28284,13 @@ yyFillLabel1288:
 				goto yyFillLabel1288
 			}
 		}
-		goto yy1179
-	case 'g':
-		goto yy1455
+		goto yy1176
+	case 'e':
+		goto yy1454
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1431:
+yy1430:
 	in.cursor += 1
 yyFillLabel1289:
 	yych = peek(in)
@@ -28259,13 +28301,13 @@ yyFillLabel1289:
 				goto yyFillLabel1289
 			}
 		}
-		goto yy1179
-	case 'l':
+		goto yy1176
+	case 't':
 		goto yy1456
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1432:
+yy1431:
 	in.cursor += 1
 yyFillLabel1290:
 	yych = peek(in)
@@ -28276,29 +28318,39 @@ yyFillLabel1290:
 				goto yyFillLabel1290
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1457
+		goto yy1176
+	case 'd':
+		goto yy1458
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1433:
+yy1432:
 	in.cursor += 1
 yyFillLabel1291:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1291
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1459
-	default:
-		goto yy1178
+		goto yy1433
 	}
+yy1433:
+//line "js.re":183
+	{ return KEYWORD }
+//line "js.go":28354
 yy1434:
 	in.cursor += 1
 yyFillLabel1292:
@@ -28310,15 +28362,117 @@ yyFillLabel1292:
 				goto yyFillLabel1292
 			}
 		}
-		goto yy1179
-	case 'd':
-		goto yy1461
+		goto yy1176
+	case 'l':
+		goto yy1459
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1435:
 	in.cursor += 1
 yyFillLabel1293:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1293
+			}
+		}
+		goto yy1176
+	case 'i':
+		goto yy1460
+	default:
+		goto yy1175
+	}
+yy1436:
+	in.cursor += 1
+yyFillLabel1294:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1294
+			}
+		}
+		goto yy1176
+	case 't':
+		goto yy1461
+	default:
+		goto yy1175
+	}
+yy1437:
+	in.cursor += 1
+yyFillLabel1295:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1295
+			}
+		}
+		goto yy1176
+	case 'n':
+		goto yy1463
+	default:
+		goto yy1175
+	}
+yy1438:
+	in.cursor += 1
+yyFillLabel1296:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1296
+			}
+		}
+		goto yy1176
+	case 'a':
+		goto yy1464
+	default:
+		goto yy1175
+	}
+yy1439:
+	in.cursor += 1
+yyFillLabel1297:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1297
+			}
+		}
+		goto yy1176
+	case 'n':
+		goto yy1466
+	default:
+		goto yy1175
+	}
+yy1440:
+	in.cursor += 1
+yyFillLabel1298:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1298
+			}
+		}
+		goto yy1176
+	case 'c':
+		goto yy1468
+	default:
+		goto yy1175
+	}
+yy1441:
+	in.cursor += 1
+yyFillLabel1299:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -28330,121 +28484,19 @@ yyFillLabel1293:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1293
-			}
-		}
-		goto yy1436
-	}
-yy1436:
-//line "js.re":185
-	{ return KEYWORD }
-//line "js.go":28346
-yy1437:
-	in.cursor += 1
-yyFillLabel1294:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1294
-			}
-		}
-		goto yy1179
-	case 'l':
-		goto yy1462
-	default:
-		goto yy1178
-	}
-yy1438:
-	in.cursor += 1
-yyFillLabel1295:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1295
-			}
-		}
-		goto yy1179
-	case 'i':
-		goto yy1463
-	default:
-		goto yy1178
-	}
-yy1439:
-	in.cursor += 1
-yyFillLabel1296:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1296
-			}
-		}
-		goto yy1179
-	case 't':
-		goto yy1464
-	default:
-		goto yy1178
-	}
-yy1440:
-	in.cursor += 1
-yyFillLabel1297:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1297
-			}
-		}
-		goto yy1179
-	case 'n':
-		goto yy1466
-	default:
-		goto yy1178
-	}
-yy1441:
-	in.cursor += 1
-yyFillLabel1298:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1298
-			}
-		}
-		goto yy1179
-	case 'a':
-		goto yy1467
-	default:
-		goto yy1178
-	}
-yy1442:
-	in.cursor += 1
-yyFillLabel1299:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1299
 			}
 		}
-		goto yy1179
-	case 'n':
-		goto yy1469
-	default:
-		goto yy1178
+		goto yy1442
 	}
+yy1442:
+//line "js.re":197
+	{ return KEYWORD }
+//line "js.go":28500
 yy1443:
 	in.cursor += 1
 yyFillLabel1300:
@@ -28456,11 +28508,11 @@ yyFillLabel1300:
 				goto yyFillLabel1300
 			}
 		}
-		goto yy1179
-	case 'c':
-		goto yy1471
+		goto yy1176
+	case 'h':
+		goto yy1470
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1444:
 	in.cursor += 1
@@ -28476,7 +28528,7 @@ yyFillLabel1301:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -28486,9 +28538,9 @@ yyFillLabel1301:
 		goto yy1445
 	}
 yy1445:
-//line "js.re":199
-	{ return KEYWORD }
-//line "js.go":28492
+//line "js.re":200
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":28544
 yy1446:
 	in.cursor += 1
 yyFillLabel1302:
@@ -28500,11 +28552,11 @@ yyFillLabel1302:
 				goto yyFillLabel1302
 			}
 		}
-		goto yy1179
-	case 'h':
-		goto yy1473
+		goto yy1176
+	case 'f':
+		goto yy1472
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1447:
 	in.cursor += 1
@@ -28520,7 +28572,7 @@ yyFillLabel1303:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -28530,81 +28582,71 @@ yyFillLabel1303:
 		goto yy1448
 	}
 yy1448:
-//line "js.re":202
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28536
+//line "js.re":206
+	{ return KEYWORD }
+//line "js.go":28588
 yy1449:
 	in.cursor += 1
 yyFillLabel1304:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1304
 			}
 		}
-		goto yy1179
-	case 'f':
-		goto yy1475
-	default:
-		goto yy1178
+		goto yy1450
 	}
 yy1450:
+//line "js.re":208
+	{ return KEYWORD }
+//line "js.go":28615
+yy1451:
 	in.cursor += 1
 yyFillLabel1305:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1305
 			}
 		}
-		goto yy1451
+		goto yy1176
+	case 'u':
+		goto yy1474
+	default:
+		goto yy1175
 	}
-yy1451:
-//line "js.re":208
-	{ return KEYWORD }
-//line "js.go":28580
 yy1452:
 	in.cursor += 1
 yyFillLabel1306:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1306
 			}
 		}
-		goto yy1453
+		goto yy1176
+	case 'e':
+		goto yy1475
+	default:
+		goto yy1175
 	}
 yy1453:
-//line "js.re":210
-	{ return KEYWORD }
-//line "js.go":28607
-yy1454:
 	in.cursor += 1
 yyFillLabel1307:
 	yych = peek(in)
@@ -28615,101 +28657,101 @@ yyFillLabel1307:
 				goto yyFillLabel1307
 			}
 		}
-		goto yy1179
-	case 'u':
-		goto yy1477
+		goto yy1176
+	case 't':
+		goto yy1476
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1455:
+yy1454:
 	in.cursor += 1
 yyFillLabel1308:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1308
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1478
-	default:
-		goto yy1178
+		goto yy1455
 	}
+yy1455:
+//line "js.re":177
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":28693
 yy1456:
 	in.cursor += 1
 yyFillLabel1309:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1309
 			}
 		}
-		goto yy1179
-	case 't':
-		goto yy1479
-	default:
-		goto yy1178
+		goto yy1457
 	}
 yy1457:
+//line "js.re":181
+	{ return KEYWORD }
+//line "js.go":28720
+yy1458:
 	in.cursor += 1
 yyFillLabel1310:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1310
 			}
 		}
-		goto yy1458
+		goto yy1176
+	case 's':
+		goto yy1478
+	default:
+		goto yy1175
 	}
-yy1458:
-//line "js.re":179
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28685
 yy1459:
 	in.cursor += 1
 yyFillLabel1311:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1311
 			}
 		}
-		goto yy1460
+		goto yy1176
+	case 'y':
+		goto yy1480
+	default:
+		goto yy1175
 	}
 yy1460:
-//line "js.re":183
-	{ return KEYWORD }
-//line "js.go":28712
-yy1461:
 	in.cursor += 1
 yyFillLabel1312:
 	yych = peek(in)
@@ -28720,29 +28762,39 @@ yyFillLabel1312:
 				goto yyFillLabel1312
 			}
 		}
-		goto yy1179
-	case 's':
-		goto yy1481
+		goto yy1176
+	case 'o':
+		goto yy1482
 	default:
-		goto yy1178
+		goto yy1175
 	}
-yy1462:
+yy1461:
 	in.cursor += 1
 yyFillLabel1313:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1313
 			}
 		}
-		goto yy1179
-	case 'y':
-		goto yy1483
-	default:
-		goto yy1178
+		goto yy1462
 	}
+yy1462:
+//line "js.re":188
+	{ return KEYWORD }
+//line "js.go":28798
 yy1463:
 	in.cursor += 1
 yyFillLabel1314:
@@ -28754,11 +28806,11 @@ yyFillLabel1314:
 				goto yyFillLabel1314
 			}
 		}
-		goto yy1179
-	case 'o':
-		goto yy1485
+		goto yy1176
+	case 'c':
+		goto yy1483
 	default:
-		goto yy1178
+		goto yy1175
 	}
 yy1464:
 	in.cursor += 1
@@ -28774,7 +28826,7 @@ yyFillLabel1315:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
@@ -28784,27 +28836,37 @@ yyFillLabel1315:
 		goto yy1465
 	}
 yy1465:
-//line "js.re":190
+//line "js.re":191
 	{ return KEYWORD }
-//line "js.go":28790
+//line "js.go":28842
 yy1466:
 	in.cursor += 1
 yyFillLabel1316:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1316
 			}
 		}
-		goto yy1179
-	case 'c':
-		goto yy1486
-	default:
-		goto yy1178
+		goto yy1467
 	}
 yy1467:
+//line "js.re":195
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":28869
+yy1468:
 	in.cursor += 1
 yyFillLabel1317:
 	yych = peek(in)
@@ -28818,20 +28880,20 @@ yyFillLabel1317:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1317
 			}
 		}
-		goto yy1468
+		goto yy1469
 	}
-yy1468:
-//line "js.re":193
-	{ return KEYWORD }
-//line "js.go":28834
 yy1469:
+//line "js.re":196
+	{ return KEYWORD }
+//line "js.go":28896
+yy1470:
 	in.cursor += 1
 yyFillLabel1318:
 	yych = peek(in)
@@ -28845,20 +28907,20 @@ yyFillLabel1318:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1318
 			}
 		}
-		goto yy1470
+		goto yy1471
 	}
-yy1470:
-//line "js.re":197
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28861
 yy1471:
+//line "js.re":198
+	{ return KEYWORD }
+//line "js.go":28923
+yy1472:
 	in.cursor += 1
 yyFillLabel1319:
 	yych = peek(in)
@@ -28872,49 +28934,56 @@ yyFillLabel1319:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1319
 			}
 		}
-		goto yy1472
+		goto yy1473
 	}
-yy1472:
-//line "js.re":198
-	{ return KEYWORD }
-//line "js.go":28888
 yy1473:
+//line "js.re":203
+	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
+//line "js.go":28950
+yy1474:
 	in.cursor += 1
 yyFillLabel1320:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1320
 			}
 		}
-		goto yy1474
+		goto yy1176
+	case 'e':
+		goto yy1484
+	default:
+		goto yy1175
 	}
-yy1474:
-//line "js.re":200
-	{ return KEYWORD }
-//line "js.go":28915
 yy1475:
 	in.cursor += 1
 yyFillLabel1321:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1321
+			}
+		}
+		goto yy1176
+	case 'r':
+		goto yy1486
+	default:
+		goto yy1175
+	}
+yy1476:
+	in.cursor += 1
+yyFillLabel1322:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -28926,54 +28995,47 @@ yyFillLabel1321:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1321
-			}
-		}
-		goto yy1476
-	}
-yy1476:
-//line "js.re":205
-	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":28942
-yy1477:
-	in.cursor += 1
-yyFillLabel1322:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1322
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1487
-	default:
-		goto yy1178
+		goto yy1477
 	}
+yy1477:
+//line "js.re":176
+	{ return KEYWORD }
+//line "js.go":29011
 yy1478:
 	in.cursor += 1
 yyFillLabel1323:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1323
 			}
 		}
-		goto yy1179
-	case 'r':
-		goto yy1489
-	default:
-		goto yy1178
+		goto yy1479
 	}
 yy1479:
+//line "js.re":182
+	{ return KEYWORD }
+//line "js.go":29038
+yy1480:
 	in.cursor += 1
 yyFillLabel1324:
 	yych = peek(in)
@@ -28987,49 +29049,56 @@ yyFillLabel1324:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1324
 			}
 		}
-		goto yy1480
+		goto yy1481
 	}
-yy1480:
-//line "js.re":178
-	{ return KEYWORD }
-//line "js.go":29003
 yy1481:
+//line "js.re":184
+	{ return KEYWORD }
+//line "js.go":29065
+yy1482:
 	in.cursor += 1
 yyFillLabel1325:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1325
 			}
 		}
-		goto yy1482
+		goto yy1176
+	case 'n':
+		goto yy1488
+	default:
+		goto yy1175
 	}
-yy1482:
-//line "js.re":184
-	{ return KEYWORD }
-//line "js.go":29030
 yy1483:
 	in.cursor += 1
 yyFillLabel1326:
+	yych = peek(in)
+	switch (yych) {
+	case 0x00:
+		if (in.limit <= in.cursor + 1) {
+			if (fill(in) == 0) {
+				goto yyFillLabel1326
+			}
+		}
+		goto yy1176
+	case 'e':
+		goto yy1490
+	default:
+		goto yy1175
+	}
+yy1484:
+	in.cursor += 1
+yyFillLabel1327:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -29041,54 +29110,47 @@ yyFillLabel1326:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1326
-			}
-		}
-		goto yy1484
-	}
-yy1484:
-//line "js.re":186
-	{ return KEYWORD }
-//line "js.go":29057
-yy1485:
-	in.cursor += 1
-yyFillLabel1327:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1327
 			}
 		}
-		goto yy1179
-	case 'n':
-		goto yy1491
-	default:
-		goto yy1178
+		goto yy1485
 	}
+yy1485:
+//line "js.re":174
+	{ return KEYWORD }
+//line "js.go":29126
 yy1486:
 	in.cursor += 1
 yyFillLabel1328:
 	yych = peek(in)
 	switch (yych) {
-	case 0x00:
+	case '$':
+		fallthrough
+	case '0','1','2','3','4','5','6','7','8','9':
+		fallthrough
+	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
+		fallthrough
+	case '_':
+		fallthrough
+	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
+		goto yy1174
+	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1328
 			}
 		}
-		goto yy1179
-	case 'e':
-		goto yy1493
-	default:
-		goto yy1178
+		goto yy1487
 	}
 yy1487:
+//line "js.re":175
+	{ return KEYWORD }
+//line "js.go":29153
+yy1488:
 	in.cursor += 1
 yyFillLabel1329:
 	yych = peek(in)
@@ -29102,110 +29164,56 @@ yyFillLabel1329:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1329
 			}
 		}
-		goto yy1488
+		goto yy1489
 	}
-yy1488:
-//line "js.re":176
-	{ return KEYWORD }
-//line "js.go":29118
 yy1489:
+//line "js.re":186
+	{ return KEYWORD }
+//line "js.go":29180
+yy1490:
 	in.cursor += 1
 yyFillLabel1330:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1330
 			}
 		}
-		goto yy1490
+		goto yy1176
+	case 'o':
+		goto yy1491
+	default:
+		goto yy1175
 	}
-yy1490:
-//line "js.re":177
-	{ return KEYWORD }
-//line "js.go":29145
 yy1491:
 	in.cursor += 1
 yyFillLabel1331:
 	yych = peek(in)
 	switch (yych) {
-	case '$':
-		fallthrough
-	case '0','1','2','3','4','5','6','7','8','9':
-		fallthrough
-	case 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z':
-		fallthrough
-	case '_':
-		fallthrough
-	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
-	default:
+	case 0x00:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
 				goto yyFillLabel1331
 			}
 		}
+		goto yy1176
+	case 'f':
 		goto yy1492
+	default:
+		goto yy1175
 	}
 yy1492:
-//line "js.re":188
-	{ return KEYWORD }
-//line "js.go":29172
-yy1493:
 	in.cursor += 1
 yyFillLabel1332:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1332
-			}
-		}
-		goto yy1179
-	case 'o':
-		goto yy1494
-	default:
-		goto yy1178
-	}
-yy1494:
-	in.cursor += 1
-yyFillLabel1333:
-	yych = peek(in)
-	switch (yych) {
-	case 0x00:
-		if (in.limit <= in.cursor + 1) {
-			if (fill(in) == 0) {
-				goto yyFillLabel1333
-			}
-		}
-		goto yy1179
-	case 'f':
-		goto yy1495
-	default:
-		goto yy1178
-	}
-yy1495:
-	in.cursor += 1
-yyFillLabel1334:
 	yych = peek(in)
 	switch (yych) {
 	case '$':
@@ -29217,25 +29225,25 @@ yyFillLabel1334:
 	case '_':
 		fallthrough
 	case 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z':
-		goto yy1177
+		goto yy1174
 	default:
 		if (in.limit <= in.cursor + 1) {
 			if (fill(in) == 0) {
-				goto yyFillLabel1334
+				goto yyFillLabel1332
 			}
 		}
-		goto yy1496
+		goto yy1493
 	}
-yy1496:
-//line "js.re":192
+yy1493:
+//line "js.re":190
 	{ in.state = STATE_POSSIBLEREGEX; return KEYWORD }
-//line "js.go":29233
-yy1497:
-//line "js.re":150
+//line "js.go":29241
+yy1494:
+//line "js.re":148
 	{ return END }
-//line "js.go":29237
+//line "js.go":29245
 }
-//line "js.re":273
+//line "js.re":271
 
     }
 }

@@ -28,7 +28,7 @@ func perl_lex_str(in *Input) TokenType {
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
-        word		         { return STRINGWORD }
+        nword		         { return STRINGWORD }
         "\\a"                { return STRING }
         "\\b"                { return STRING }
         "\\f"                { return STRING }
@@ -75,7 +75,7 @@ func perl_doc_lex(in *Input) TokenType {
         * { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = COMMENT }; continue }
         $ { return END }
 
-        word { return COMMENTWORD }
+        nword { return COMMENTWORD }
     */
     }
 }

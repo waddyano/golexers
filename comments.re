@@ -20,8 +20,7 @@ func lex_eol_comment(in *Input) TokenType {
 		wsp                  { continue }
         "\n"                 { in.state = STATE_NORMAL; in.cursor -= 1; return NEWLINE }
         $                    { return END }
-        word        		 { return COMMENTWORD }
-        [0-9]+               { return COMMENTWORD }
+        nword       		 { return COMMENTWORD }
 	*/
 	}
 }
@@ -34,8 +33,7 @@ func lex_ml_comment(in *Input) TokenType {
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; return NEWLINE }
         "*/"                 { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
-        word       			 { return COMMENTWORD }
-        [0-9]+               { return COMMENTWORD }
+        nword     			 { return COMMENTWORD }
 	*/
 	}
 }

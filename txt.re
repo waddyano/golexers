@@ -25,15 +25,7 @@ func txt_lex(in *Input) TokenType {
         * { if (in.unmatched_start < 0 ) { in.unmatched_start = in.token; in.unmatched_token = PUNCTUATION }; continue }
         $ { return END }
 
-		decimal = [1-9][0-9]*;
-		hex = "0x" [0-9a-fA-F]+;
-		octal = "0" [0-7]*;
-
-		decimal { return LITERAL }
-		hex { return LITERAL }
-		octal { return LITERAL }
-
-        word { return IDENTIFIER }
+        nword { return IDENTIFIER }
     */
     }
 }

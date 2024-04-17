@@ -26,7 +26,7 @@ func py_lex_str(in *Input) TokenType {
         $                    { return -1 }
         "\""                 { if in.state == STATE_STRINGLITERAL { in.state = STATE_NORMAL }; return STRING }
         "\'"                 { if in.state == STATE_CHARLITERAL { in.state = STATE_NORMAL }; return STRING }
-        [a-zA-Z_0-9]+        { return STRINGWORD }
+        nword                { return STRINGWORD }
         "\\a"                { return STRING }
         "\\b"                { return STRING }
         "\\f"                { return STRING }
@@ -62,7 +62,7 @@ func py_lex_long_str(in *Input, start bool) TokenType {
 		"\"\"\"" { if bytes.Equal(in.raw_str_delim, in.data[in.token:in.cursor]) { in.state = STATE_NORMAL; in.raw_str_delim = nil }; return STRING }
 		"\'\'\'" { if bytes.Equal(in.raw_str_delim, in.data[in.token:in.cursor]) { in.state = STATE_NORMAL; in.raw_str_delim = nil }; return STRING }
 
-        [a-zA-Z_0-9]+        { return STRINGWORD }
+        nword                { return STRINGWORD }
 	*/
 	}
 }

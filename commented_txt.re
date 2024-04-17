@@ -30,15 +30,7 @@ func commented_txt_lex(in *Input, commentChar byte) TokenType {
 		* { if in.data[in.cursor-1] == commentChar { in.state = STATE_EOLCOMMENT; return COMMENT }; continue }
 		$ { return END }
 
-		decimal = [1-9][0-9]*;
-		hex = "0x" [0-9a-fA-F]+;
-		octal = "0" [0-7]*;
-
-		decimal { return LITERAL }
-		hex { return LITERAL }
-		octal { return LITERAL }
-
-		word { return IDENTIFIER }
+		nword { return IDENTIFIER }
 	*/
 	}
 }

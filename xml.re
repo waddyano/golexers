@@ -28,7 +28,7 @@ func xml_lex_ml_comment(in *Input) TokenType {
         "\n"                 { in.bolcursor = in.cursor; in.line += 1; continue }
         "-->"                { in.state = STATE_NORMAL; return COMMENT }
         $                    { return END }
-        word       			 { return COMMENTWORD }
+        nword      			 { return COMMENTWORD }
 	*/
 	}
 }
@@ -78,7 +78,7 @@ func xml_lex_str(in *Input) TokenType {
         wsp                  { continue }
         $                    { return -1 }
         "\""                 { if in.state != STATE_STRINGLITERAL { return STRING }; in.state = STATE_NORMAL; return STRING }
-        word		         { return STRINGWORD }
+        nword		         { return STRINGWORD }
         wsp                  { continue }
         "\\b"                { return STRING }
         "\\f"                { return STRING  }
